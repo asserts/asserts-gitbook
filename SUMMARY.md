@@ -1,11 +1,22 @@
 # Table of contents
 
 * [Asserts](README.md)
-* [Asserts Intro](j.a.r.v.i.s.-asserts-intro.md)
-* [Asserts reach out blurb](j.a.r.v.i.s.-asserts-reach-out-blurb.md)
-* [How Asserts Works \(WIP\)](product-how-asserts-works-wip.md)
+* [How Asserts Processes Data](product-how-asserts-works-wip.md)
+* [A New Age For Time-Series Data](a-new-age-for-time-series-data.md)
+
+## Quickstart Guide
+
+* [Getting Started](quickstart-guide/getting-started.md)
+
+## User Guide
+
+* [Check-in](user-guide/check-in.md)
+* [Assertion Management](user-guide/assertion-management.md)
+* [RCA with the Workbench](user-guide/rca-with-the-workbench.md)
+* [Exploring the entity graph](user-guide/exploring-the-entity-graph.md)
 
 ## Developer Guide
 
+* [Integrations](developer-guide/integrations.md)
 * [Relabeling](developer-guide/relabeling.md)
 
