@@ -47,7 +47,9 @@ First, we inspect their labels to discover various entities and populate their p
 
 All these entities, properties, and relationships form a knowledge graph that describes our understanding of the system. They are also indexed to be easily searchable. The discovery process constantly updates the graph while at the same time keeps the history.
 
-TODO: a better entity graph, or perhaps a GIF? I moved the GIF to Navigation section below![](.gitbook/assets/1563492359.png)
+TODO: a better entity graph, or perhaps a GIF? I moved the GIF to Navigation section below
+
+![](.gitbook/assets/1563492359.png)
 
 ### Normalization <a id="HowAssertsWorks(WIP)-Normalization"></a>
 
@@ -111,7 +113,9 @@ Since assertions are condensed and contextualized, they are much faster to query
 
 #### Top Insights <a id="HowAssertsWorks(WIP)-TopInsights"></a>
 
-Assertions enable us to quantify the overall health of the system. We represent that as top insights on the default landing page.![](.gitbook/assets/1562312711.png)
+Assertions enable us to quantify the overall health of the system. We represent that as top insights on the default landing page.
+
+![](.gitbook/assets/1562312711.png)
 
 Here we rank services by their weighted assertion score and present a thumbnail sketch of all the assertions in the system. This helps surface the hot spot in the system so a user can jump right in.
 
@@ -154,7 +158,9 @@ These incidents are grouped by SLOs and assertions and laid out in a common time
 
 Asserts’s web app is built for cloud-scale. The best way to explore the entity graph is to use search expressions. We’ve shipped a default set of search expressions that cover common use cases. For example “Show all services”, “Show Assertions in Namespace”, etc.
 
-“Advanced search” panel provides more advanced search functions like search by property conditions, show connected entities, etc. These searches can provide context-rich shortcuts to a group of entities that a user wants to look at as a whole.![](.gitbook/assets/1561493511.png)
+“Advanced search” panel provides more advanced search functions like search by property conditions, show connected entities, etc. These searches can provide context-rich shortcuts to a group of entities that a user wants to look at as a whole.
+
+![](.gitbook/assets/1561493511.png)
 
 Keep in mind that the graph is constantly updated by the time-series data, so the search result represents the system's state in the specified time window. When you change the time, the search result may change too. In addition, search results are always filtered by the selection in `env` and `site` dropdown.
 
@@ -162,9 +168,13 @@ Keep in mind that the graph is constantly updated by the time-series data, so th
 
 When a user clicks on an entity, it also allows the user to navigate to its connected entities. Navigation can be done in both graph view and list view. If the graph gets busy, we can filter the displayed entities by clicking on the entity type in the legends.
 
-The list view also contains the monitoring status of each entity. This gives a high-level overview of what’s being automatically monitored by Asserts. Resource monitoring applies to both Services and Nodes, but traffic and latency monitoring usually only applies to Services.![](.gitbook/assets/1568473089.png)
+The list view also contains the monitoring status of each entity. This gives a high-level overview of what’s being automatically monitored by Asserts. Resource monitoring applies to both Services and Nodes, but traffic and latency monitoring usually only applies to Services.
 
-A bubble view is also provided to help the user to rank entities by requests, resources, or selected property. The user can even select multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus `yace` service here is having a CPU-related assertion.![](.gitbook/assets/1567621144.png)
+![](.gitbook/assets/1568473089.png)
+
+A bubble view is also provided to help the user to rank entities by requests, resources, or selected property. The user can even select multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus `yace` service here is having a CPU-related assertion.
+
+![](.gitbook/assets/1567621144.png)
 
 #### Entity assertion status <a id="HowAssertsWorks(WIP)-Entityassertionstatus"></a>
 
@@ -187,7 +197,9 @@ TODO: we are merging the two tabs into one, so need to get a new screenshot late
 
 #### Dashboards <a id="HowAssertsWorks(WIP)-Dashboards"></a>
 
-A user can pull up the KPI dashboard for each entity in focus by clicking “Show KPI”. Asserts has curated a library of Grafana dashboards. Each entity type has its own dashboard, so we have a dashboard for Nodes and Services. Within the same entity type, say Service, if we know the service type, say Redis, we have a specific dashboard for that service type.![](.gitbook/assets/1564540939.png)
+A user can pull up the KPI dashboard for each entity in focus by clicking “Show KPI”. Asserts has curated a library of Grafana dashboards. Each entity type has its own dashboard, so we have a dashboard for Nodes and Services. Within the same entity type, say Service, if we know the service type, say Redis, we have a specific dashboard for that service type.
+
+![](.gitbook/assets/1564540939.png)
 
 Asserts keeps working on expanding this library. If a customer has their own dashboards, he/she can also integrate them into Asserts Web App.
 
@@ -197,7 +209,9 @@ The traditional way of troubleshooting usually involves pulling out a few dashbo
 
 Asserts has automatically surfaced all the assertions in the system, and enriched them with all the context. At times, just a glance over top insights, or a search into the graph can reveal what’s going on. For more hands-on troubleshooting, we build a Workbench for manually analyzing assertions.
 
-The workflow for the Workbench is similar to a pinboard. Whether a user is just glancing through top insights or incidents, or exploring the entities in the graph, there is always a pin button “+” or “Add” to add entities, assertions, or the result of a search expression to the Workbench. Once they are in the Workbench, they are laid out in a common time frame, so if there is any causality in between, it will pop up right in front of you.![](.gitbook/assets/1564213274.png)
+The workflow for the Workbench is similar to a pinboard. Whether a user is just glancing through top insights or incidents, or exploring the entities in the graph, there is always a pin button “+” or “Add” to add entities, assertions, or the result of a search expression to the Workbench. Once they are in the Workbench, they are laid out in a common time frame, so if there is any causality in between, it will pop up right in front of you.
+
+![](.gitbook/assets/1564213274.png)
 
 The search box also works for the Workbench, so a user can quickly add more entities to the Workbench for root cause analysis. We also integrate with logging systems to help the user quickly jump into the logs with the time range pre-populated.
 
@@ -221,7 +235,9 @@ Asserts has curated an assertion library pertaining to our SAAFE model. Internal
   * Some resources like disk have rate metrics \(bytes read/write\), so we have **ResourceRateAnomaly** and **ResourceRateBreach** assertions. They follow the same approach as their request counterparts
 * **Health** section is mostly about all the failure assertions in various domains. We organize the domain rules by groups. Within each group, the user can edit each individual rule.
 
-Besides the configuration for all the default thresholds, the user can also configure individual thresholds on fine-grained levels. These levels are hierarchical. For requests, if you specify a threshold on `job` level, it applies to all the request types for that job. Similarly, if you specify a threshold on `request_type` level, it applies to all the request contexts for that request type and job.![](.gitbook/assets/1573322759.png)
+Besides the configuration for all the default thresholds, the user can also configure individual thresholds on fine-grained levels. These levels are hierarchical. For requests, if you specify a threshold on `job` level, it applies to all the request types for that job. Similarly, if you specify a threshold on `request_type` level, it applies to all the request contexts for that request type and job.
+
+![](.gitbook/assets/1573322759.png)
 
 For resources, the hierarchy starts with `source`, i.e., the exporter, then `resource_type,` and then `container`. An additional dimension is `severity`, which is independent of the granularity levels.
 
