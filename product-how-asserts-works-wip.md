@@ -243,7 +243,7 @@ TODO: This screen looks like WIP
 
 ## Integrations <a id="HowAssertsWorks(WIP)-Integrations"></a>
 
-TODO: WIP
+**We integrate with Kibana for Logging** 
 
 Logging
 
