@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Asserts](README.md)
-* [How Asserts Processes Data](product-how-asserts-works-wip.md)
 * [A New Age For Time-Series Data](a-new-age-for-time-series-data.md)
+* [How Asserts Processes Data](product-how-asserts-works-wip.md)
 
 ## Quickstart Guide
 
