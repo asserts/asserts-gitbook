@@ -244,6 +244,7 @@ TODO: This screen looks like WIP
 ## Integrations <a id="HowAssertsWorks(WIP)-Integrations"></a>
 
 **We integrate with Kibana for Logging** 
+GrayLog too!
 
 Logging
 
