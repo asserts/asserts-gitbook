@@ -53,5 +53,7 @@ You can use the search expression in our workbench and jump right in to view all
 
 ## How to get started? <a id="AssertsIntro-Howtogetstarted?"></a>
 
-Asserts is cloud-agnostic and has no proprietary application agents to install. It is natively built on the open [Prometheus](https://prometheus.io/) ecosystem with 100s of [exporters](https://prometheus.io/docs/instrumenting/exporters/). You can get started by remote-writing to Asserts cloud.![](.gitbook/assets/1049362470%20%281%29.png)
+Asserts is cloud-agnostic and has no proprietary application agents to install. It is natively built on the open [Prometheus](https://prometheus.io/) ecosystem with 100s of [exporters](https://prometheus.io/docs/instrumenting/exporters/). You can get started by remote-writing to Asserts cloud.
+
+![](.gitbook/assets/1049362470%20%281%29.png)
 
