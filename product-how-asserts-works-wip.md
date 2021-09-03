@@ -213,8 +213,6 @@ The workflow for the Workbench is similar to a pinboard. Whether a user is just 
 
 ![](.gitbook/assets/1564213274.png)
 
-![](.gitbook/assets/screen-shot-2021-09-01-at-11.09.13-pm.png)
-
 The search box also works for the Workbench, so a user can quickly add more entities to the Workbench for root cause analysis. We also integrate with logging systems to help the user quickly jump into the logs with the time range pre-populated.
 
 The timeline view is not the only view option. A user can also choose the graph view to evaluate the impact of the current issues and spot spatial correlation on the graph.
