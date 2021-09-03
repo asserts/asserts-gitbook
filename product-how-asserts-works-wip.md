@@ -1,6 +1,4 @@
-# Product : How Asserts Works \(WIP\)
-
-
+# How Asserts Works \(WIP\)
 
 * [A New Age For Time-Series Data](product-how-asserts-works-wip.md#HowAssertsWorks%28WIP%29-ANewAgeForTime-SeriesData)
 * [How Asserts Processes Data](product-how-asserts-works-wip.md#HowAssertsWorks%28WIP%29-HowAssertsProcessesData)
@@ -177,7 +175,7 @@ For each entity, two color-coded rings indicate the assertion status of the enti
 
 The inner ring helps because, for ephemeral entities like Pods, their containing entity like Nodes or Services are usually more applicable for being focal points for analysis. Thus seeing a colored inner ring on the node/service itself is useful.
 
-Red highlights CRITICAL, Yellow indicates WARNING, and Blue is for INFO. As a rule of thumb, _Saturation_ can be either CRITICAL or WARNING, _Failure_s are usually CRITICAL, _Anomalies_ are usually _WARNING_, and _Amends_ are usually INFO.
+Red highlights CRITICAL, Yellow indicates WARNING, and Blue is for INFO. As a rule of thumb, _Saturation_ can be either CRITICAL or WARNING, _Failure\_s are usually CRITICAL, \_Anomalies_ are usually _WARNING_, and _Amends_ are usually INFO.
 
 The following example shows a node that has a critical CPU load on itself, while at the same time, one of the pods hosted on it is experiencing CPU Throttle.
 
@@ -243,7 +241,7 @@ TODO: This screen looks like WIP
 
 ## Integrations <a id="HowAssertsWorks(WIP)-Integrations"></a>
 
-**We integrate with Kibana for Logging** 
+**We integrate with Kibana for Logging**
 
 Logging
 
