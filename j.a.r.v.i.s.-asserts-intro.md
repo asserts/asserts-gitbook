@@ -6,7 +6,7 @@ As builders and operators of cloud applications and founding engineers of indust
 
 As engineers, we wished for a solution that was adaptive and purposefully built for _distributed systems and cloud architecture_, and most importantly, allow us to manage our _Monitoring as a Code_.
 
-**What is Asserts?**
+**What is Asserts?** 
 
 Asserts is the next-generation insights for your distributed, multi-cloud, hybrid applications.
 
