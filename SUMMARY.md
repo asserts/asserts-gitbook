@@ -6,3 +6,7 @@
 * [Asserts reach out blurb](j.a.r.v.i.s.-asserts-reach-out-blurb.md)
 * [How Asserts Works \(WIP\)](product-how-asserts-works-wip.md)
 
+## Developer Guide
+
+* [Relabeling](developer-guide/relabeling.md)
+
