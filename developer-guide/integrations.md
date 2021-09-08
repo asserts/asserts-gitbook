@@ -6,5 +6,5 @@ Logging
 
 Custom Dashboards
 
-Sentry?
+<span style="color:purple">Sentry?</span>. 
 
