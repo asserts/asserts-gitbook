@@ -1,10 +1,10 @@
 # Integrations
 
-**We integrate with Kibana for Logging**
++ We integrate with Kibana for Logging +
 
-Logging
+- Logging -
 
-Custom Dashboards
+! Custom Dashboards !
 
-<span style="color:purple">Sentry?</span>. 
+@@ Sentry? @@
 
