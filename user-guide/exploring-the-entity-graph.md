@@ -14,15 +14,15 @@ Keep in mind that the graph is constantly updated by the time-series data, so th
 
 When a user clicks on an entity, it also allows the user to navigate to its connected entities. Navigation can be done in both graph view and list view. If the graph gets busy, we can filter the displayed entities by clicking on the entity type in the legends.
 
-![](../.gitbook/assets/navigation%20%282%29.gif)
+![](../.gitbook/assets/navigation%20%283%29.gif)
 
 The list view also contains the monitoring status of each entity. This gives a high-level overview of what’s being automatically monitored by Asserts. Resource monitoring applies to both Services and Nodes, but traffic and latency monitoring usually only applies to Services.
 
-![](../.gitbook/assets/1568473089%20%281%29%20%281%29%20%282%29.png)
+![](../.gitbook/assets/1568473089%20%281%29%20%281%29%20%282%29%20%283%29.png)
 
 A bubble view is also provided to help the user to rank entities by requests, resources, or selected property. The user can even select multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus `yace` service here is having a CPU-related assertion.
 
-![](../.gitbook/assets/1567621144%20%281%29%20%282%29.png)
+![](../.gitbook/assets/1567621144%20%281%29%20%282%29%20%283%29.png)
 
 #### Entity assertion status <a id="HowAssertsWorks(WIP)-Entityassertionstatus"></a>
 
@@ -47,7 +47,7 @@ TODO: we are merging the two tabs into one, so need to get a new screenshot late
 
 A user can pull up the KPI dashboard for each entity in focus by clicking “Show KPI”. Asserts has curated a library of Grafana dashboards. Each entity type has its own dashboard, so we have a dashboard for Nodes and Services. Within the same entity type, say Service, if we know the service type, say Redis, we have a specific dashboard for that service type.
 
-![](../.gitbook/assets/dashboards%20%282%29%20%283%29%20%282%29.png)
+![](../.gitbook/assets/dashboards%20%282%29%20%283%29%20%282%29%20%283%29.png)
 
 Asserts keeps working on expanding this library. If a customer has their own dashboards, he/she can also integrate them into Asserts Web App.
 

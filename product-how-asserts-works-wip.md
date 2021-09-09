@@ -8,9 +8,7 @@ First, we inspect their labels to discover various entities and populate their p
 
 All these entities, properties, and relationships form a knowledge graph that describes our understanding of the system. They are also indexed to be easily searchable. The discovery process constantly updates the graph while at the same time keeps the history.
 
-TODO: a better entity graph, or perhaps a GIF? I moved the GIF to Navigation section below
-
-![](.gitbook/assets/1563492359.png)
+![](.gitbook/assets/image%20%281%29.png)
 
 ### Normalization <a id="HowAssertsWorks(WIP)-Normalization"></a>
 

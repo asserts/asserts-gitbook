@@ -1,8 +1,7 @@
 # Integrations
 
-+ We integrate with Kibana for Logging +
-
-- Logging -
+* We integrate with Kibana for Logging +
+* Logging -
 
 ! Custom Dashboards !
 

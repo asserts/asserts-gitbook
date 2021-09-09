@@ -33,7 +33,7 @@ Unlike assertions, SLOs are meant for capturing high-level business objectives. 
 
 TODO: find a better chart that has better burn-down details
 
-![](../.gitbook/assets/slos%20%282%29%20%282%29%20%284%29.png)
+![](../.gitbook/assets/slos%20%282%29%20%282%29%20%281%29%20%285%29.png)
 
 #### Incidents <a id="HowAssertsWorks(WIP)-Incidents"></a>
 
