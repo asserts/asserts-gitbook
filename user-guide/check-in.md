@@ -31,9 +31,7 @@ objectives:
 
 Unlike assertions, SLOs are meant for capturing high-level business objectives. The specification is designed to be declarative. Asserts takes care of how it is actually tracked and integrated into our assertion and alerting framework. The web app provides a list view of all the SLOs, along with their status, and the burndown chart of the error budget.
 
-TODO: find a better chart that has better burn-down details
-
-![](../.gitbook/assets/slos%20%282%29%20%282%29%20%281%29%20%285%29.png)
+![](../.gitbook/assets/image%20%282%29.png)
 
 #### Incidents <a id="HowAssertsWorks(WIP)-Incidents"></a>
 

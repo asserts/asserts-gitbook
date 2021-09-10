@@ -32,5 +32,3 @@ Similar to notifications, you can also choose a subset of assertions to suppress
 
 If you have your own set of rules, you can also bring them into the Asserts system by defining custom assertion rules. You can either add them one by one on the UI or upload a rule file.
 
-TODO: This screen looks like WIP
-
