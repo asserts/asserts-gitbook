@@ -1,6 +1,6 @@
 # Assertion Management
 
-### Thresholds
+## Thresholds
 
 Asserts has curated an assertion library pertaining to our SAAFE model. Internally they are a collection of Prometheus rules with user-configurable thresholds. We divide the threshold configuration into three sections and organize each section by assertion types
 
@@ -20,15 +20,15 @@ Besides the configuration for all the default thresholds, the user can also conf
 
 For resources, the hierarchy starts with `source`, i.e., the exporter, then `resource_type,` and then `container`. An additional dimension is `severity`, which is independent of the granularity levels.
 
-#### Notifications <a id="HowAssertsWorks(WIP)-Notifications"></a>
+### Notifications <a id="HowAssertsWorks(WIP)-Notifications"></a>
 
 As we mentioned earlier, assertions are not alerts. If you want to get notified, you can add notification rules. They are also organized into the same three sections like the thresholds, and the same hierarchical granularity levels apply. You can set notifications for an assertion whenever it fires, or when it fires on a certain job, or a certain job and request type. Free-form label conditions are also supported here.
 
-#### Suppressions <a id="HowAssertsWorks(WIP)-Suppressions"></a>
+### Suppressions <a id="HowAssertsWorks(WIP)-Suppressions"></a>
 
 Similar to notifications, you can also choose a subset of assertions to suppress, so they don’t even fire. Suppressed assertions are ignored in Asserts processing. They will not be available in Top Insights, Graph, or the Workbench. Note this is very different from an assertion that fires but does not notify.
 
-#### Additions <a id="HowAssertsWorks(WIP)-Additions"></a>
+### Additions <a id="HowAssertsWorks(WIP)-Additions"></a>
 
 If you have your own set of rules, you can also bring them into the Asserts system by defining custom assertion rules. You can either add them one by one on the UI or upload a rule file.
 

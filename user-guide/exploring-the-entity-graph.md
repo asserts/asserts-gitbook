@@ -1,6 +1,6 @@
 # Exploring the entity graph
 
-### Search
+## Search
 
 Asserts’s web app is built for cloud-scale. The best way to explore the entity graph is to use search expressions. We’ve shipped a default set of search expressions that cover common use cases. For example “Show all services”, “Show Assertions in Namespace”, etc.
 
@@ -10,7 +10,7 @@ Asserts’s web app is built for cloud-scale. The best way to explore the entity
 
 Keep in mind that the graph is constantly updated by the time-series data, so the search result represents the system's state in the specified time window. When you change the time, the search result may change too. In addition, search results are always filtered by the selection in `env` and `site` dropdown.
 
-#### Navigation <a id="HowAssertsWorks(WIP)-Navigation"></a>
+### Navigation <a id="HowAssertsWorks(WIP)-Navigation"></a>
 
 When a user clicks on an entity, it also allows the user to navigate to its connected entities. Navigation can be done in both graph view and list view. If the graph gets busy, we can filter the displayed entities by clicking on the entity type in the legends.
 
@@ -24,7 +24,7 @@ A bubble view is also provided to help the user to rank entities by requests, re
 
 ![](../.gitbook/assets/1567621144%20%281%29%20%282%29%20%283%29.png)
 
-#### Entity assertion status <a id="HowAssertsWorks(WIP)-Entityassertionstatus"></a>
+### Entity assertion status <a id="HowAssertsWorks(WIP)-Entityassertionstatus"></a>
 
 For each entity, two color-coded rings indicate the assertion status of the entity
 
@@ -43,7 +43,7 @@ TODO: we are merging the two tabs into one, so need to get a new screenshot late
 | :--- | :--- |
 
 
-#### Dashboards <a id="HowAssertsWorks(WIP)-Dashboards"></a>
+### Dashboards <a id="HowAssertsWorks(WIP)-Dashboards"></a>
 
 A user can pull up the KPI dashboard for each entity in focus by clicking “Show KPI”. Asserts has curated a library of Grafana dashboards. Each entity type has its own dashboard, so we have a dashboard for Nodes and Services. Within the same entity type, say Service, if we know the service type, say Redis, we have a specific dashboard for that service type.
 

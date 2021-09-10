@@ -106,12 +106,12 @@ Metrics can be dropped with **action: drop**. For example, the following relabel
 ```
 
 This relabeling rule drops the following metrics:  
- **foo{instance="foobar1"}**  
- **foo{instance="foobar2",job="xxx",aaa="bb"}**
+**foo{instance="foobar1"}**  
+**foo{instance="foobar2",job="xxx",aaa="bb"}**
 
 It doesn’t drop the following metrics:  
- **foo{instance="xxx"}**  
- **foo{instance="abc",job="xyz"}**
+**foo{instance="xxx"}**  
+**foo{instance="abc",job="xyz"}**
 
 Sometimes it is easier to specify metrics that needs to be preserved instead of metrics that needs to be dropped. In this case **action: keep** must be used:
 
@@ -121,8 +121,7 @@ Sometimes it is easier to specify metrics that needs to be preserved instead of 
   regex: "foobar"
 ```
 
-This relabeling rule preserves metrics with **job** label equal to **foobar**, while other metrics will be dropped.  
-
+This relabeling rule preserves metrics with **job** label equal to **foobar**, while other metrics will be dropped.
 
 How to drop metrics if they contain certain values for multiple labels? Just enumerate these labels in **source\_labels** and then specify the desired **regex**. Then **source\_labels** contains multiple labels, they are concatenated with **;** char before matching the provided **regex**. For example, the following relabeling rule would drop metric with **{job="foo",instance="bar"}** labels:
 
@@ -181,7 +180,7 @@ Suppose a metric has **host** and **port** labels, while you need constructing *
 
 This relabeling rule joins **host** and **port** label values with **:** separator and stores the result at **target\_label**.
 
-Sometimes it is necessary to construct a label from parts of existing labels. For example, the **url** label with **http://hostname/path** value must be constructed from **address** and **path** labels, where **address** contains **hostname:port**. This can be done with the following relabeling rule:
+Sometimes it is necessary to construct a label from parts of existing labels. For example, the **url** label with [http://hostname/path](http://hostname/path) value must be constructed from **address** and **path** labels, where **address** contains **hostname:port**. This can be done with the following relabeling rule:
 
 ```yaml
 - source_labels: [address, path]
@@ -190,7 +189,7 @@ Sometimes it is necessary to construct a label from parts of existing labels. Fo
   target_label: "url"
 ```
 
-By default **source\_labels** are joined with **;** separator before applying **regex** to the resulting string. So the resulting string will contain **address:port;path** value. The given **regex** matches this string and extracts **address** and **path** parts into **$1** and **$2**. Then these values are used for constructing **replacement** string in the form **http://&lt;address&gt;/&lt;path&gt;**. Then the resulting string is written into **target\_label**.
+By default **source\_labels** are joined with **;** separator before applying **regex** to the resulting string. So the resulting string will contain **address:port;path** value. The given **regex** matches this string and extracts **address** and **path** parts into **$1** and **$2**. Then these values are used for constructing **replacement** string in the form [http://&lt;address&gt;/&lt;path&gt](http://<address>/<path&gt)**;**. Then the resulting string is written into **target\_label**.
 
 ## Chaining relabeling rules <a id="_chaining_relabeling_rules"></a>
 

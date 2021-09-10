@@ -16,5 +16,3 @@ The timeline view is not the only view option. A user can also choose the graph 
 
 Mindmap view provides a way to walk down the assertions by categories and assertion types, instead of by entities. This view helps to spot the common problem across many different entities.
 
-###  <a id="HowAssertsWorks(WIP)-AssertionManagement"></a>
-

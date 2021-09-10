@@ -40,24 +40,19 @@ Asserts curates knowledge of common runtime failure patterns and potential cause
 
 ![](.gitbook/assets/1.png)
 
-#### 
-
 ### **Explore with Unified Search**
 
 With our unified search, you can combine components, relations, configurations, and associated assertions to express your intent in an easy natural language expression.
 
-· _e.g.,_ Search “pods with cpu limits crashing” 
+· _e.g.,_ Search “pods with cpu limits crashing”
 
 ![](.gitbook/assets/2.png)
-
-### 
 
 ### **Troubleshoot in Workbench with all the Assertions**
 
 You can use the same search expression in our workbench and jump right in to view all the assertions correlated across time and space, with just the right metrics at your fingertip.
 
-· _e.g.,_ an amend \(new deployment\) triggered a spike in error rate caused by a memory saturation. Click \`View Logs\` to see contextual logs in your existing log store.  
-
+· _e.g.,_ an amend \(new deployment\) triggered a spike in error rate caused by a memory saturation. Click \`View Logs\` to see contextual logs in your existing log store.
 
 ![](.gitbook/assets/3.png)
 

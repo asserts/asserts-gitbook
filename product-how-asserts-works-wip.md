@@ -2,7 +2,7 @@
 
 As an Asserts customer, all you need to do is to forward your Prometheus metrics to Asserts. This can be done with a simple remote write config. Once the metrics are in Asserts land, a few things happen.
 
-### Discovery <a id="HowAssertsWorks(WIP)-Discovery"></a>
+## Discovery <a id="HowAssertsWorks(WIP)-Discovery"></a>
 
 First, we inspect their labels to discover various entities and populate their properties. In addition, we deduce the relationships between them by matching their properties or matching against certain metrics that directly establish relations. As a result, we can determine which pod is hosted on which node, which pods form a service, and how services call each other.
 
@@ -10,7 +10,7 @@ All these entities, properties, and relationships form a knowledge graph that de
 
 ![](.gitbook/assets/image%20%281%29.png)
 
-### Normalization <a id="HowAssertsWorks(WIP)-Normalization"></a>
+## Normalization <a id="HowAssertsWorks(WIP)-Normalization"></a>
 
 Secondly, Asserts has curated a set of rules to normalize the incoming heterogeneous time series into a set of essential metrics, like RED metrics \(Request, Error, Duration\) for application components, and utilization metrics for infrastructure components.
 
@@ -41,7 +41,7 @@ We add labels like `asserts_request_type`, `asserts_error_type`, etc., to indica
 
 If a customer has metrics from multiple environments \(dev, stage, prod\), or multiple sites \(region, data center, etc\), he/she can use a combination of external labels and relabeling rules to add `asserts_env` and `asserts_site` labels to scope metrics and thus entities discovered from them. Asserts provides `env` and `site` dropdown filters in the Web App to segment the graph into different environments and sites, while at the same time still keep everything in a single graph to facilitate cross-environment/site correlation or comparison.
 
-### Assertion <a id="HowAssertsWorks(WIP)-Assertion"></a>
+## Assertion <a id="HowAssertsWorks(WIP)-Assertion"></a>
 
 We then apply our extensive domain knowledge to instrument these normalized metrics. Out-of-box we automatically instrument application frameworks like Springboot, Flask, Loopback, etc, infrastructure components like Kubernetes resources, 3rd party services like Redis server, Kafka cluster, and many more.
 
@@ -57,7 +57,7 @@ Assertions thus become condensed time-series data that only capture important ev
 
 Assertions are different from traditional alerts, as they are not meant to be used to notify on-call personnel. They are more like vital signs surfaced automatically by Asserts, and ready to be used in troubleshooting. Sure enough, customers can choose to subscribe to selected assertions and fulfill their role as traditional alerts.
 
-### Correlation <a id="HowAssertsWorks(WIP)-Correlation"></a>
+## Correlation <a id="HowAssertsWorks(WIP)-Correlation"></a>
 
 Asserts’s story doesn’t stop with automatic instrumentation. Once assertions arise, we do a few more things
 
@@ -65,6 +65,4 @@ Asserts’s story doesn’t stop with automatic instrumentation. Once assertions
 * we enrich the assertions with context information from the graph. For example, an assertion that happened on a pod can be tagged back to the node and service the pod belongs to. This allows assertions that happened on ephemeral entities \(pods\) to bubble up to long-lived entities \(nodes, services\), thus forming an aggregated view with a continuous timeline.
 
 Since assertions are condensed and contextualized, they are much faster to query and aggregate, much easier to correlate or rank, thus enabling quick and precise root cause analysis.
-
-
 
