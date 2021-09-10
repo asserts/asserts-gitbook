@@ -1,9 +1,10 @@
 # Integrations
+```diff
++ We integrate with Kibana for Logging
 
-* We integrate with Kibana for Logging +
-* Logging -
+- Logging
 
-! Custom Dashboards !
+! Custom Dashboards
 
 @@ Sentry? @@
-
+```
