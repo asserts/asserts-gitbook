@@ -19,6 +19,5 @@
 ## Developer Guide
 
 * [Integrations](developer-guide/integrations.md)
-* [Relabeling](developer-guide/relabeling/README.md)
-  * [SSO](developer-guide/relabeling/sso.md)
+* [Relabeling](developer-guide/relabeling.md)
 
