@@ -3,6 +3,7 @@
 * [Asserts](README.md)
 * [A New Age For Time-Series Data](a-new-age-for-time-series-data.md)
 * [How Asserts Processes Data](product-how-asserts-works-wip.md)
+* [Understanding SAAFE Model](understanding-saafe-model.md)
 
 ## Quickstart Guide
 
