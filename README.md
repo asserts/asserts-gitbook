@@ -66,5 +66,5 @@ _e.g.,_ an amend \(new deployment\) on `api-server`triggered a spike in error ra
 
 The SRE book recommends [Alerting on SLOs](https://sre.google/workbook/alerting-on-slos/), and with Asserts setting up your SLOs and tracking your error budget is a breeze. And then finding the symptoms is just a click away in our workbench.
 
-![](.gitbook/assets/slo-graph-freshness.png)
+![](.gitbook/assets/screen-shot-2021-09-17-at-1.26.13-am.png)
 
