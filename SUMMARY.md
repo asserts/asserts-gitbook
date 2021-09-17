@@ -21,3 +21,7 @@
 * [Integrations](developer-guide/integrations.md)
 * [Relabeling](developer-guide/relabeling.md)
 
+---
+
+* [Assertion Catalog](cloud-platforms.md)
+
