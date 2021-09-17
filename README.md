@@ -60,7 +60,7 @@ You can use the same search expression in our workbench and jump right in to vie
 
 _e.g.,_ an amend \(new deployment\) on `api-server`triggered a spike in error rate on an endpoint `/slo/incidents`. Jump to `Dashboard` or `View Logs` to see contextual logs in your existing log store.
 
-![](.gitbook/assets/screen-shot-2021-09-16-at-11.14.22-pm.png)
+![](.gitbook/assets/screen-shot-2021-09-17-at-12.38.03-am.png)
 
 ### **Wake up when it matters**
 
