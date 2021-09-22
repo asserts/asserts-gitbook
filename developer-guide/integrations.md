@@ -22,7 +22,11 @@ Asserts can integrate with any log aggregation tool. Currently log integration i
 
 **Index** The index id. This is applicable only for **Kibana**
 
+## Kibana
+
 ![Kibana Configuration](../.gitbook/assets/screenshot-2021-09-22-at-6.22.43-pm.png)
+
+## Graylog
 
 ![Graylog configuration](../.gitbook/assets/screenshot-2021-09-22-at-6.05.04-pm.png)
 
