@@ -35,7 +35,7 @@ Out of the box, Asserts detect the following amends
 * Scaling events like node count change, pod count change
 * Other domain-specific change events like shard rebalancing in elastic search, config reload in Nginx, etc
 
-![](.gitbook/assets/image-2021-09-15-10-39-56.png)
+![](.gitbook/assets/screen-shot-2021-09-21-at-5.58.51-pm.png)
 
 As we expand our domain coverage, we expect to include more amend assertions in the future.
 
@@ -72,7 +72,11 @@ Sometimes things could go wrong, and as they happen, catastrophic damage may ens
 sum by (job) (kafka_controller_kafkacontroller_activecontrollercount) != 1
 ```
 
-Failure assertions are highly domain-specific, so the list of failure assertion names is long. They come directly from our understanding of all the basic building blocks of modern cloud-native applications. We've curated a rich list of failure conditions that cover Kubernetes, Flux, Elastic Search, Kafka, MySql, Postgres, Nginx,  Redis, Traefik, and many more, and we continue to expand our coverage as time goes by.
+Failure assertions are highly domain-specific, so the list of failure assertion names is long. They come directly from our understanding of all the basic building blocks of modern cloud-native applications. We've curated a rich list of failure conditions that cover Kubernetes, Flux, Elastic Search, Kafka, MySql, Postgres, Nginx,  Redis, Traefik, and many more, and we continue to expand our coverage as time goes by.  
+  
+Here is an example of Service Failures \(and Errors\) triggered by Traffic Spike.  
+
+![](.gitbook/assets/screen-shot-2021-09-21-at-7.02.03-pm.png)
 
 ## Error
 
