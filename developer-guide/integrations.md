@@ -1,9 +1,9 @@
 # Integrations
 
-* We integrate with Kibana for Logging +
-* Logging -
+* View Logs - Kibana & Graylog
+* Import Dashboards and Link to Entity Graph 
 
-! Custom Dashboards !
 
-@@ Sentry? @@
+
+
 
