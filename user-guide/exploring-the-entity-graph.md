@@ -4,6 +4,8 @@
 
 Asserts’s web app is built for cloud-scale. The best way to explore the entity graph is to use search expressions. We’ve shipped a default set of search expressions that cover common use cases. For example "Show Service api-server", “Show all services”, “Show Assertions in Namespace”, etc.
 
+![](../.gitbook/assets/screen-shot-2021-09-21-at-8.54.42-pm.png)
+
 “Advanced search” panel provides more advanced search functions like search by property conditions, show connected entities, etc. These searches can provide context-rich shortcuts to a group of entities that a user wants to look at as a whole.
 
 ![](../.gitbook/assets/screen-shot-2021-09-21-at-8.32.21-pm.png)
@@ -18,9 +20,9 @@ When a user clicks on an entity, it also allows the user to navigate to its conn
 
 The list view also contains the monitoring status of each entity. This gives a high-level overview of what’s being automatically monitored by Asserts. Resource monitoring applies to both Services and Nodes, but traffic and latency monitoring usually only applies to Services.
 
-![](../.gitbook/assets/1568473089%20%281%29%20%281%29%20%282%29%20%283%29.png)
+![](../.gitbook/assets/screen-shot-2021-09-22-at-12.44.28-am.png)
 
-A bubble view is also provided to help the user to rank entities by requests, resources, or selected property. The user can even select multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus `yace` service here is having a CPU-related assertion.
+A bubble view is also provided to help the user to rank entities by requests, resources, or selected property  from `View Settings`![](../.gitbook/assets/screen-shot-2021-09-22-at-1.31.16-am.png) . The user can even select multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus `yace` service here is having a CPU-related assertion.
 
 ![](../.gitbook/assets/1567621144%20%281%29%20%282%29%20%283%29.png)
 
@@ -37,7 +39,7 @@ Red highlights CRITICAL, Yellow indicates WARNING, and Blue is for INFO. As a ru
 
 The following example shows a node that has a critical CPU load on itself, while at the same time, one of the pods hosted on it is experiencing CPU Throttle.
 
-TODO: we are merging the two tabs into one, so need to get a new screenshot later. See [CH ticket](https://app.clubhouse.io/asserts/story/7506/failure-assertions-show-up-in-self-instead-of-connected)
+Note: we are merging the two tabs into one in an upcoming release
 
 | ![](../.gitbook/assets/1562017793%20%281%29%20%281%29.png) | ![](../.gitbook/assets/1562050561.png) |
 | :--- | :--- |
@@ -45,9 +47,13 @@ TODO: we are merging the two tabs into one, so need to get a new screenshot late
 
 #### Dashboards <a id="HowAssertsWorks(WIP)-Dashboards"></a>
 
-A user can pull up the KPI dashboard for each entity in focus by clicking “Show KPI”. Asserts has curated a library of Grafana dashboards. Each entity type has its own dashboard, so we have a dashboard for Nodes and Services. Within the same entity type, say Service, if we know the service type, say Redis, we have a specific dashboard for that service type.
+A user can pull up the KPI dashboard for each entity in focus by clicking “Show KPI”. Asserts has curated a library of Grafana dashboards. Each entity type has its own dashboard, so we have a dashboard for Cluster, NodeGroups, Nodes,  Pods, Services et al. 
 
-![](../.gitbook/assets/dashboards%20%282%29%20%283%29%20%282%29%20%283%29.png)
+![](../.gitbook/assets/screen-shot-2021-09-22-at-1.12.01-am.png)
 
-Asserts keeps working on expanding this library. If a customer has their own dashboards, he/she can also integrate them into Asserts Web App.
+Within the same entity type, say Service, if we know the service type, say `Nginx`, we also have a specific dashboard for that service type.
+
+![](../.gitbook/assets/screen-shot-2021-09-22-at-1.12.39-am.png)
+
+Asserts keeps working on expanding this library. If a customer has their own grafana dashboards, he/she can also integrate them into Asserts Web App.
 
