@@ -1,6 +1,6 @@
 # Integrations
 
-### Log Integration
+## Log Integration
 
 When doing RCA in the workbench, one can pick a specific time-window when a problem occurred and directly jump to see the logs for that component in that time window.  
 
@@ -8,7 +8,7 @@ When doing RCA in the workbench, one can pick a specific time-window when a prob
 
 Asserts can integrate with any log aggregation tool. Currently log integration is supported for **Kibana** and **Graylog**
 
-### Log Configurations
+## Log Configuration
 
 **Environment** The environment for which this configuration is applicable
 
