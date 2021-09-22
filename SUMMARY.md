@@ -14,7 +14,7 @@
 * [Check-in](user-guide/check-in.md)
 * [Assertion Management](user-guide/assertion-management.md)
 * [RCA with the Workbench](user-guide/rca-with-the-workbench.md)
-* [Exploring the entity graph and KPI](user-guide/exploring-the-entity-graph.md)
+* [Exploring the entity graph](user-guide/exploring-the-entity-graph.md)
 
 ## Developer Guide
 

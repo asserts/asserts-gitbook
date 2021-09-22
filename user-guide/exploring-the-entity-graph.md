@@ -1,4 +1,4 @@
-# Exploring the entity graph and KPI
+# Exploring the entity graph
 
 ### Search
 
