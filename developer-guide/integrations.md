@@ -10,7 +10,7 @@ Asserts can integrate with any log aggregation tool. Currently log integration i
 
 ## Log Configuration
 
-**Environment** The environment for which this configuration is applicable
+**Environment** The environment for which the configuration is applicable
 
 **URL** The base URL of the log analytics UI
 
