@@ -1,12 +1,12 @@
-# Exploring the entity graph
+# Exploring the entity graph and KPI
 
 ### Search
 
-Asserts’s web app is built for cloud-scale. The best way to explore the entity graph is to use search expressions. We’ve shipped a default set of search expressions that cover common use cases. For example “Show all services”, “Show Assertions in Namespace”, etc.
+Asserts’s web app is built for cloud-scale. The best way to explore the entity graph is to use search expressions. We’ve shipped a default set of search expressions that cover common use cases. For example "Show Service api-server", “Show all services”, “Show Assertions in Namespace”, etc.
 
 “Advanced search” panel provides more advanced search functions like search by property conditions, show connected entities, etc. These searches can provide context-rich shortcuts to a group of entities that a user wants to look at as a whole.
 
-![](../.gitbook/assets/1561493511.png)
+![](../.gitbook/assets/screen-shot-2021-09-21-at-8.32.21-pm.png)
 
 Keep in mind that the graph is constantly updated by the time-series data, so the search result represents the system's state in the specified time window. When you change the time, the search result may change too. In addition, search results are always filtered by the selection in `env` and `site` dropdown.
 
