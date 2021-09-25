@@ -16,7 +16,7 @@ Asserts has curated an assertion library pertaining to our SAAFE model. Internal
 
 Besides the configuration for all the default thresholds, the user can also configure individual thresholds on fine-grained levels. These levels are hierarchical. For requests, if you specify a threshold on `job` level, it applies to all the request types for that job. Similarly, if you specify a threshold on `request_type` level, it applies to all the request contexts for that request type and job.
 
-![](../.gitbook/assets/1573322759%20%281%29%20%281%29%20%282%29%20%281%29.png)
+![](../.gitbook/assets/1573322759%20%281%29%20%281%29%20%282%29%20%283%29%20%281%29.png)
 
 For resources, the hierarchy starts with `source`, i.e., the exporter, then `resource_type,` and then `container`. An additional dimension is `severity`, which is independent of the granularity levels.
 

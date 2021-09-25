@@ -16,7 +16,7 @@ Keep in mind that the graph is constantly updated by the time-series data, so th
 
 When a user clicks on an entity, it also allows the user to navigate to its connected entities. Navigation can be done in both graph view and list view. If the graph gets busy, we can filter the displayed entities by clicking on the entity type in the legends.
 
-![](../.gitbook/assets/navigation%20%283%29.gif)
+![](../.gitbook/assets/navigation%20%283%29%20%283%29.gif)
 
 The list view also contains the monitoring status of each entity. This gives a high-level overview of what’s being automatically monitored by Asserts. Resource monitoring applies to both Services and Nodes, but traffic and latency monitoring usually only applies to Services.
 
@@ -24,7 +24,7 @@ The list view also contains the monitoring status of each entity. This gives a h
 
 A bubble view is also provided to help the user to rank entities by requests, resources, or selected property  from `View Settings`![](../.gitbook/assets/screen-shot-2021-09-22-at-1.31.16-am.png) . The user can even select multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus `yace` service here is having a CPU-related assertion.
 
-![](../.gitbook/assets/1567621144%20%281%29%20%282%29%20%283%29.png)
+![](../.gitbook/assets/1567621144%20%281%29%20%282%29%20%283%29%20%283%29.png)
 
 #### Entity assertion status <a id="HowAssertsWorks(WIP)-Entityassertionstatus"></a>
 
