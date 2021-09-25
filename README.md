@@ -58,7 +58,7 @@ With our always-on Assertions, you don’t have to wait for Alerts to fire and S
 
 You can use the same search expression in our workbench and jump right in to view all the assertions correlated across time and space, with just the right metrics at your fingertip.
 
-_e.g.,_ an amend \(new deployment\) on `api-server`triggered a spike in error rate on an endpoint `/slo/incidents`. Jump to `Dashboard` or `View Logs` to see contextual logs in your existing log store.
+_e.g.,_ an amend \(new deployment\) on `api-server`triggered a spike in error rate on an endpoint `/slo/incidents`. Jump to `Dashboard` or `View Logs` to see contextual logs in your existing log store, like Kibana, Graylog, et al.
 
 ![](.gitbook/assets/screen-shot-2021-09-17-at-12.38.03-am.png)
 
