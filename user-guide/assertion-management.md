@@ -24,11 +24,17 @@ For resources, the hierarchy starts with `source`, i.e., the exporter, then `res
 
 As we mentioned earlier, assertions are not alerts. If you want to get notified, you can add notification rules. They are also organized into the same three sections like the thresholds, and the same hierarchical granularity levels apply. You can set notifications for an assertion whenever it fires, or when it fires on a certain job, or a certain job and request type. Free-form label conditions are also supported here.
 
+![](../.gitbook/assets/screen-shot-2021-09-22-at-10.53.12-am.png)
+
 #### Suppressions <a id="HowAssertsWorks(WIP)-Suppressions"></a>
 
 Similar to notifications, you can also choose a subset of assertions to suppress, so they don’t even fire. Suppressed assertions are ignored in Asserts processing. They will not be available in Top Insights, Graph, or the Workbench. Note this is very different from an assertion that fires but does not notify.
 
+![](../.gitbook/assets/screen-shot-2021-09-22-at-10.48.12-am.png)
+
 #### Additions <a id="HowAssertsWorks(WIP)-Additions"></a>
 
 If you have your own set of rules, you can also bring them into the Asserts system by defining custom assertion rules. You can either add them one by one on the UI or upload a rule file.
+
+![](../.gitbook/assets/screen-shot-2021-09-22-at-12.04.38-pm.png)
 
