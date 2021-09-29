@@ -11,6 +11,10 @@ You can get started by adding _remote-write_ to Asserts cloud in your _prometheu
 Here’s an example Prometheus remote write configuration:
 
 ```yaml
+global:
+  external_labels:
+    asserts_tenant: your-tenant-name
+    
 remote_write:
  - url: https://your-tenant-name.tsdb.asserts.ai/insert/0/prometheus/
    basic_auth:
