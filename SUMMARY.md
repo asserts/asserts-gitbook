@@ -20,6 +20,7 @@
 
 * [Integrations](developer-guide/integrations.md)
 * [Relabeling](developer-guide/relabeling.md)
+* [Monitoring as a Code](developer-guide/monitoring-as-a-code.md)
 
 ---
 

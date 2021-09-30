@@ -66,5 +66,5 @@ _e.g.,_ an amend \(new deployment\) on `api-server`triggered a spike in error ra
 
 The SRE book recommends [Alerting on SLOs](https://sre.google/workbook/alerting-on-slos/), and with Asserts setting up your Service Level Objectives and tracking your error budget is a breeze. And then viewing the associated causes in our workbench is just a click away.
 
-![](.gitbook/assets/screen-shot-2021-09-24-at-5.27.39-pm.png)
+![](.gitbook/assets/screen-shot-2021-09-30-at-9.19.41-am.png)
 
