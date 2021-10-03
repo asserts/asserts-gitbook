@@ -34,7 +34,7 @@ Our [cloud component catalog](cloud-platforms.md) is constantly evolving.
 
 Asserts curates knowledge of common runtime failure patterns and potential causes, so your team doesn’t have to research and maintain these rules.
 
-It continuously tracks resource _**Saturation**_, _**Amends**_ \(new deployments, scale events et al.\), request & latency _**Anomalies**_, systemic _**Failures**_, and _**Errors**_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals) and health metrics.
+It continuously tracks resource _**Saturation**_**s**, _**Amends**_ \(new deployments, scale events et al.\), request & latency _**Anomalies**_, systemic _**Failures**_, and _**Errors**_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals) and health metrics.
 
 The occurrences of these assertions are annotated on the \(Knowledge\) Graph, so it is easy to consume at a glance. 
 
@@ -48,23 +48,26 @@ _e.g.,_ Search “Pods `crashing` on Nodes with high `cpu:load`”
 
 ![](.gitbook/assets/screen-shot-2021-09-16-at-11.34.26-pm.png)
 
+### **Wake up when it matters**
+
+The SRE book recommends [Alerting on Service Level Objectives \(SLO\)](https://sre.google/workbook/alerting-on-slos/), to track`"what's broken"`and with Asserts setting up your SLOs and tracking your error budget is a breeze. And then finding "why it's broken" is just a click away in our Assertion workbench.
+
+![](.gitbook/assets/screen-shot-2021-09-30-at-9.19.41-am.png)
+
 ### **Spot issues quickly with Top Insights**
 
-With our always-on Assertions, you don’t have to wait for Alerts to fire and SLOs to breach. Top Insights presents a stack-ranked view of Services that need attention based on their _assertion score_.
+With our always-on Assertions, you don’t have to wait for SLOs to breach and Alerts to fire. Top Insights presents a stack-ranked view of Services / Nodes that need attention based on their `assertion score`.   
+And then `Open in Workbench` to find the root cause.
 
 ![](.gitbook/assets/screen-shot-2021-09-17-at-12.32.50-am.png)
 
 ### **Troubleshoot in Workbench with all the Assertions**
 
-You can use the same search expression in our workbench and jump right in to view all the assertions correlated across time and space, with just the right metrics at your fingertip.
+In our assertion workbench, dig in to view all the possible causes correlated across time and space, with just the right metrics and logs at your fingertip.
 
 _e.g.,_ an amend \(new deployment\) on `api-server`triggered a spike in error rate on an endpoint `/slo/incidents`. Jump to `Dashboard` or `View Logs` to see contextual logs in your existing log store, like Kibana, Graylog, et al.
 
 ![](.gitbook/assets/screen-shot-2021-09-17-at-12.38.03-am.png)
 
-### **Wake up when it matters**
-
-The SRE book recommends [Alerting on Service Level Objectives \(SLO\)](https://sre.google/workbook/alerting-on-slos/), to track`"what's broken"`and with Asserts setting up your SLOs and tracking your error budget is a breeze. And then viewing the possible causes in our Assertion workbench is just a click away.
-
-![](.gitbook/assets/screen-shot-2021-09-30-at-9.19.41-am.png)
+### \*\*\*\*
 
