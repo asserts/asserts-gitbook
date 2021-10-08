@@ -74,7 +74,7 @@ sum by (job) (kafka_controller_kafkacontroller_activecontrollercount) != 1
 
 Failure assertions are highly domain-specific, so the list of failure assertion names is long. They come directly from our understanding of all the basic building blocks of modern cloud-native applications. We've curated a rich list of failure conditions that cover Kubernetes, Flux, Elastic Search, Kafka, MySql, Postgres, Nginx,  Redis, Traefik, and many more, and we continue to expand our coverage as time goes by.  
   
-Here is an example of `failures` \(Pod Crashes\) triggered by Traffic Spike detected via request `anomaly` assertion.  
+Here is an example of `failures` \(pod crash looping\) triggered by Traffic Spike detected via request `anomaly` assertion.  
 
 ![](.gitbook/assets/screen-shot-2021-09-21-at-7.02.03-pm.png)
 
