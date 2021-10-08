@@ -52,9 +52,9 @@ asserts:request:rate5m > asserts:request:rate5m:anomaly_upper_threshold)
 unless asserts:request:erratic_and_sparse > 0
 ```
 
-Resource consumption is often tied to request rate, so it's not uncommon to see them happening at the same time.
+An example of change detected by an `amend` assertion triggering a latency spike, an `anomaly` assertion on rule-engine service
 
-![](.gitbook/assets/image%20%283%29.png)
+![](.gitbook/assets/screen-shot-2021-10-08-at-4.34.05-pm.png)
 
 For these anomaly assertions, customers do not need to provide much input on thresholds, but they can customize the size of the range and the sensitivity for detecting sparse requests.
 
