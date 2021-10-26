@@ -4,9 +4,9 @@
 
 When doing RCA in the workbench, one can pick a specific time-window when a problem occurred and directly jump to see the logs for that component in that time window. &#x20;
 
-![View Logs in the context of a problem](../.gitbook/assets/screenshot-2021-09-22-at-6.15.03-pm.png)
-
 Asserts can integrate with any log aggregation tool. Currently log integration is supported for **Kibana** and **Graylog**
+
+![View Logs for the error timeline](<../.gitbook/assets/Screenshot 2021-10-26 at 2.04.41 PM.png>)
 
 ## Log Configuration
 
