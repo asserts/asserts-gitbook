@@ -4,7 +4,7 @@
 
 When doing RCA in the workbench, one can pick a specific time-window when a problem occurred and directly jump to see the logs for that component in that time window. &#x20;
 
-Asserts can integrate with any log aggregation tool. Currently log integration is supported for **Kibana** and **Graylog**
+Currently log integration is supported for **Kibana** and **Graylog**
 
 ![View logs for the exact problem window](<../.gitbook/assets/Screenshot 2021-10-26 at 2.08.19 PM.png>)
 
@@ -18,15 +18,17 @@ Asserts can integrate with any log aggregation tool. Currently log integration i
 
 **Error Filter ** Search text to identify error messages. For e.g. _log\_level: ERROR. _This will be automatically added when viewing logs for **errors**
 
-**Correlation labels **The set of labels whose values are available as fields in the log message and optionally the mapping of these alert labels to log fields through the **Label to Log Field Mapping**. This is a very powerful feature which enables a precise correlation for the specific component. You can use any field that is present both in the alert and the log message.
+**Correlation labels **The set of labels whose values are available as fields in the log message.
+
+**Label to Log Field Mapping (optional) **Optionally, the correlation labels can be mapped to the log fields to enable a precise search of logs related to the component, problem and time-window.&#x20;
 
 **Index** The index id. This is applicable only for **Kibana**
 
 ## Kibana
 
-![](<../.gitbook/assets/Screenshot 2021-10-21 at 11.42.27 AM.png>)
+![Kibana Configuration to a custom Kibana Service](<../.gitbook/assets/Screenshot 2021-10-21 at 11.42.27 AM.png>)
 
 ## Graylog
 
-![](<../.gitbook/assets/Screenshot 2021-10-21 at 11.44.50 AM.png>)
+![Graylog Configruation to a custom Graylog Service](<../.gitbook/assets/Screenshot 2021-10-21 at 11.44.50 AM.png>)
 

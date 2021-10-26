@@ -12,7 +12,7 @@ Here we rank services by their weighted assertion score and present a thumbnail 
 
 For a more hands-on approach, users can define SLOs based on our normalized metrics or their own metrics. For example, an SLO specification can be defined like the following and posted to our API endpoint or through our configuration UI.
 
-**API**
+**SLO Definition API**
 
 ```
 apiVersion: asserts/v1
@@ -31,15 +31,17 @@ objectives:
       days: 7
 ```
 
-**UI**
+**SLO Definition UI**
 
 ![](<../.gitbook/assets/Screenshot 2021-10-26 at 2.13.36 PM.png>)
 
-
+**SLO List Page**
 
 Unlike assertions, SLOs are meant for capturing high-level business objectives. The specification is designed to be declarative. Asserts takes care of how it is actually tracked and integrated into our assertion and alerting framework. The SLO list page lists all the SLOs along with their status and summary of budget utilization and incidents.
 
 ![List of SLOs with their budget utilization, incident status and summary](<../.gitbook/assets/Screenshot 2021-10-26 at 3.30.33 PM.png>)
+
+**SLO Burndown and Incident Timeline**
 
 Clicking an SLO Objective navigates to a view that shows the error budget burndown and the underlying metric. Occurrences of incidents are highlighted on the timeline. Clicking a highlighted incident will show the incident duration and budget burndown. The tooltip has a navigation to go to the **TopInsights **view using the search expression provided in the SLO definition and the time window of the incident
 
