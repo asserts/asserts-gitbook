@@ -37,7 +37,11 @@ objectives:
 
 
 
-Unlike assertions, SLOs are meant for capturing high-level business objectives. The specification is designed to be declarative. Asserts takes care of how it is actually tracked and integrated into our assertion and alerting framework. The web app provides a list view of all the SLOs, along with their status, and the burndown chart of the error budget.
+Unlike assertions, SLOs are meant for capturing high-level business objectives. The specification is designed to be declarative. Asserts takes care of how it is actually tracked and integrated into our assertion and alerting framework. The SLO list page lists all the SLOs along with their status and summary of budget utilization and incidents.
+
+![List of SLOs with their budget utilization, incident status and summary](<../.gitbook/assets/Screenshot 2021-10-26 at 3.30.33 PM.png>)
+
+Clicking an SLO Objective navigates to a view that shows the error budget burndown and the underlying metric. Occurrences of incidents are highlighted on the timeline. Clicking a highlighted incident will show the incident duration and budget burndown. The tooltip has a navigation to go to the **TopInsights **view using the search expression provided in the SLO definition and the time window of the incident
 
 ![](../.gitbook/assets/screen-shot-2021-09-30-at-4.37.17-pm.png)
 
