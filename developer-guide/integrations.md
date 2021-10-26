@@ -6,7 +6,7 @@ When doing RCA in the workbench, one can pick a specific time-window when a prob
 
 Asserts can integrate with any log aggregation tool. Currently log integration is supported for **Kibana** and **Graylog**
 
-![View Logs for the error timeline](<../.gitbook/assets/Screenshot 2021-10-26 at 2.04.41 PM.png>)
+![View logs for the exact problem window](<../.gitbook/assets/Screenshot 2021-10-26 at 2.08.19 PM.png>)
 
 ## Log Configuration
 
