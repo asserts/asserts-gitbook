@@ -33,7 +33,9 @@ objectives:
 
 **SLO Definition UI**
 
-![](<../.gitbook/assets/Screenshot 2021-10-26 at 2.13.36 PM.png>)
+![Example Request SLO for availability](<../.gitbook/assets/Screenshot 2021-10-26 at 2.13.36 PM.png>)
+
+![Example Occurrence SLO for latency ](<../.gitbook/assets/Screenshot 2021-10-26 at 4.37.02 PM.png>)
 
 **SLO List Page**
 
