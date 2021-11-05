@@ -117,8 +117,8 @@ These assertions complement each other, but they sometimes overlap.
 In addition, we've also expanded the concept of errors to latency. Even though we have latency anomaly assertions already, we understand latency impacts user experience. When a user-facing request latency is big enough, we'd like to treat it as an error condition. Latency distribution is known to have long tails, so Asserts tries not to miss out by building a couple of different assertions:
 
 * _LatencyAverageBreach_  is to capture the overall elevated latency
-* P99 latency represents the long tail. Unlike the average measurement, the underlying requests for P99 latency are  usually sporadic, so we implemented two:
-  * _LatencyP99Breach_ is to capture sudden spikes
-  * _LatencyP99ErrorBuildup_ is to capture chronic violations
+* _LatencyP99ErrorBuildup_ is to capture chronic deterioation of latency. Unlike the average measurement, the underlying requests for P99 latency are usually sporadic, so we use the same fast build-up approach as what is used for _ErrorBuildup_.&#x20;
+
+![](<.gitbook/assets/image (6).png>)
 
 Because these are to capture user experience impact, they are all deemed critical.&#x20;
