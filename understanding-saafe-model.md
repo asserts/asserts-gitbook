@@ -2,7 +2,7 @@
 
 Existing taxonomies for time-series data ([the four golden signals](https://sre.google/sre-book/monitoring-distributed-systems/), [the RED method](https://www.weave.works/blog/the-red-method-key-metrics-for-microservices-architecture/), or [the USE method](https://www.brendangregg.com/usemethod.html), etc.) are most concerned about the nature of each type of data. Asserts's terminology is slightly different, as we aspire to help our customers to focus on what they imply, not where they come from. Upon receiving raw time-series data, Asserts platform instruments them with our domain knowledge, surfaces key insights as _assertions_, and provides a UI to facilitate the use of assertions for monitoring and troubleshooting.&#x20;
 
-Hence, based on what they imply for the system, assertions are categorized in a SAAFE model: _Saturation_, _Amend_, _Anomaly_, _Failure,_ and _Error_. They may belong to three different severity levels: _info_, _warning_, and _critical, _color-coded in the UI as blue, yellow, and red, respectively.
+Hence, based on what they imply for the system, assertions are categorized in a SAAFE model: _Saturation_, _Amend_, _Anomaly_, _Failure,_ and _Error_. They may belong to three different severity levels: _info_, _warning_, and _critical,_ color-coded in the UI as blue, yellow, and red, respectively.
 
 ## Saturation
 
@@ -16,7 +16,7 @@ asserts:resource > asserts:resource:threshold
 
 We quantify resource usage either as a percentage or an absolute value. Either way, the usage value is compared to two static thresholds. One is for warning, and the other for critical. They are not overlapping, so when the critical saturation fires, the warning assertion is suppressed. In the following example, CPU load experienced both warning and critical.
 
-![](<.gitbook/assets/image (5).png>)
+![](<.gitbook/assets/image (3).png>)
 
 Different types of resources need different thresholds. Even for the same resource type, like CPU, its usage measured by [cAdvisor](https://github.com/google/cadvisor) or [node exporter](https://github.com/prometheus/node\_exporter) can be different, thus may need different threshold values. Asserts provides default values per resource type, and in some cases, per source/exporter. Customers can modify them. For more fine-grained control, they can also supply threshold values on the container level.
 
@@ -35,7 +35,7 @@ Out of the box, Asserts detect the following amends
 * Scaling events like node count change, pod count change
 * Other domain-specific change events like shard rebalancing in elastic search, config reload in Nginx, etc
 
-![](.gitbook/assets/screen-shot-2021-09-21-at-5.58.51-pm.png)
+![](<.gitbook/assets/Screen Shot 2021-09-21 at 5.58.51 PM.png>)
 
 As we expand our domain coverage, we expect to include more amend assertions in the future.
 
@@ -54,7 +54,7 @@ unless asserts:request:erratic_and_sparse > 0
 
 An example of change detected by an `amend` assertion triggering a latency spike, an `anomaly` assertion on rule-engine service
 
-![](.gitbook/assets/screen-shot-2021-10-08-at-4.34.05-pm.png)
+![](<.gitbook/assets/Screen Shot 2021-10-08 at 4.34.05 PM.png>)
 
 For these anomaly assertions, customers do not need to provide much input on thresholds, but they can customize the size of the range and the sensitivity for detecting sparse requests.
 
@@ -76,7 +76,7 @@ Failure assertions are highly domain-specific, so the list of failure assertion 
 \
 Here is an example of `failures` (pod crash looping) triggered by Traffic Spike detected via request `anomaly` assertion. &#x20;
 
-![](.gitbook/assets/screen-shot-2021-09-21-at-7.02.03-pm.png)
+![](<.gitbook/assets/Screen Shot 2021-09-21 at 7.02.03 PM.png>)
 
 ## Error
 
@@ -103,7 +103,7 @@ Because errors are usually the most important clues to discover design defects o
 First, we support two basic types of error assertions
 
 * _ErrorRatioBreach_ is to compare the current error ratio against a static threshold to capture acute error conditions that demand immediate attention and thus are critical
-* _ErrorBuildup _is to capture chronic error conditions that otherwise cannot be captured by _ErrorRatioBreach_. Asserts uses a [multi-burn-rate](https://sre.google/workbook/alerting-on-slos/) approach to monitor error building up. A fast build-up is deemed critical, while a slow build-up is a warning.
+* _ErrorBuildup_ is to capture chronic error conditions that otherwise cannot be captured by _ErrorRatioBreach_. Asserts uses a [multi-burn-rate](https://sre.google/workbook/alerting-on-slos/) approach to monitor error building up. A fast build-up is deemed critical, while a slow build-up is a warning.
 
 We then supplement them with two warning assertions to detect pattern changes in errors
 

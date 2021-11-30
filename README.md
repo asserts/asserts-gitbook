@@ -26,7 +26,7 @@ Asserts taps into your telemetry data sources (app metrics), automatically build
 
 * With our search, you can find how the components fit together in real-time and view KPIs in the built-in Grafana dashboard.
 
-![](.gitbook/assets/screen-shot-2021-09-17-at-12.30.30-am.png)
+![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.30.30 AM.png>)
 
 Our [cloud component catalog](cloud-platforms.md) is constantly evolving.
 
@@ -46,20 +46,20 @@ With our unified search, you can combine components, relations, configurations, 
 
 _e.g.,_ Search “Pods `crashing` on Nodes with high `cpu:load`”&#x20;
 
-![](.gitbook/assets/screen-shot-2021-09-16-at-11.34.26-pm.png)
+![](<.gitbook/assets/Screen Shot 2021-09-16 at 11.34.26 PM.png>)
 
 ### **Wake up when it matters**
 
 The SRE book recommends [Alerting on Service Level Objectives (SLO)](https://sre.google/workbook/alerting-on-slos/), to track`"what's broken"`and with Asserts setting up your SLOs and tracking your error budget is a breeze. And then finding "why it's broken" is just a click away in our Assertion workbench.
 
-![](.gitbook/assets/screen-shot-2021-09-30-at-9.19.41-am.png)
+![](<.gitbook/assets/Screen Shot 2021-09-30 at 9.19.41 AM.png>)
 
 ### **Spot issues quickly with Top Insights**
 
 With our always-on Assertions, you don’t have to wait for SLOs to breach and Alerts to fire. Top Insights presents a stack-ranked view of Services / Nodes that need attention based on their `assertion score`. \
 And then `Open in Workbench` to find the root cause.
 
-![](.gitbook/assets/screen-shot-2021-09-17-at-12.32.50-am.png)
+![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.32.50 AM.png>)
 
 ### **Troubleshoot in Workbench with all the Assertions**
 
@@ -67,6 +67,6 @@ In our assertion workbench, dig in to view all the possible causes correlated ac
 
 _e.g.,_ an amend (new deployment) on `api-server`triggered a spike in error rate on an endpoint `/slo/incidents`. Jump to `Dashboard` or `View Logs` to see contextual logs in your existing log store, like Kibana, Graylog, et al.
 
-![](.gitbook/assets/screen-shot-2021-09-17-at-12.38.03-am.png)
+![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.38.03 AM.png>)
 
 ### ****

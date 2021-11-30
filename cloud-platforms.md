@@ -8,5 +8,4 @@ description: >-
 
 
 
-![](.gitbook/assets/screen-shot-2021-09-16-at-4.37.29-pm.png)
-
+![](<.gitbook/assets/Screen Shot 2021-09-16 at 4.37.29 PM.png>)

@@ -1,14 +1,14 @@
 # Check-in
 
-#### Top Insights <a href="howassertsworks-wip-topinsights" id="howassertsworks-wip-topinsights"></a>
+#### Top Insights <a href="#howassertsworks-wip-topinsights" id="howassertsworks-wip-topinsights"></a>
 
 Assertions enable us to quantify the overall health of the system. We represent that as top insights on the default landing page.
 
-![](../.gitbook/assets/screen-shot-2021-09-27-at-1.29.15-am.png)
+![](<../.gitbook/assets/Screen Shot 2021-09-27 at 1.29.15 AM.png>)
 
 Here we rank services by their weighted assertion score and present a thumbnail sketch of all the assertions in the system. This helps surface the hot spot in the system so a user can jump right in.
 
-#### SLOs <a href="howassertsworks-wip-slos" id="howassertsworks-wip-slos"></a>
+#### SLOs <a href="#howassertsworks-wip-slos" id="howassertsworks-wip-slos"></a>
 
 For a more hands-on approach, users can define SLOs based on our normalized metrics or their own metrics. For example, an SLO specification can be defined like the following and posted to our API endpoint or through our configuration UI.
 
@@ -45,14 +45,14 @@ Unlike assertions, SLOs are meant for capturing high-level business objectives. 
 
 **SLO Burndown and Incident Timeline**
 
-Clicking an SLO Objective navigates to a view that shows the error budget burndown and the underlying metric. Occurrences of incidents are highlighted on the timeline. Clicking a highlighted incident will show the incident duration and budget burndown. The tooltip has a navigation to go to the **TopInsights **view using the search expression provided in the SLO definition and the time window of the incident
+Clicking an SLO Objective navigates to a view that shows the error budget burndown and the underlying metric. Occurrences of incidents are highlighted on the timeline. Clicking a highlighted incident will show the incident duration and budget burndown. The tooltip has a navigation to go to the **TopInsights** view using the search expression provided in the SLO definition and the time window of the incident
 
-![](../.gitbook/assets/screen-shot-2021-09-30-at-4.37.17-pm.png)
+![](<../.gitbook/assets/Screen Shot 2021-09-30 at 4.37.17 PM.png>)
 
-#### Incidents <a href="howassertsworks-wip-incidents" id="howassertsworks-wip-incidents"></a>
+#### Incidents <a href="#howassertsworks-wip-incidents" id="howassertsworks-wip-incidents"></a>
 
 We assume the user wants to be notified whenever an SLO is violated, so we list each violation on the Incidents page. Assertions, on the other hand, are not necessarily incidents. A user can choose to treat certain assertions as incidents by enabling notifications on them.
 
 These incidents are grouped by SLOs and assertions and laid out in a common time frame. This is very similar to our WorkBench to help users instantly spot time-based correlation.
 
-### &#x20;<a href="howassertsworks-wip-exploringtheentitygraph" id="howassertsworks-wip-exploringtheentitygraph"></a>
+### &#x20;<a href="#howassertsworks-wip-exploringtheentitygraph" id="howassertsworks-wip-exploringtheentitygraph"></a>
