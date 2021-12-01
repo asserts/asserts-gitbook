@@ -82,11 +82,11 @@ aws cloudformation create-stack \
 
 Create a `t2.micro` EC2 instance and attach the IAM Instance profile `asserts-aws-exporter-role` to it
 
-Download the [Asserts AWS exporter zip](https://github.com/asserts/aws-cloudwatch-exporter/releases/download/v1.0.90/aws-cloudwatch-exporter.tar.gz) on this EC2 and extract it
+Download the [Asserts AWS exporter zip](https://github.com/asserts/aws-cloudwatch-exporter/releases/download/v1.0.90/aws-cloudwatch-exporter.tar.gz) on the EC2 instance and extract it
 
 ```shell
 curl 'https://objects.githubusercontent.com/github-production-release-asset-2e65be/413873030/1da738cd-9e53-47b2-aed8-fc0faebdd0f9?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20211201%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20211201T064414Z&X-Amz-Expires=300&X-Amz-Signature=9ec66b479b5df98ba6c24e7d99735da4011af1c0bef7954989e50d08221c5f92&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=413873030&response-content-disposition=attachment%3B%20filename%3Daws-cloudwatch-exporter.tar.gz&response-content-type=application%2Foctet-stream' \
-  --compressed --output aws-exporter.tar.gz
+  --compressed --output aws-cloudwatch-exporter.tar.gz
 tar -xf aws-cloudwatch-exporter.tar.gz
 cd ansible
 ls -al
