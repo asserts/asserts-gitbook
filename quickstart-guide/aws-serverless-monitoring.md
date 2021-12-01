@@ -94,6 +94,6 @@ INFO  2021-11-30 16:55:45.449 pool-1-thread-5 MetricScrapeTask BEGIN Scrape for 
 INFO  2021-11-30 16:55:57.088 pool-1-thread-5 MetricScrapeTask END Scrape for region us-west-2 and interval 300
 ```
 
-#### Step 8 Verify that the metrics are present in Asserts
+#### Step 8 Verify the metrics in Asserts
 
 ![AWS Lambda Metric in Asserts](<../.gitbook/assets/Screenshot 2021-12-01 at 4.26.51 PM.png>)
