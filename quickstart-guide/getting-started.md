@@ -205,6 +205,6 @@ INFO  2021-11-30 16:55:57.088 pool-1-thread-5 MetricScrapeTask END Scrape for re
 
 You can log into Asserts and verify that your metrics are being ingested.&#x20;
 
-![](<../.gitbook/assets/image (6).png>)
+![](<../.gitbook/assets/image (6) (1).png>)
 
 The default scrape interval is set to `300` seconds. For more information on configuring the exporter, check [the documentation](https://github.com/asserts/aws-cloudwatch-exporter)&#x20;

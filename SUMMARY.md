@@ -8,6 +8,7 @@
 ## Quickstart Guide
 
 * [Getting Started](quickstart-guide/getting-started.md)
+* [AWS Serverless Monitoring](quickstart-guide/aws-serverless-monitoring.md)
 
 ## User Guide
 
@@ -22,7 +23,6 @@
 * [Relabeling](developer-guide/relabeling.md)
 * [Monitoring as a Code](developer-guide/monitoring-as-a-code.md)
 
----
+***
 
 * [Assertion Catalog](cloud-platforms.md)
-
