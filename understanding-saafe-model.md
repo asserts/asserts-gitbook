@@ -119,6 +119,6 @@ In addition, we've also expanded the concept of errors to latency. Even though w
 * _LatencyAverageBreach_  is to capture the overall elevated latency
 * _LatencyP99ErrorBuildup_ is to capture chronic deterioation of latency. Unlike the average measurement, the underlying requests for P99 latency are usually sporadic, so we use the same fast build-up approach as what is used for _ErrorBuildup_.&#x20;
 
-![](<.gitbook/assets/image (6).png>)
+![](<.gitbook/assets/image (6) (1).png>)
 
 Because these are to capture user experience impact, they are all deemed critical.&#x20;
