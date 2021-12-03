@@ -11,8 +11,7 @@ To monitor AWS Lambda or Fargate, the CloudWatch metrics need to be exported fro
 Create a stack using a CloudFormation template to set up the necessary IAM policy, role, and EC2 instance profile
 
 ```bash
-git clone git@github.com:asserts/aws-cloudwatch-exporter.git
-cd aws-cloudwatch-exporter
+curl -L https://raw.githubusercontent.com/asserts/aws-exporter-ec2/main/AWSCloudFormationTemplate.json --output AWSCloudFormationTemplate.json
 AWS cloudformation create-stack \
     --stack-name asserts-aws-exporter \
     --template-body file://$PWD/AWSCloudFormationTemplate.json \
