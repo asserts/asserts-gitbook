@@ -8,7 +8,7 @@
 ## Quickstart Guide
 
 * [Getting Started](quickstart-guide/getting-started.md)
-* [AWS Serverless Monitoring](quickstart-guide/aws-serverless-monitoring.md)
+* [Setting up AWS Serverless Monitoring](quickstart-guide/setting-up-aws-serverless-monitoring.md)
 
 ## User Guide
 
