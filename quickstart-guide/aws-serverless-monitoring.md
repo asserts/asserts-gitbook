@@ -49,15 +49,60 @@ regions:
   - us-west-2
 ```
 
-#### Step 5 Configure remote-write
+#### Step 5 Enable monitoring for ECS/AWS Fargate
+
+If your application running on ECS/AWS Fargate is instrumented with Prometheus, you need to enable ECS task discovery by setting the following configuration&#x20;
+
+```
+discoverECSTasks: true
+```
+
+Please note that in addition to the above configuration, you may have to export CloudWatch metrics for resource monitoring. This depends on whether your application is instrumented using Prometheus and which resource metrics are exported by the Prometheus client. To enable exporting resource metrics from CloudWatch, you need to uncomment the following commented configuration -
+
+```
+#  - name: ECS/ContainerInsights
+#    dimensionFilters:
+#      ServiceName: .+
+#    metrics:
+#      - name: MemoryReserved
+#        stats:
+#          - Average
+#          - Maximum
+#      - name: MemoryUtilized
+#        stats:
+#          - Average
+#          - Maximum
+#      - name: CpuReserved
+#        stats:
+#          - Average
+#          - Maximum
+#      - name: CpuUtilized
+#        stats:
+#          - Average
+#          - Maximum
+#      - name: NetworkRxBytes
+#        stats:
+#          - Sum
+#      - name: NetworkTxBytes
+#        stats:
+#          - Sum
+#      - name: StorageReadBytes
+#        stats:
+#          - Sum
+#      - name: StorageWriteBytes
+#        stats:
+#          - Sum
+```
+
+#### Step 6 Configure remote-write
 
 Set values for the following placeholders in `configure-services.yaml`
 
-1. `REMOTE-WRITE-URL` Your Asserts remote write URL. E.g. `https://acme.tsdb.asserts.ai/insert/0/prometheus/`
+1. `REMOTE-WRITE-URL` Your Asserts remote write URL. E.g., `https://acme.tsdb.asserts.ai/insert/0/prometheus/`
 2. `USERNAME/PASSWORD` Your Asserts tenant username and password
 3. `TENANT-NAME` Your Asserts tenant name
 
-#### Step 6 Configure Environment name
+#### Step 7 Configure Environment name
 
 The environment name needs to be configured in the `configure-services.yaml`. It can be done in one of the following ways
 
@@ -75,7 +120,7 @@ The environment name needs to be configured in the `configure-services.yaml`. It
 
 _**Note:**_ Please note that only one of the two ways should be configured. If you use metric relabelling to specify the environment, please remove the environment label configuration in `external_labels`
 
-#### Step 7 Start the exporter and vmagent
+#### Step 8 Start the exporter and vmagent
 
 Start the services by running the following command
 
@@ -93,6 +138,6 @@ INFO  2021-11-30 16:55:45.449 pool-1-thread-5 MetricScrapeTask BEGIN Scrape for 
 INFO  2021-11-30 16:55:57.088 pool-1-thread-5 MetricScrapeTask END Scrape for region us-west-2 and interval 300
 ```
 
-#### Step 8 Verify the metrics in Asserts
+#### Step 9 Verify the metrics in Asserts
 
 ![AWS Lambda Metric in Asserts](<../.gitbook/assets/Screenshot 2021-12-01 at 4.26.51 PM.png>)
