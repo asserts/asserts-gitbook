@@ -27,14 +27,14 @@ Create a `t2.micro` EC2 instance with Ubuntu 18.0.4 and assign the IAM Instance 
 #### Step 3 Download the Asserts Exporter bundle
 
 ```
-curl -L https://github.com/asserts/aws-exporter-ec2/releases/download/1.0.96/aws-exporter-ec2-1.0.96.tar.gz --compressed --output aws-exporter-ec2-1.0.96.tar.gz
-tar -xf aws-exporter-ec2-1.0.96.tar.gz
+curl -L https://github.com/asserts/aws-exporter-ec2/releases/download/1.0.97/aws-exporter-ec2.tar.gz --compressed --output aws-exporter-ec2.tar.gz
+tar -xf aws-exporter-ec2.tar.gz
 cd ansible
 ```
 
 #### Step 4 Configure the AWS Region that needs to be scraped
 
-Configure the AWS region in `aws-cloudwatch-exporter/conf/cloudwatch-scrape-configuration.yml`
+Configure the AWS region in `aws-cloudwatch-exporter/conf/`cloudwatch\_scrape\_config\_sample.yml
 
 ```
 regions:
