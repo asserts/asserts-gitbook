@@ -1,4 +1,4 @@
-# AWS Serverless Monitoring
+# Setting up AWS Serverless Monitoring
 
 To monitor AWS Lambda or Fargate, the CloudWatch metrics need to be exported from AWS to Asserts. Asserts provides an exporter to do this.&#x20;
 
@@ -30,28 +30,20 @@ Create a `t2.micro` EC2 instance with Ubuntu 18.0.4 and assign the IAM Instance 
 curl -L https://github.com/asserts/aws-exporter-ec2/releases/download/1.0.96/aws-exporter-ec2-1.0.96.tar.gz --compressed --output aws-exporter-ec2-1.0.96.tar.gz
 tar -xf aws-exporter-ec2-1.0.96.tar.gz
 cd ansible
-ls -al
-total 16
-drwxr-xr-x  6 user  staff   192 Nov 29 16:36 .
-drwxr-xr-x  3 user  staff    96 Nov 30 17:09 ..
-drwxr-xr-x  9 user  staff   288 Nov 29 16:36 aws-cloudwatch-exporter-1.0.96
--rw-r--r--  1 user  staff  1395 Nov 29 16:35 configure-services.yaml
--rw-r--r--  1 user  staff   153 Nov 15 19:36 install.sh
-drwxr-xr-x  4 user  staff   128 Nov 15 19:35 roles
 ```
 
 #### Step 4 Configure the AWS Region that needs to be scraped
 
-Configure the AWS region in `aws-cloudwatch-exporter-1.0.96/cloudwatch-scrape-configuration.yml`
+Configure the AWS region in `aws-cloudwatch-exporter/conf/cloudwatch-scrape-configuration.yml`
 
 ```
 regions:
   - us-west-2
 ```
 
-#### Step 5 Enable monitoring for ECS/AWS Fargate
+#### Step 5 Enable monitoring for ECS/AWS Fargate (Optional)
 
-If your application running on ECS/AWS Fargate is instrumented with Prometheus, you need to enable ECS task discovery by setting the following configuration&#x20;
+If you have containerized applications running on ECS/Fargate, you can enable monitoring for it. If your application is instrumented with Prometheus, you need to enable ECS task discovery by setting the following configuration&#x20;
 
 ```
 discoverECSTasks: true
@@ -128,7 +120,7 @@ Start the services by running the following command
 bash -x install.sh
 ```
 
-Check `aws-cloudwatch-exporter-1.0.96/aws-exporter.log` to verify that the exporter started without any errors. You should see the following log messages
+Check `aws-cloudwatch-exporter/aws-exporter.log` to verify that the exporter started without any errors. You should see the following log messages
 
 ```
 INFO  2021-11-30 16:55:40.442 main StartupInfoLogger Started CloudWatchExporterApplication in 7.251 seconds (JVM running for 7.626)
