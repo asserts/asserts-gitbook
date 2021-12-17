@@ -55,4 +55,4 @@ We assume the user wants to be notified whenever an SLO is violated, so we list 
 
 These incidents are grouped by SLOs and assertions and laid out in a common time frame. This is very similar to our WorkBench to help users instantly spot time-based correlation.
 
-### &#x20;<a href="#howassertsworks-wip-exploringtheentitygraph" id="howassertsworks-wip-exploringtheentitygraph"></a>
+![](../.gitbook/assets/Incident.jpg)
