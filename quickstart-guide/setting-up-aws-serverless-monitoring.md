@@ -132,4 +132,7 @@ INFO  2021-11-30 16:55:57.088 pool-1-thread-5 MetricScrapeTask END Scrape for re
 
 #### Step 9 Verify the metrics in Asserts
 
-![AWS Lambda Metric in Asserts](<../.gitbook/assets/Screenshot 2021-12-01 at 4.26.51 PM.png>)
+Verify the presence of metrics in Asserts. E.g., for AWS Lambda you can check for the metric `aws_lambda_timeout_seconds`, and for ECS/Fargate you can check for the metric `aws_ecs_containerinsights_cpu_utilization_avg`
+
+![Lambda metric in Asserts](<../.gitbook/assets/Screen Shot 2021-12-20 at 9.34.15 AM.png>)
+
