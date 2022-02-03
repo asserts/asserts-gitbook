@@ -72,7 +72,7 @@ the `logs` configuration will result in the creation of the following metric
 aws_lambda_logs{d_destination_name="ShipmentRequest", d_destination_type="SQSQueue", d_function_name="OrderProcessor", region="us-west-"}
 ```
 
-#### Step 5 Enable monitoring for ECS/AWS Fargate (Optional)
+#### Step 6 Enable monitoring for ECS/AWS Fargate (Optional)
 
 If you have containerized applications running on ECS/Fargate, you can enable monitoring for it. If your application is instrumented with Prometheus, you need to enable ECS task discovery by setting the following configuration&#x20;
 
@@ -117,7 +117,7 @@ Please note that in addition to the above configuration, you may have to export 
 #          - Sum
 ```
 
-#### Step 6 Configure remote-write
+#### Step 7 Configure remote-write
 
 Set values for the following placeholders in `configure-services.yaml`
 
@@ -125,7 +125,7 @@ Set values for the following placeholders in `configure-services.yaml`
 2. `USERNAME/PASSWORD` Your Asserts tenant username and password
 3. `TENANT-NAME` Your Asserts tenant name
 
-#### Step 7 Configure Environment name
+#### Step 8 Configure Environment name
 
 The environment name needs to be configured in the `configure-services.yaml`. It can be done in one of the following ways
 
@@ -143,7 +143,7 @@ The environment name needs to be configured in the `configure-services.yaml`. It
 
 _**Note:**_ Please note that only one of the two ways should be configured. If you use metric relabelling to specify the environment, please remove the environment label configuration in `external_labels`
 
-#### Step 8 Start the exporter and vmagent
+#### Step 9 Start the exporter and vmagent
 
 Start the services by running the following command
 
@@ -161,7 +161,7 @@ INFO  2021-11-30 16:55:45.449 pool-1-thread-5 MetricScrapeTask BEGIN Scrape for 
 INFO  2021-11-30 16:55:57.088 pool-1-thread-5 MetricScrapeTask END Scrape for region us-west-2 and interval 300
 ```
 
-#### Step 9 Verify the metrics in Asserts
+#### Step 10 Verify the metrics in Asserts
 
 Verify the presence of metrics in Asserts. E.g., for AWS Lambda you can check for the metric `aws_lambda_timeout_seconds`, and for ECS/Fargate you can check for the metric `aws_ecs_containerinsights_cpu_utilization_avg`
 
