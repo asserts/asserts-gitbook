@@ -41,6 +41,37 @@ regions:
   - us-west-2
 ```
 
+#### Step 5 Configure export of CloudWatch log message as a metric
+
+In the Lambda metric configuration, you can add a configuration to convert a CloudWatch log message into a Prometheus metric under the `logs` config element. You can specify a regular expression with capturing groups and export the groups as labels.&#x20;
+
+```
+  - name: AWS/Lambda
+    dimensionFilters:
+      FunctionName: .+
+    metrics:
+      ...
+    logs:
+      - lambdaFunctionName: (Function.+)|(OrderProcessor)
+        logFilterPattern: "About to put message in SQS Queue"
+        regexPattern: ".*put message in SQS Queue https://sqs.us-west-2.amazonaws.com/342994379019/(.+)"
+        labels:
+          "destination_type": "SQSQueue"
+          "destination_name": "$1"
+```
+
+When the following CloudWatch log message is logged by the Lambda function `OrderProcessor`
+
+```
+About to put message in SQS Queue https://sqs.us-west-2.amazonaws.com/342994379019/ShipmentRequest
+```
+
+the `logs` configuration will result in the creation of the following metric
+
+```
+aws_lambda_logs{d_destination_name="ShipmentRequest", d_destination_type="SQSQueue", d_function_name="OrderProcessor", region="us-west-"}
+```
+
 #### Step 5 Enable monitoring for ECS/AWS Fargate (Optional)
 
 If you have containerized applications running on ECS/Fargate, you can enable monitoring for it. If your application is instrumented with Prometheus, you need to enable ECS task discovery by setting the following configuration&#x20;
