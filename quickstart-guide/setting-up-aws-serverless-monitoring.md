@@ -69,10 +69,10 @@ About to put message in SQS Queue https://sqs.us-west-2.amazonaws.com/3429943790
 the `logs` configuration will result in the creation of the following metric
 
 ```
-aws_lambda_logs{d_destination_name="ShipmentRequest", d_destination_type="SQSQueue", d_function_name="OrderProcessor", region="us-west-"}
+aws_lambda_logs{d_function_name="OrderProcessor", d_destination_type="SQSQueue", d_destination_name="ShipmentRequest", region="us-west-"}
 ```
 
-Using this metric, Asserts will automatically establish a relationship between the `OrderProcessor` function and the `ShipmentRequest` SQS Queue in the entity graph. Note that Asserts makes it possible to establish relationships between entities using any metric as long as the metric has labels to identify the entities. The above example is what Asserts will do out-of-the-box. If you have some other metric, or want to put additional information in the `aws_lambda_logs` metric, you can do so and then customize how the relationship is established.
+Using this metric, Asserts will automatically establish a relationship between the `OrderProcessor` function and the `ShipmentRequest` SQS Queue in the entity graph. Note that Asserts makes it possible to establish relationships between entities using any metric as long as the metric has labels to identify the entities. The above example is what Asserts will do out-of-the-box. If you have some other metric or want to put additional information in the `aws_lambda_logs` metric, you can do so and then customize how the relationship is established.
 
 #### Step 6 Enable monitoring for ECS/AWS Fargate (Optional)
 
