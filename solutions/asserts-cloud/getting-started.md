@@ -4,7 +4,7 @@ Asserts is cloud-agnostic and has no proprietary application agents to install. 
 
 You can get started by adding _remote-write_ to Asserts cloud in your _prometheus.yml_
 
-![](../.gitbook/assets/4.png)
+![](../../.gitbook/assets/4.png)
 
 ### **Remote Write**
 

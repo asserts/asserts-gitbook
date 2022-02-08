@@ -1,4 +1,8 @@
-# Setting up AWS Serverless Monitoring
+---
+description: How to set up AWS Serverless Monitoring with Asserts
+---
+
+# AWS Serverless Monitoring
 
 To monitor AWS Lambda or Fargate, the CloudWatch metrics need to be exported from AWS to Asserts. Asserts provides an exporter to do this.&#x20;
 
