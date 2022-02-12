@@ -2,7 +2,7 @@
 
 As an Asserts customer, all you need to do is forward your Prometheus metrics to Asserts with a simple remote write config. Once the metrics are in Asserts land, a few things happen.
 
-## Discovery <a href="howassertsworks-wip-discovery" id="howassertsworks-wip-discovery"></a>
+## Discovery <a href="#howassertsworks-wip-discovery" id="howassertsworks-wip-discovery"></a>
 
 First, we inspect their labels to discover various entities and populate their properties. In addition, we deduce the relationships between them by matching their properties or matching against specified metrics that directly establish relations. As a result, we can determine which pod is hosted on which node, which pods form a Service, and how services call each other.
 
@@ -10,38 +10,13 @@ All these entities, properties, and relationships form a knowledge graph that de
 
 ![](<.gitbook/assets/image (1).png>)
 
-## Normalization <a href="howassertsworks-wip-normalization" id="howassertsworks-wip-normalization"></a>
+## Normalization <a href="#howassertsworks-wip-normalization" id="howassertsworks-wip-normalization"></a>
 
 Secondly, Asserts has curated a collection of rules to normalize the incoming heterogeneous time series into a set of essential metrics, like RED metrics (Request, Error, Duration) for application components and utilization metrics for infrastructure components.
 
-For example, the RED metrics from Springboot will be recorded as Prometheus counter `asserts:request:total`, `asserts:latency:total`, and `asserts:error:total`
-
-```yaml
-- record: asserts:request:total
-  expr: http_server_requests_seconds_count
-  labels:
-    asserts_request_type: inbound
-    asserts_source: spring_boot
-
-- record: asserts:latency:total
-  expr: http_server_requests_seconds_sum
-  labels:
-    asserts_request_type: inbound
-    asserts_source: spring_boot
-
-- record: asserts:error:total
-  expr: http_client_requests_seconds_count{status=~"5.."}
-  labels:
-    asserts_request_type: outbound
-    asserts_error_type: server_errors
-    asserts_source: spring_boot
-```
-
-We add labels like `asserts_request_type`, `asserts_error_type`, etc., to indicate the level of granularity for further processing in instrumentation. Some more dynamic context information like HTTP paths will be recorded in `asserts_request_context` with Prometheus relabelling rule at ingestion time.
-
 We understand a customer may have different environments for dev, stage, and prod. Each of them might have one or more sites. For data separation, the customer can use either external labels or relabelling rules to add `asserts_env` and `asserts_site` labels to scope metrics and thus entities discovered from them. Asserts provides corresponding `env` and `site` drop-downs in the Web App to segment the data in a single graph. At the same time, keeping everything in a single graph facilitate cross-environment/site correlation or comparison.
 
-## Assertion <a href="howassertsworks-wip-assertion" id="howassertsworks-wip-assertion"></a>
+## Assertion <a href="#howassertsworks-wip-assertion" id="howassertsworks-wip-assertion"></a>
 
 We then apply our extensive domain knowledge to instrument these normalized metrics. Out-of-box we automatically instrument application frameworks like Springboot, Flask, Loopback, etc., infrastructure components like Kubernetes resources, 3rd party services like Redis server, Kafka cluster, and many more.
 
@@ -59,7 +34,7 @@ Assertions are different from traditional alerts, as they are not meant to be us
 
 For more details, refer to [Understanding SAAFE model](understanding-saafe-model.md).
 
-## Correlation <a href="howassertsworks-wip-correlation" id="howassertsworks-wip-correlation"></a>
+## Correlation <a href="#howassertsworks-wip-correlation" id="howassertsworks-wip-correlation"></a>
 
 Asserts’s story doesn’t stop with automatic instrumentation. Once assertions arise, we do a few more things:
 
