@@ -4,7 +4,7 @@ As an Asserts customer, all you need to do is forward your Prometheus metrics to
 
 ## Discovery <a href="#howassertsworks-wip-discovery" id="howassertsworks-wip-discovery"></a>
 
-First, we inspect their labels to discover various entities and populate their properties. In addition, we deduce the relationships between them by matching their properties or matching against specified metrics that directly establish relations. As a result, we can determine which pod is hosted on which node, which pods form a Service, and how services call each other.
+We inspect the metrics to discover various entities and populate their properties. In addition, we deduce the relationships between them.
 
 All these entities, properties, and relationships form a knowledge graph that describes our understanding of the system. They are also indexed to be easily searchable. The discovery process constantly updates the graph while at the same time keeps the history.
 
