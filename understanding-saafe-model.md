@@ -11,7 +11,7 @@ We monitor hardware resources like CPU, memory, and disk. We also monitor softwa
 The detection mechanism of saturation resembles the following simple PromQL rule:
 
 ```
-asserts:resource > asserts:resource:threshold
+resource:usage > resource:usage:threshold
 ```
 
 We quantify resource usage either as a percentage or an absolute value. Either way, the usage value is compared to two static thresholds. One is for warning, and the other for critical. They are not overlapping, so when the critical saturation fires, the warning assertion is suppressed. In the following example, CPU load experienced both warning and critical.
@@ -46,10 +46,10 @@ Anomalies are pattern changes related to traffic. Modern cloud-native applicatio
 They usually apply to request rate, latency, and resource consumption rate. Asserts uses a statistical approach to figure out their normal ranges. These ranges are dynamic, with daily and weekly seasonalities considered.  Anomalies thus can be defined for the case the current metric is outside of the band. A sparseness check is also put in place to reduce noise on sparse requests. Note that, unlike saturation, a breach underneath the lower bound also counts as an anomaly assertion. It can be handy for detecting loss of traffic, which sometimes implies a much bigger problem.
 
 ```
-(asserts:request:rate5m < asserts:request:rate5m:anomaly_lower_threshold
+(request:rate5m < request:rate5m:anomaly_lower_threshold
 or
-asserts:request:rate5m > asserts:request:rate5m:anomaly_upper_threshold)
-unless asserts:request:erratic_and_sparse > 0
+request:rate5m > request:rate5m:anomaly_upper_threshold)
+unless request:erratic_and_sparse > 0
 ```
 
 An example of change detected by an `amend` assertion triggering a latency spike, an `anomaly` assertion on rule-engine service
