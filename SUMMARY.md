@@ -9,7 +9,7 @@
 ## Solutions
 
 * [Asserts Cloud](solutions/asserts-cloud/README.md)
-  * [Getting Started](solutions/asserts-cloud/getting-started.md)
+  * [Getting Started](quickstart-guide/getting-started.md)
 * [Asserts Enterprise](solutions/asserts-enterprise/README.md)
   * [Installation](solutions/asserts-enterprise/installation/README.md)
     * [Mac & Windows](solutions/asserts-enterprise/installation/mac-and-windows.md)
