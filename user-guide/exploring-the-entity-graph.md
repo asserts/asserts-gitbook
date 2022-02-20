@@ -24,7 +24,7 @@ The list view also contains the monitoring status of each entity. This gives a h
 
 A bubble view is also provided to help the user to rank entities by requests, resources, or selected property  from `View Settings`![](<../.gitbook/assets/Screen Shot 2021-09-22 at 1.31.16 AM.png>) . The user can even select multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus `yace` service here is having a CPU-related assertion.
 
-![](<../.gitbook/assets/Screen Shot 2022-02-19 at 6.00.28 PM.png>)
+![](<../.gitbook/assets/Screen Shot 2022-02-19 at 6.09.15 PM.png>)
 
 #### Entity assertion status <a href="#howassertsworks-wip-entityassertionstatus" id="howassertsworks-wip-entityassertionstatus"></a>
 
