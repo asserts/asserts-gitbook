@@ -6,11 +6,10 @@ Asserts has automatically surfaced all the assertions in the system and enriched
 
 The workflow for the Workbench is similar to a pinboard. Whether a user is just glancing through top insights, checking incidents, or exploring the entities in the graph, there is always a pin button “+” or “Add” to add entities, assertions, or the result of a search expression to the Workbench. Once they are in the Workbench, they are plotted in the same time frame, so if there is any causality in between, it will pop up right in front of you.
 
-![](../.gitbook/assets/1564213274.png)
+![Correlate Assertions from connected services in Interactive Workbench](../.gitbook/assets/wb-docs.gif)
 
 The search box also works for the Workbench to help quickly add more entities for root cause analysis. We also have logging system integration in the Workbench, so the user can quickly jump into the logs with the time range pre-populated.
 
 The timeline view is not the only view option. A user can also choose the graph view to evaluate the impact of the current issues and spot spatial correlation on the graph. In addition, the Mindmap view provides a way to walk down the assertions by categories and assertion types instead of entities. This view helps to spot the common problem across many different entities.
 
-###  <a id="HowAssertsWorks(WIP)-AssertionManagement"></a>
-
+### &#x20;<a href="#howassertsworks-wip-assertionmanagement" id="howassertsworks-wip-assertionmanagement"></a>
