@@ -8,7 +8,7 @@ Asserts’s web app is built for cloud-scale. The best way to explore the entity
 
 “Advanced search” panel provides more advanced search functions like search by property conditions, show connected entities, etc. These searches can provide context-rich shortcuts to a group of entities that a user wants to look at as a whole.
 
-![](<../.gitbook/assets/Screen Shot 2021-09-21 at 8.32.21 PM.png>)
+![pods crashing in namespace petclinic](<../.gitbook/assets/Screen Shot 2021-09-21 at 8.32.21 PM.png>)
 
 Keep in mind that the graph is constantly updated by the time-series data, so the search result represents the system's state in the specified time window. When you change the time, the search result may change too. In addition, search results are always filtered by the selection in `env` and `site` dropdown.
 
@@ -16,7 +16,7 @@ Keep in mind that the graph is constantly updated by the time-series data, so th
 
 When a user clicks on an entity, it also allows the user to navigate to its connected entities. Navigation can be done in both graph view and list view. If the graph gets busy, we can filter the displayed entities by clicking on the entity type in the legends.
 
-![](<../.gitbook/assets/navigation (3) (3) (2).gif>)
+![Browse entity graph](<../.gitbook/assets/navigation (3) (3) (2).gif>)
 
 The list view also contains the monitoring status of each entity. This gives a high-level overview of what’s being automatically monitored by Asserts. Resource monitoring applies to both Services and Nodes, but traffic and latency monitoring usually only applies to Services.
 
