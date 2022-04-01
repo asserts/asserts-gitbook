@@ -20,7 +20,7 @@ You can get Prometheus data flowing into Asserts with a few simple steps.
 
 You will need to add (or modify) a prometheus [<mark style="color:blue;">`remote-write`</mark>](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote\_write) configuration on your Prometheus server in order to send metrics to the Asserts Enterprise remote write url endpoint. A good example prometheus configuration file can be found [here.](https://github.com/prometheus/prometheus/blob/main/config/testdata/conf.good.yml)
 
-The configuration of your Prometheus server depends on your installation. In general, you configure the <mark style="color:blue;">`remote_write`</mark> section in the <mark style="color:blue;">`prometheus.yml`</mark> configuration file like so:
+The configuration of your Prometheus server depends on your installation. In general, you configure the <mark style="color:blue;">`remote_write`</mark> section in the <mark style="color:blue;">`prometheus.yml`</mark> configuration file like so. Note it is recommended to have \~25% more [memory for your prometheus](https://prometheus.io/docs/practices/remote\_write/) to accommodate the remote-write assuming you're already operating at optimal efficiency.
 
 ```yaml
 global:
@@ -31,9 +31,9 @@ global:
 remote_write:
   - url: http://<Asserts-Enterprise-Url>:8428/api/v1/write
     queue_config:
-      capacity: 10000
+      capacity: 20000
       max_samples_per_send: 10000
-      max_shards: 10
+      max_shards: 30
 ```
 
 ### Authorization
@@ -67,9 +67,9 @@ remote_write:
     - regex: __tmp_keep # drop all the __tmp_keep labels (not the metric)
       action: labeldrop
     queue_config:
-      capacity: 10000
+      capacity: 20000
       max_samples_per_send: 10000
-      max_shards: 10
+      max_shards: 30
 ```
 
 ## Reload Config

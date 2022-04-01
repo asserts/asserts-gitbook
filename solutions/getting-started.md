@@ -12,7 +12,7 @@ Remote Writing from Prometheus can be done multiple ways. Here we cover using a 
 
 #### Standard Prometheus Config
 
-Here’s an example of a Prometheus remote write configuration:
+Here’s an example of a Prometheus remote write configuration: Note it is recommended to have \~25% more [memory for your prometheus](https://prometheus.io/docs/practices/remote\_write/) to accommodate the remote-write assuming you're already operating at optimal efficiency.
 
 ```yaml
 global:
@@ -26,9 +26,9 @@ remote_write:
       username: <your-tenant-name>
       password: <secret>
     queue_config:
-      capacity: 10000
+      capacity: 20000
       max_samples_per_send: 10000
-      max_shards: 10
+      max_shards: 30
 ```
 
 Here you will populate `external_labels` (optional) but ensuring to fill in `<your-tenant-name>` for the remote\_write url and the `basic_auth` username. Additionally, the `<secret>` needs to be filled out with the remote-write password Asserts has provided during onboarding.
@@ -59,9 +59,9 @@ remote_write:
       - regex: __tmp_keep # drop all the __tmp_keep labels (not the metric)
         action: labeldrop
     queue_config:
-      capacity: 10000
+      capacity: 20000
       max_samples_per_send: 10000
-      max_shards: 10
+      max_shards: 30
 ```
 
 #### Prometheus Operator Helm Chart Config
@@ -99,9 +99,9 @@ Now, configure your prometheus-operator values, filling in the `externalLabels` 
               name: asserts-remote-write
               key: username        
           queueConfig:
-            capacity: 10000
+            capacity: 20000
             maxSamplesPerSend: 10000
-            maxShards: 10
+            maxShards: 30
 ```
 
 Reiterating from the standard configuration, Asserts will provide your tenant name and password used in the above configuration during onboarding.
@@ -138,7 +138,7 @@ Sometimes it’s desirable to only remote write some metrics. You can add a `wri
             - regex: __tmp_keep # drop all the __tmp_keep labels (not the metric)
               action: labeldrop 
           queueConfig:
-            capacity: 10000
+            capacity: 20000
             maxSamplesPerSend: 10000
-            maxShards: 10
+            maxShards: 30
 ```
