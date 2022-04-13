@@ -4,7 +4,7 @@ As an Asserts customer, all you need to do is forward your Prometheus metrics to
 
 ## Discovery <a href="#howassertsworks-wip-discovery" id="howassertsworks-wip-discovery"></a>
 
-We inspect the metrics to discover various entities and populate their properties. In addition, we deduce the relationships between them.
+First, we inspect their labels to discover various entities and populate their properties. In addition, we deduce the relationships between them by matching their properties or matching against specified metrics that directly establish relations. As a result, we can determine which pod is hosted on which node, which pods form a Service, and how services call each other.
 
 All these entities, properties, and relationships form a knowledge graph that describes our understanding of the system. They are also indexed to be easily searchable. The discovery process constantly updates the graph while at the same time keeps the history.
 
@@ -14,7 +14,32 @@ All these entities, properties, and relationships form a knowledge graph that de
 
 Secondly, Asserts has curated a collection of rules to normalize the incoming heterogeneous time series into a set of essential metrics, like RED metrics (Request, Error, Duration) for application components and utilization metrics for infrastructure components.
 
-We understand a customer may have different environments for dev, stage, and prod. Each of them might have one or more sites. For data separation, the customer can use either external labels or relabelling rules to add `asserts_env` and `asserts_site` labels to scope metrics and thus entities discovered from them. Asserts provides corresponding `env` and `site` drop-downs in the Web App to segment the data in a single graph. At the same time, keeping everything in a single graph facilitate cross-environment/site correlation or comparison.
+For example, the RED metrics from Springboot will be recorded as Prometheus counter `asserts:request:total`, `asserts:latency:total`, and `asserts:error:total`
+
+```
+- record: asserts:request:total
+  expr: http_server_requests_seconds_count
+  labels:
+    asserts_request_type: inbound
+    asserts_source: spring_boot
+
+- record: asserts:latency:total
+  expr: http_server_requests_seconds_sum
+  labels:
+    asserts_request_type: inbound
+    asserts_source: spring_boot
+
+- record: asserts:error:total
+  expr: http_client_requests_seconds_count{status=~"5.."}
+  labels:
+    asserts_request_type: outbound
+    asserts_error_type: server_errors
+    asserts_source: spring_boot
+```
+
+We add labels like `asserts_request_type`, `asserts_error_type`, etc., to indicate the level of granularity for further processing in instrumentation. Some more dynamic context information like HTTP paths will be recorded in `asserts_request_context` with Prometheus relabelling rule at ingestion time.
+
+We understand a customer may have different environments for dev, stage, and prod. Each of them might have one or more sites. For data separation, the customer can use either external labels or relabelling rules to add `asserts_env` and `asserts_site` labels to scope metrics and thus entities discovered from them. Asserts provides corresponding env and site
 
 ## Assertion <a href="#howassertsworks-wip-assertion" id="howassertsworks-wip-assertion"></a>
 
