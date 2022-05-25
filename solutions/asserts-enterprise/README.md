@@ -32,7 +32,7 @@ However, this was done to merley to simplify the setup for enterprise trials. \
 Asserts Enterprise has integration support for many identity & SSO providers such as:
 
 * [Google](https://support.google.com/a/answer/60224?hl=en)
-* [Okta](https://www.okta.com)
+* [Okta](https://www.okta.com/)
 * [GitHub](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/about-authentication-with-saml-single-sign-on)
 
 Once your confident that Asserts Enterprise is the right fit and can help you achieve your business goals, we can work with you to enable **Authentication** and **multi-user** support **** for whatever identity provider works best for you & your team.
@@ -61,7 +61,7 @@ Once your confident that Asserts Enterprise is the right fit and can help you ac
 
 ## Try Asserts Enterprise <a href="#try-grafana-enterprise" id="try-grafana-enterprise"></a>
 
-To learn more or to obtain a trial license for this offering, simply click on the ![](../../.gitbook/assets/intercom-icon-27.jpg) icon in the bottom right corner of this page to open our messenger app and <mark style="color:blue;">Send us a message</mark>.
+To learn more or to obtain a trial license for this offering, simply click on the <img src="../../.gitbook/assets/intercom-icon-27.jpg" alt="" data-size="line"> icon in the bottom right corner of this page to open our messenger app and <mark style="color:blue;">Send us a message</mark>.
 
 {% hint style="warning" %}
 In order to trial this offering at this time you will need to provide us with a [DockerID](https://docs.docker.com/docker-id/) that will be used to access our private docker images. You can provide a bot, service account or personal DockerID, but only 1 can be added per account.&#x20;

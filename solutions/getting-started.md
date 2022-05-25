@@ -1,6 +1,6 @@
 # Getting Started
 
-Asserts is cloud-agnostic and has no proprietary application agents to install. It is natively built on the open [Prometheus](https://prometheus.io) ecosystem with 100s of [exporters](https://prometheus.io/docs/instrumenting/exporters/).
+Asserts is cloud-agnostic and has no proprietary application agents to install. It is natively built on the open [Prometheus](https://prometheus.io/) ecosystem with 100s of [exporters](https://prometheus.io/docs/instrumenting/exporters/).
 
 You can start by configuring a _remote-write_ on your Prometheus to write to the Asserts Cloud or Asserts Enterprise installation.
 

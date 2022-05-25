@@ -557,4 +557,4 @@ The logs will be extracted to:\
 
 General support for Asserts is provided via our in app messenger.\
 Please reach out with any issues, questions, or even feature requests at any time.\
-Simply click on the ![](../../../.gitbook/assets/intercom-icon-27.jpg) icon in the bottom right corner of this page to open our messenger app and <mark style="color:blue;">Send us a message</mark>.
+Simply click on the <img src="../../../.gitbook/assets/intercom-icon-27.jpg" alt="" data-size="line"> icon in the bottom right corner of this page to open our messenger app and <mark style="color:blue;">Send us a message</mark>.
