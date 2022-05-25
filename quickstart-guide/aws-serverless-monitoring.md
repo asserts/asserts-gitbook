@@ -43,15 +43,15 @@ The Asserts AWS Exporter can be set up by using a [CloudFormation template](http
 
 The template would create a user named **asserts-cloudwatch-user** in AWS and also create an API Key for this user. The API id/key would be available in the output of the CloudFormation Stack. Use this id and key to set up the AWS Account in Asserts as shown below&#x20;
 
-![](<../.gitbook/assets/image (8).png>)
+![](<../.gitbook/assets/Screen Shot 2022-05-25 at 1.16.36 PM (1).png>)
 
 #### Step 2 Verify the metrics in Asserts
 
-Verify the presence of metrics in Asserts. E.g., for AWS Lambda you can check for the metric `aws_lambda_timeout_seconds`, and for ECS/Fargate you can check for the metric `aws_ecs_containerinsights_cpu_utilization_avg`
+Verify the presence of metrics in Asserts. E.g., for AWS Lambda you can check for the metric `aws_lambda_timeout_seconds`
 
 ![Lambda metric in Asserts ](<../.gitbook/assets/Screen Shot 2021-12-20 at 9.34.15 AM.png>)
 
 **Step 3 Verify that Asserts ECS Services and Application Load Balancer are discovered**
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/Screen Shot 2022-05-25 at 1.18.41 PM.png>)
 
