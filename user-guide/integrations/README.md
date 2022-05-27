@@ -6,7 +6,7 @@ When doing RCA in the workbench, one can pick a specific time-window when a prob
 
 Currently log integration is supported for **Kibana** and **Graylog**
 
-![View logs for the exact problem window](<../.gitbook/assets/Screenshot 2021-10-26 at 2.08.19 PM.png>)
+![View logs for the exact problem window](<../../.gitbook/assets/Screenshot 2021-10-26 at 2.08.19 PM.png>)
 
 ## Log Configuration
 
@@ -28,9 +28,9 @@ Currently log integration is supported for **Kibana** and **Graylog**
 
 ## Kibana
 
-![Kibana Configuration to a custom Kibana Service](<../.gitbook/assets/Screenshot 2021-10-21 at 11.42.27 AM.png>)
+![Kibana Configuration to a custom Kibana Service](<../../.gitbook/assets/Screenshot 2021-10-21 at 11.42.27 AM.png>)
 
 ## Graylog
 
-![Graylog Configruation to a custom Graylog Service](<../.gitbook/assets/Screenshot 2021-10-21 at 11.44.50 AM.png>)
+![Graylog Configruation to a custom Graylog Service](<../../.gitbook/assets/Screenshot 2021-10-21 at 11.44.50 AM.png>)
 

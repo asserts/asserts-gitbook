@@ -23,10 +23,12 @@
 * [RCA with the Workbench](user-guide/rca-with-the-workbench.md)
 * [Exploring the entity graph](user-guide/exploring-the-entity-graph.md)
 * [Manage SLOs](user-guide/manage-slos.md)
+* [Integrations](user-guide/integrations/README.md)
+  * [Logs](user-guide/integrations/logs.md)
+  * [AWS](user-guide/integrations/aws.md)
 
 ## Developer Guide
 
-* [Integrations](developer-guide/integrations.md)
 * [Relabeling](developer-guide/relabeling.md)
 * [Monitoring as a Code](developer-guide/monitoring-as-a-code.md)
 
