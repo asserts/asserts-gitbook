@@ -6,12 +6,10 @@ For monitoring AWS Serverless like AWS Lambda, ECS Fargate, and other services l
 
 The Asserts AWS Exporter can be set up by using a [CloudFormation template](https://s3.us-west-2.amazonaws.com/downloads.asserts.ai/aws-integration/ecs/v3/aws-integration-https-without-dns.yaml). The following inputs would need to be provided -
 
-**VPC, Subnets, and ALB Configuration**
+**VPC and Subnets**
 
 1. **VPC Id** The VPC in which the ECS Services and the Application Load Balancer need to be installed.&#x20;
 2. **Subnets** The subnets for the service instances. At least 2 subnets in different availability zones need to be provided
-
-****
 
 **ECS Cluster and Log Group Settings**
 
