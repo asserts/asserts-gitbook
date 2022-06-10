@@ -1,7 +1,5 @@
 # Java
 
-
-
 ### Setup
 
 The following are the two popular exporters for Java JVM Metrics [JMX Exporter](https://github.com/prometheus/jmx\_exporter) or [Micrometer Prometheus Exporter](https://micrometer.io/docs/registry/prometheus). The Micrometer exporter provides more information and is the recommended option.

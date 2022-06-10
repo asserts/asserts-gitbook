@@ -76,6 +76,6 @@ Following dashboard will show key metrics like
 * Active Session
 * Max Connection
 
-![](<../../.gitbook/assets/image (10).png>)
+![](<../../.gitbook/assets/image (23).png>)
 
 You can configure the following [Dashboard](https://grafana.com/grafana/dashboards/9628) as a custom dashboard in case you would like to get very detailed information for each PostgreSQL Prometheus metric.

@@ -11,7 +11,6 @@
   * [Runtimes](cloud-platforms/runtimes/README.md)
     * [Java](cloud-platforms/runtimes/java.md)
     * [NodeJS](cloud-platforms/runtimes/nodejs.md)
-    * [Go](cloud-platforms/runtimes/go.md)
   * [Data Stores](cloud-platforms/data-stores/README.md)
     * [MySQL](cloud-platforms/data-stores/mysql.md)
     * [PostgreSQL](cloud-platforms/data-stores/postgresql.md)
@@ -26,10 +25,10 @@
     * [AWS](cloud-platforms/cloud-platform/aws/README.md)
       * [Lambda](cloud-platforms/cloud-platform/aws/lambda.md)
       * [ECS](cloud-platforms/cloud-platform/aws/ecs.md)
-      * [Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer.md)
+      * [Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer/README.md)
+        * [Application Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer/application-load-balancer.md)
+        * [Classic Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer/classic-load-balancer.md)
       * [ApiGateway](cloud-platforms/cloud-platform/aws/apigateway.md)
-      * [SQS](cloud-platforms/cloud-platform/aws/sqs.md)
-      * [Kinesis](cloud-platforms/cloud-platform/aws/kinesis.md)
 
 ## Solutions
 
