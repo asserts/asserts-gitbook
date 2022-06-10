@@ -27,3 +27,5 @@ The [Node Exporter](https://github.com/prometheus/node\_exporter) needs to be in
 ### Dashboard
 
 The following KPIs are shown in the Node Dashboard
+
+![](<../../.gitbook/assets/image (21).png>)

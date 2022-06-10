@@ -25,7 +25,7 @@
     * [AWS](cloud-platforms/cloud-platform/aws/README.md)
       * [Lambda](cloud-platforms/cloud-platform/aws/lambda.md)
       * [ECS](cloud-platforms/cloud-platform/aws/ecs.md)
-      * [Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer/README.md)
+      * [Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer.md)
         * [Application Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer/application-load-balancer.md)
         * [Classic Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer/classic-load-balancer.md)
       * [ApiGateway](cloud-platforms/cloud-platform/aws/apigateway.md)

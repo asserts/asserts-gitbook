@@ -94,4 +94,4 @@ Further details metrics are shown in the below dashboard
 
 InnoDB Specific metrics are shown in the below dashboard
 
-![](<../../.gitbook/assets/image (21).png>)
+![](<../../.gitbook/assets/image (22).png>)

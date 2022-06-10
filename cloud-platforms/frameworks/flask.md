@@ -54,7 +54,7 @@ This dashboard has the following KPIs that include resource and requests metrics
 * Disk Usage
 * Network Usage
 
-![](<../../.gitbook/assets/image (22).png>)
+![](<../../.gitbook/assets/image (23).png>)
 
 You can include any custom dashboard from the community for example [this](https://github.com/rycus86/prometheus\_flask\_exporter/blob/master/examples/sample-signals/grafana/dashboards/example.json) which shows flask specific metrics directly as a custom dashboard for your service.
 
