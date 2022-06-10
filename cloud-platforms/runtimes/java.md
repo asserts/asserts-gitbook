@@ -69,3 +69,5 @@ The following metrics are available for Direct and Mapped buffers
 #### Classes Loaded
 
 * jvm\_classes\_loaded\_classes
+
+![](<../../.gitbook/assets/image (21).png>)
