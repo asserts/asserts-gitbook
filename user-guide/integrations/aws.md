@@ -47,3 +47,8 @@ Verify the presence of metrics in Asserts. E.g., for AWS Lambda you can check fo
 
 ![](<../../.gitbook/assets/Screen Shot 2022-05-25 at 1.18.41 PM.png>)
 
+#### Step 4 Configure AWS API Key in Asserts
+
+To view AWS CloudWatch metrics in Asserts the AWS API Key with read permissions needs to be configured in Asserts.
+
+![](../../.gitbook/assets/Save\_AWS\_API\_Key\_In\_Asserts.gif)
