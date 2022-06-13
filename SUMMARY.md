@@ -55,7 +55,3 @@
 
 * [Relabeling](developer-guide/relabeling.md)
 * [Monitoring as a Code](developer-guide/monitoring-as-a-code.md)
-
-## Tutorials <a href="#quickstart-guide" id="quickstart-guide"></a>
-
-* [AWS Serverless Monitoring](quickstart-guide/aws-serverless-monitoring.md)
