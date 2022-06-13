@@ -27,9 +27,7 @@ The Asserts AWS Exporter can be set up by using a [CloudFormation template](http
 5. **Asserts API Server API User Name** An API key can be created in Asserts. In the Asserts product, Go to your Profile -> Settings -> Credentials and create a new credential. Copy the **Id** and **Secret** for use later. Specify the **Id** as the User name
 6. **Asserts API Server API Password** Specify the **Secret** as the password
 
-{% file src="../../.gitbook/assets/Asserts_API_Credential.gif" %}
-API Credentials
-{% endfile %}
+![](../../.gitbook/assets/Asserts\_API\_Credential\_v2.gif)
 
 **Asserts AWS User**
 
