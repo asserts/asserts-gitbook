@@ -66,7 +66,9 @@ A software system has many moving parts, each of which is expected to function i
 * a primary/standby system should only have one active at any time
 * each Kafka partition should have its replication count maintained to the specified setting
 
-Sometimes things could go wrong, and as they happen, catastrophic damage may ensue. Asserts identifies these scenarios as _failure_ assertions. They are different from saturations or anomalies because they are critical ones and usually do not involve arbitrary thresholds. An example failure assertion to assert whether a Kafka cluster violation its expectation that there is one and only one active controller looks like this
+Sometimes significant or complete app degradation might occur. Asserts identifies these scenarios as _failure_ assertions. They are different from saturations and anomalies by being clear-cut critical issues without arbitrary thresholds.&#x20;
+
+Here is an example of a failure assertion showing a Kafka cluster violating the expectation that there is only one active controller:
 
 ```
 sum by (job) (kafka_controller_kafkacontroller_activecontrollercount) != 1

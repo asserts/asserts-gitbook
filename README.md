@@ -28,7 +28,7 @@ Asserts taps into your telemetry data sources (app metrics), automatically build
 
 ![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.30.30 AM.png>)
 
-Our [cloud component catalog](cloud-platforms/) is constantly evolving.
+Our [cloud component catalog](cloud-platforms.md) is constantly evolving.
 
 ### Instrument **via SAAFE Assertions to collect the symptoms and causes**
 
