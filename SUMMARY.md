@@ -8,6 +8,7 @@
   * [Infrastructure](cloud-platforms/infrastructure/README.md)
     * [Kubernetes](cloud-platforms/infrastructure/kubernetes.md)
     * [Node](cloud-platforms/infrastructure/node.md)
+    * [Istio](cloud-platforms/infrastructure/istio.md)
   * [Runtimes](cloud-platforms/runtimes/README.md)
     * [Java](cloud-platforms/runtimes/java.md)
     * [NodeJS](cloud-platforms/runtimes/nodejs.md)
