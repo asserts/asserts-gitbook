@@ -40,6 +40,7 @@
     * [Mac & Windows](solutions/asserts-enterprise/installation/mac-and-windows.md)
     * [EC2](solutions/asserts-enterprise/installation/ec2.md)
   * [Integrate Prometheus](solutions/asserts-enterprise/integrate-prometheus.md)
+* [AWS CloudWatch](solutions/aws-cloudwatch.md)
 
 ## User Guide
 
