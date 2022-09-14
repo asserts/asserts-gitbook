@@ -8,13 +8,12 @@ description: Quick start guide for Deploying Asserts on a Kubernetes Cluster
 
 ### **Required P**rerequisites
 
-In order to deploy the Asserts helm chart, the following prerequisites <mark style="color:red;">**must**</mark> be satisfied :
+In order to deploy the Asserts helm chart, the following prerequisites should be satisfied :
 
-* [ ] Acquired <mark style="color:blue;">**Asserts License**</mark>
-* [ ] Helm client (version 3.0+)\
+* Helm client (version 3.0+)\
   [_Install Helm_](https://helm.sh/docs/intro/install/)__
-* [ ] Target Cluster is running Kubernetes 1.17+
-* [ ] Target Cluster must have PV provisioner support
+* Target Cluster is running Kubernetes 1.17+
+* Target Cluster must have PV provisioner support
 
 <details>
 
@@ -48,14 +47,9 @@ Kubernetes currently supports the following plugins:
 
 All Asserts services publish their own metrics, which are in turn consumed by Asserts so it can monitor itself. This enables you to install and run Asserts without the following prerequisites to get a taste of the value that Asserts aims to provide. However, to realize the full potential that Asserts can provide please consider satisfying the following prerequisites.
 
-* [ ] A Prometheus compatible endpoint to query (can be multiple)\
-  :warning: - _Asserts can not provide actionable insights into your **Prometheus environment** without the ability_ query it's endpoint. __ \
-  __
-  * [ ] [kube-state-metrics](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-state-metrics) (metrics within the Prometheus endpoint)\
-    :warning: - _Asserts can not provide actionable insights on **the state of the objects** managed by your **Cluster** without these metrics._\
-    __
-  * [ ] [node-exporter](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-node-exporter) (metrics within the Prometheus endpoint)\
-    :warning: - _Asserts can not provide insights on_ **Node** (Instance) level resource utilization, performance and health _without these metrics._\
+* A Prometheus compatible endpoint to query (can be multiple)
+* [kube-state-metrics](https://github.com/kubernetes/kube-state-metrics)
+* [node-exporter](https://github.com/prometheus/node\_exporter)\
 
 
 ****
@@ -72,27 +66,16 @@ helm repo add asserts https://asserts.github.io/helm-charts
 
 #### 2. Set Chart Configuration Overrides
 
-Create a **values.yaml** with chart overrides
+Create a helm **values**  with chart overrides
 
-{% code title="values.yaml" %}
+{% code title="your-values.yaml" %}
 ```yaml
-prometheusEndpoints:
-  - url: kube-prometheus-stack-prometheus.default.svc.cluster.local:9090
-    scheme: http
-    env: dev
-
-assertsClusterEnv: dev
-
-## OPTIONAL: if not using out of the box community edition
-##           and you have a trial or enterprise license
-server:
-  extraEnv:
-    - name: ASSERTS_LICENSE_AUTH_TOKEN
-      value: "<YOUR-AUTH-TOKEN>"
-    - name: ASSERTS_LICENSE_PRODUCT_ID
-      value: "<YOUR-PRODUCT-ID>"
-    - name: ASSERTS_LICENSE_KEY
-      value: "<YOUR-LICENSE-KE
+## Asserts cluster env and site
+## This should be set to the env and site
+## of the cluster asserts is being installed in.
+assertsClusterEnv: your-env
+# optional (e.g. us-west-2)
+assertsClusterSite: ""
 ```
 {% endcode %}
 
@@ -100,16 +83,16 @@ View all install configuration options [**here**](https://github.com/asserts/hel
 
 #### **3. Install Asserts Helm Chart**
 
-This command will  instal the asserts charts with overrides and create Asserts namespace
+This command will install the asserts charts with overrides and create Asserts namespace
 
 ```shell
 helm upgrade --install asserts asserts/asserts \
--f values.yaml \
+-f your-values.yaml \
 --namespace asserts \
 --create-namespace
 ```
 
-### **Enable port-forward**
+### **Enable port-forward to login**
 
 ```bash
 kubectl port-forward -n asserts deployment/asserts-ui 8080
@@ -142,7 +125,13 @@ To uninstall Asserts and its dependencies, run the following command:
 helm uninstall asserts -n asserts
 ```
 
+The previous command removes all the Kubernetes components but PVCs associated with the chart and deletes the release.
 
+To delete the PVCs associated with `asserts`:
+
+```
+kubectl delete pvc -l app.kubernetes.io/instance=asserts
+```
 
 ## [Need Help](../#before-you-begin)
 

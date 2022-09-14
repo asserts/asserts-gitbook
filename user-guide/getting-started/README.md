@@ -22,7 +22,7 @@ If you run into any issues, need help setting up or using Asserts, or just have 
     This is our preferred method of communication. \
 
 2. **Messenger App**\
-   You can also reach us by simply clicking on the <img src="../../.gitbook/assets/intercom-icon-27.jpg" alt="" data-size="line"> icon in the bottom right corner of any page on our site to open our messenger app and <mark style="color:blue;">Send us a message</mark> to directly chat with us 😃\
+   You can also reach us by simply clicking on the <img src="../../.gitbook/assets/intercom-icon-27.jpg" alt="" data-size="line"> icon in the bottom right corner of any page on our site to open our messenger app and send us a message <mark style="color:blue;"></mark> to directly chat with us 😃\
 
 3. **Email**\
    Lastly, you can also shoot us an email directly at [support@asserts.ai](mailto:support@asserts.ai)
@@ -31,7 +31,7 @@ If you run into any issues, need help setting up or using Asserts, or just have 
 
 ## Determine which Asserts is right for you?
 
-### [Self Hosted vs](self-hosted-vs-cloud.md) [Asserts Cloud](self-hosted-vs-cloud.md)
+### Self-Hosted vs Asserts Cloud
 
 
 
@@ -41,15 +41,15 @@ If you run into any issues, need help setting up or using Asserts, or just have 
 
 ### Self-Hosted
 
-1. <mark style="color:yellow;">****</mark>[Install **** Asserts](self-hosted/)
+1. [Install **** Asserts](self-hosted/#installation-options)
 2. Follow the instructions in your installation to request a _**Self-Hosted** _ Trial License
 3. Integrate your **Prometheus** server(s) through our **Data Sources** screen
-4. Start <mark style="color:blue;">**Observing**</mark>
+4. Start Observing
 
 ### Asserts Cloud
 
-1. [Request a **Cloud** Trial](https://share.hsforms.com/1Cc0HO62KRIy2-TZpbvcTwwbvn02)
+1. [Request a Cloud Trial](https://share.hsforms.com/1Cc0HO62KRIy2-TZpbvcTwwbvn02)
 2. We will reach out to you to connect to your **Prometheus**
-3. Start <mark style="color:blue;">**Observing**</mark>
+3. Start Observing
 
 <mark style="color:blue;">****</mark>

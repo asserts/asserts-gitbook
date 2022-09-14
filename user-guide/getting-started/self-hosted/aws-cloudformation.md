@@ -8,24 +8,18 @@ description: Quick start guide for Deploying Asserts on a EC2 Instance
 
 ### **Required P**rerequisites
 
-* [ ] Acquired <mark style="color:blue;">**Asserts License**</mark>
-* [ ] An **AWS Account** and **Access** to create **CloudFormation Stacks**
-* [ ] An <mark style="color:orange;">**AWS EC2 key-pair**</mark>
-* [ ] An <mark style="color:orange;">**AWS VPC**</mark>
-* [ ] An <mark style="color:orange;">**AWS Public Subnet**</mark>
+* An **AWS Account** and **Access** to create **CloudFormation Stacks**
+* An <mark style="color:orange;">**AWS EC2 key-pair**</mark>
+* An <mark style="color:orange;">**AWS VPC**</mark>
+* An <mark style="color:orange;">**AWS Public Subnet**</mark>
 
 ### **Optional P**rerequisites
 
 All Asserts services publish their own metrics, which are in turn consumed by Asserts so it can monitor itself. This enables you to install and run Asserts without the following prerequisites to get a taste of the value that Asserts aims to provide. However, to realize the full potential that Asserts can provide please consider satisfying the following prerequisites.
 
-* [ ] A Prometheus compatible endpoint to query (can be multiple)\
-  :warning: - _Asserts can not provide actionable insights into your **Prometheus environment** without the ability_ query it's endpoint. __ \
-  __
-  * [ ] [kube-state-metrics](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-state-metrics) (metrics within the Prometheus endpoint)\
-    :warning: - _Asserts can not provide actionable insights on **the state of the objects** managed by your **Cluster** without these metrics._\
-    __
-  * [ ] [node-exporter](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-node-exporter) (metrics within the Prometheus endpoint)\
-    :warning: - _Asserts can not provide insights on_ **Node** (Instance) level resource utilization, performance and health _without these metrics._
+* A Prometheus compatible endpoint to query (can be multiple)
+* [node-exporter](https://github.com/prometheus/node\_exporter)
+* [cadvisor](https://github.com/google/cadvisor)
 
 \
 
@@ -132,7 +126,7 @@ _Region specific Quick-Create Links for Asserts Stack_
 #### Confirm & Create Asserts Stack
 
 1. Check the box at the bottom of the page
-   * [ ] _I acknowledge that AWS CloudFormation might create IAM resources._
+   * _I acknowledge that AWS CloudFormation might create IAM resources._
 2. _Click the <mark style="color:orange;">**Create stack**</mark> <mark style="color:orange;"></mark><mark style="color:orange;"></mark> button_
 
 #### **See the data!**

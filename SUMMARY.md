@@ -54,4 +54,4 @@
 ## Developer Guide
 
 * [Relabeling](developer-guide/relabeling.md)
-* [Monitoring as a Code](developer-guide/monitoring-as-a-code.md)
+* [Monitoring as Code](developer-guide/monitoring-as-a-code.md)
