@@ -8,7 +8,7 @@ First, we inspect their labels to discover various entities and populate their p
 
 All these entities, properties, and relationships form a knowledge graph that describes our understanding of the system. They are also indexed to be easily searchable. The discovery process constantly updates the graph while at the same time keeps the history.
 
-![](<.gitbook/assets/image (1) (2).png>)
+![](<../.gitbook/assets/image (1) (2).png>)
 
 ## Normalization <a href="#howassertsworks-wip-normalization" id="howassertsworks-wip-normalization"></a>
 

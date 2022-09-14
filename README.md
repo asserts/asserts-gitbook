@@ -1,72 +1,55 @@
 ---
-description: Introduction
+description: How to get up and running with Asserts
 ---
 
-# Asserts
+# Introduction
 
-## **Founding Story**
+## Welcome!
 
-As builders and operators of cloud applications and founding engineers of industry-leading APM products, we were pinched every day; why was it still so hard to troubleshoot and optimize our app with the modern APM tools? We had [assertions](https://en.wikipedia.org/wiki/Assertion\_\(software\_development\)) for our compile time with Unit, Component, and Integration tests but couldn’t apply the same rigor to our runtime. There wasn’t a platform to _transcribe our system design_ embedded in the [four golden signals](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics into Runtime Assertions. When we started creating Alerts to track these failures and dashboards to view the metrics, they were disjoint, too many to manage, too noisy to correlate, and will go out of date too soon with our continuous release.
+This guide will walk you through getting up and running with Asserts.
 
-As engineers, we wished for an adaptive and purposefully built solution for _distributed systems and cloud architecture_, and most importantly, that allowed us to manage our _Monitoring as a Code_.
+You'll learn how to setup, run, and experiment with the Asserts Platform.
 
-**What is Asserts?**
 
-Asserts is the next-generation insights for your distributed, multi-cloud applications.
 
-With Asserts, your team can say goodbye to disjointed dashboards that don’t keep up with rapid releases. Your expert engineers won’t be constantly interrupted to pore over esoteric metric charts and sift through an ocean of disjointed logs hoping to stumble upon the needle in the haystack. And to top it off, your on-call team won’t be fatigued by alerts that don’t matter.
+### **Before you begin**
 
-Let’s dig deeper to find how Asserts is different.
+If you run into any issues, need help setting up or using Asserts, or just have questions in general you can reach us via the following channels:
 
-## **Features**
+1.  **Join our community Slack Channel**
 
-### **Discover a Living Map of App and Infra components**
+    Please consider joining our [community Slack channel](https://join.slack.com/t/asserts-community/shared\_invite/zt-1aobjmmls-xT1HwiSp1DNFXPeEvQEb5A). \
+    This is our preferred method of communication. \
 
-Asserts taps into your telemetry data sources (app metrics), automatically builds a graph of your application and infrastructure components, and indexes the graph for search.
+2. **Messenger App**\
+   You can also reach us by simply clicking on the <img src=".gitbook/assets/intercom-icon-27.jpg" alt="" data-size="line"> icon in the bottom right corner of any page on our site to open our messenger app and send us a message <mark style="color:blue;"></mark> to directly chat with us 😃\
 
-* With our search, you can find how the components fit together in real-time and view KPIs in the built-in Grafana dashboard.
+3. **Email**\
+   Lastly, you can also shoot us an email directly at [support@asserts.ai](mailto:support@asserts.ai)
 
-![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.30.30 AM.png>)
 
-Our [cloud component catalog](cloud-platforms/) is constantly evolving.
 
-### Instrument **via SAAFE Assertions to collect the symptoms and causes**
+## Determine which Asserts is right for you?
 
-Asserts curates knowledge of common runtime failure patterns and potential causes, so your team doesn’t have to research and maintain these rules.
+### Self-Hosted vs Asserts Cloud
 
-It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (new deployments, scale events et al.), request & latency _**Anomalies**_, systemic _**Failures**_, and _**Errors**_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
 
-The occurrences of these assertions are annotated on the (Knowledge) Graph, so it is easy to consume at a glance.&#x20;
 
-![](.gitbook/assets/1.png)
+## What's needed to get up and running? <a href="#system-requirements" id="system-requirements"></a>
 
-### **Explore with Unified Search**
+&#x20; You can get setup and running with Asserts in a few simple steps.
 
-With our unified search, you can combine components, relations, configurations, and associated assertions to express your intent in an easy natural language expression.
+### Self-Hosted
 
-_e.g.,_ Search “Pods `crashing` on Nodes with high `cpu:load`”&#x20;
+1. [Install **** Asserts](getting-started/self-hosted/#installation-options)
+2. Follow the instructions in your installation to request a _**Self-Hosted** _ Trial License
+3. Integrate your **Prometheus** server(s) through our **Data Sources** screen
+4. Start Observing
 
-![](<.gitbook/assets/Screen Shot 2021-09-16 at 11.34.26 PM.png>)
+### Asserts Cloud
 
-### **Wake up when it matters**
+1. [Request a Cloud Trial](https://share.hsforms.com/1Cc0HO62KRIy2-TZpbvcTwwbvn02)
+2. We will reach out to you to connect to your **Prometheus**
+3. Start Observing
 
-The SRE book recommends [Alerting on Service Level Objectives (SLO)](https://sre.google/workbook/alerting-on-slos/), to track`"what's broken"`and with Asserts setting up your SLOs and tracking your error budget is a breeze. And then finding "why it's broken" is just a click away in our Assertion workbench.
-
-![](<.gitbook/assets/Screen Shot 2021-09-30 at 9.19.41 AM.png>)
-
-### **Spot issues quickly with Top Insights**
-
-With our always-on Assertions, you don’t have to wait for SLOs to breach and Alerts to fire. Top Insights presents a stack-ranked view of Services / Nodes that need attention based on their `assertion score`. \
-And then `Open in Workbench` to find the root cause.
-
-![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.32.50 AM.png>)
-
-### **Troubleshoot in Workbench with all the Assertions**
-
-In our assertion workbench, dig in to view all the possible causes correlated across time and space, with just the right metrics and logs at your fingertip.
-
-_e.g.,_ an amend (new deployment) on `api-server`triggered a spike in error rate on an endpoint `/slo/incidents`. Jump to `Dashboard` or `View Logs` to see contextual logs in your existing log store, like Kibana, Graylog, et al.
-
-![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.38.03 AM.png>)
-
-### ****
+<mark style="color:blue;">****</mark>

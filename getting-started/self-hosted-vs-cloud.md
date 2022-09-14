@@ -33,7 +33,7 @@ This offering is well suited for:&#x20;
 
 
 
-## FAQ <a href="#authentication" id="authentication"></a>
+
 
 
 

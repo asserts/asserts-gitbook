@@ -16,13 +16,13 @@ resource:usage > resource:usage:threshold
 
 We quantify resource usage either as a percentage or an absolute value. Either way, the usage value is compared to two static thresholds. One is for warning, and the other for critical. They are not overlapping, so when the critical saturation fires, the warning assertion is suppressed. In the following example, CPU load experienced both warning and critical.
 
-![](<.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (3).png>)
 
 Different types of resources need different thresholds. Even for the same resource type, like CPU, its usage measured by [cAdvisor](https://github.com/google/cadvisor) or [node exporter](https://github.com/prometheus/node\_exporter) can be different, thus may need different threshold values. Asserts provides default values per resource type, and in some cases, per source/exporter. Customers can modify them. For more fine-grained control, they can also supply threshold values on the container level.
 
 To simplify the customization, the three levels (resource type, metric source, and container) are hierarchical in this order. For example, a customer can define a global threshold of 85% for memory usage, but if reported from the Redis exporter, 80%, and if it's on a Redis instance for a particular memory-critical application, 70%.
 
-Refer to [Assertion Management ](user-guide/assertion-management.md)on how to make these customizations.
+Refer to [Assertion Management ](../user-guide/assertion-management.md)on how to make these customizations.
 
 ## Amend
 
@@ -35,7 +35,7 @@ Out of the box, Asserts detect the following amends
 * Scaling events like node count change, pod count change
 * Other domain-specific change events like shard rebalancing in elastic search, config reload in Nginx, etc
 
-![](<.gitbook/assets/Screen Shot 2021-09-21 at 5.58.51 PM.png>)
+![](<../.gitbook/assets/Screen Shot 2021-09-21 at 5.58.51 PM.png>)
 
 As we expand our domain coverage, we expect to include more amend assertions in the future.
 
@@ -54,7 +54,7 @@ unless request:erratic_and_sparse > 0
 
 An example of change detected by an `amend` assertion triggering a latency spike, an `anomaly` assertion on rule-engine service
 
-![](<.gitbook/assets/Screen Shot 2021-10-08 at 4.34.05 PM.png>)
+![](<../.gitbook/assets/Screen Shot 2021-10-08 at 4.34.05 PM.png>)
 
 For these anomaly assertions, customers do not need to provide much input on thresholds, but they can customize the size of the range and the sensitivity for detecting sparse requests.
 
@@ -78,7 +78,7 @@ Failure assertions are highly domain-specific, so the list of failure assertion 
 \
 Here is an example of `failures` (pod crash looping) triggered by Traffic Spike detected via request `anomaly` assertion. &#x20;
 
-![](<.gitbook/assets/Screen Shot 2021-09-21 at 7.02.03 PM.png>)
+![](<../.gitbook/assets/Screen Shot 2021-09-21 at 7.02.03 PM.png>)
 
 ## Error
 
@@ -114,13 +114,13 @@ We then supplement them with two warning assertions to detect pattern changes in
 
 These assertions complement each other, but they sometimes overlap.
 
-![](<.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4).png>)
 
 In addition, we've also expanded the concept of errors to latency. Even though we have latency anomaly assertions already, we understand latency impacts user experience. When a user-facing request latency is big enough, we'd like to treat it as an error condition. Latency distribution is known to have long tails, so Asserts tries not to miss out by building a couple of different assertions:
 
 * _LatencyAverageBreach_  is to capture the overall elevated latency
 * _LatencyP99ErrorBuildup_ is to capture chronic deterioation of latency. Unlike the average measurement, the underlying requests for P99 latency are usually sporadic, so we use the same fast build-up approach as what is used for _ErrorBuildup_.&#x20;
 
-![](<.gitbook/assets/image (6) (1) (1).png>)
+![](<../.gitbook/assets/image (6) (1) (1).png>)
 
 Because these are to capture user experience impact, they are all deemed critical.&#x20;

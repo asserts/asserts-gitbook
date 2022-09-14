@@ -1,6 +1,6 @@
 # Assertion Management
 
-### Thresholds
+## Thresholds
 
 Asserts has curated an assertion library pertaining to our SAAFE model. Internally they are a collection of Prometheus rules with user-configurable thresholds. We divide the threshold configuration into three sections and organize each section by assertion types
 
