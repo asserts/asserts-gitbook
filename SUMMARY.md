@@ -31,19 +31,17 @@
         * [Classic Load Balancer](cloud-platforms/cloud-platform/aws/load-balancer/classic-load-balancer.md)
       * [ApiGateway](cloud-platforms/cloud-platform/aws/apigateway.md)
 
-## Solutions
-
-* [Getting Started](solutions/getting-started.md)
-* [Asserts Cloud](solutions/asserts-cloud.md)
-* [Asserts Enterprise](solutions/asserts-enterprise/README.md)
-  * [Installation](solutions/asserts-enterprise/installation/README.md)
-    * [Mac & Windows](solutions/asserts-enterprise/installation/mac-and-windows.md)
-    * [EC2](solutions/asserts-enterprise/installation/ec2.md)
-  * [Integrate Prometheus](solutions/asserts-enterprise/integrate-prometheus.md)
-* [AWS CloudWatch](solutions/aws-cloudwatch.md)
-
 ## User Guide
 
+* [Getting Started](user-guide/getting-started/README.md)
+  * [Self-Hosted vs Cloud](user-guide/getting-started/self-hosted-vs-cloud.md)
+  * [Self-Hosted](user-guide/getting-started/self-hosted/README.md)
+    * [Helm Chart](user-guide/getting-started/self-hosted/helm-chart.md)
+    * [Docker Compose](user-guide/getting-started/self-hosted/docker-compose.md)
+    * [AWS CloudFormation](user-guide/getting-started/self-hosted/aws-cloudformation.md)
+  * [Cloud](user-guide/getting-started/cloud.md)
+* [AWS CloudWatch](user-guide/aws-cloudwatch/README.md)
+  * [FAQ](user-guide/aws-cloudwatch/faq.md)
 * [Check-in](user-guide/check-in.md)
 * [Assertion Management](user-guide/assertion-management.md)
 * [RCA with the Workbench](user-guide/rca-with-the-workbench.md)
