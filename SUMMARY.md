@@ -18,10 +18,10 @@
 
 ## User Guide
 
-* [Check-in](user-guide/check-in.md)
+* [Top Insights](user-guide/check-in.md)
 * [Workbench](user-guide/workbench.md)
 * [Exploring the entity graph](user-guide/exploring-the-entity-graph.md)
-* [Manage SLOs](user-guide/manage-slos.md)
+* [SLOs](user-guide/slos.md)
 * [Monitoring as Code](user-guide/monitoring-as-a-code.md)
 * [Assertion Management](user-guide/assertion-management.md)
 * [Global Settings](user-guide/global-settings/README.md)

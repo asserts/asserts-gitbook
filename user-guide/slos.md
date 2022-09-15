@@ -1,8 +1,10 @@
-# Manage SLOs
+# SLOs
 
 #### SLOs <a href="#howassertsworks-wip-slos" id="howassertsworks-wip-slos"></a>
 
-Unlike assertions, SLOs are meant to capture high-level business objectives and help reduce alert fatigue. Asserts makes it extremely easy to define SLOs for your services. Asserts automatically tracks the SLO, reports violations as Incidents that are integrated into the assertion and alerting framework. You can define SLOs through the UI or through the API
+SLOs are meant to capture high-level business objectives and help reduce alert fatigue. Asserts makes it extremely easy to define SLOs for your services. Asserts automatically tracks the SLO, and reports each violation on the Incidents page. You can define SLOs through the UI or through the API.
+
+#### **Manage SLOs**
 
 **Availability SLO using Simple UI**
 
@@ -12,7 +14,7 @@ Defining an SLO through the UI is very simple. Navigate to the `Manage SLOs` pag
 
 #### Availability SLO using Advanced UI
 
-The advanced UI allows specifying custom prometheus queries to define the SLO.
+The advanced UI allows specifying custom Prometheus queries to define the SLO.
 
 ![Define an availability SLO using the advanced UI](<../.gitbook/assets/Screen Shot 2022-01-05 at 7.35.17 PM.png>)
 
@@ -26,7 +28,7 @@ The advanced UI allows specifying custom prometheus queries to define the SLO.
 
 **SLO Definition API**
 
-SLOs can also be defined through an API. Here is an example of a SLO API request to define an SLO.&#x20;
+SLOs can also be defined through an API. Here is an example of an SLO API request to define an SLO.&#x20;
 
 ```
 apiVersion: asserts/v1
@@ -45,7 +47,7 @@ objectives:
       days: 7
 ```
 
-**SLO List Page**
+#### **SLO List Page**
 
 The SLO list page lists all the SLOs and their status and a summary of budget utilization and incidents.
 
@@ -53,7 +55,7 @@ The SLO list page lists all the SLOs and their status and a summary of budget ut
 
 **SLO Burndown and Incident Timeline**
 
-Clicking an SLO Objective navigates to a view that shows the error budget burndown and the underlying metric. Occurrences of incidents are highlighted on the timeline. Clicking a highlighted incident will show the incident duration and budget burndown. The tooltip shows the incident time window and budget burn down. By clicking `View` , you can navigate to [Top Insights](https://docs.asserts.ai/user-guide/check-in#howassertsworks-wip-topinsights) to start RCA of the incident.&#x20;
+Clicking an SLO Objective navigates to a view that shows the error budget burndown and the underlying metric. Occurrences of incidents are highlighted on the timeline. Clicking a highlighted incident will show the incident duration and budget burndown. The tooltip shows the incident time window and budget burn down. By clicking `View` , you can navigate to [Workbench](workbench.md) to start the RCA of the incident.&#x20;
 
 ![](<../.gitbook/assets/Screen Shot 2021-09-30 at 4.37.17 PM.png>)
 
