@@ -2,7 +2,7 @@
 
 #### **Asserts AWS Exporter**
 
-The [Asserts AWS Exporter](broken-reference) is required to export the throttle count metric and the function execution count metric at the function and region level. You can also export request and error metrics from CloudWatch, but it is recommended to use the lambda layer instead. To run it in the development environment
+The [Asserts AWS Exporter](../../../integrations/aws.md) is required to export the throttle count metric and the function execution count metric at the function and region level. You can also export request and error metrics from CloudWatch, but it is recommended to use the lambda layer instead. To run it in the development environment
 
 ```
 docker run --env-file env.properties -p 8010:8010 asserts/aws-cloudwatch-exporter.dev 

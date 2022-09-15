@@ -20,7 +20,7 @@
 
 * [Top Insights](user-guide/top-insights.md)
 * [Workbench](user-guide/workbench.md)
-* [Exploring the entity graph](user-guide/exploring-the-entity-graph.md)
+* [Entities](user-guide/exploring-the-entity-graph.md)
 * [SLOs](user-guide/slos.md)
 * [Monitoring as Code](user-guide/monitoring-as-a-code.md)
 * [Assertion Management](user-guide/assertion-management.md)
