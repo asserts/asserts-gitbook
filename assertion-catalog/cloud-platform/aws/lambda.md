@@ -49,6 +49,6 @@ The Asserts Lambda layer needs to be added to the Lambda function. Lambda layers
 
 ### KPI Dashboard
 
-The Lambda KPI Dashboard shows all the KPIs
+The Lambda KPI Dashboard shows all the KPIs and also the Cold Starts for correlation with Traffic Spike and Latency degradation
 
 <figure><img src="../../../.gitbook/assets/Lambda_with_Cold_Starts.png" alt=""><figcaption><p>Lambda KPI for a NodeJS Lambda function</p></figcaption></figure>
