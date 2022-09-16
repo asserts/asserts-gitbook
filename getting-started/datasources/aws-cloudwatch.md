@@ -47,7 +47,7 @@ The following inputs would need to be provided -
 6. **Asserts API Server API Password** Specify the **Secret** as the password
 7. **CloudWatch User Password** Password to create a user with permission to read CloudWatch metrics.
 
-![](../../.gitbook/assets/Asserts\_API\_Credential\_v2.gif)
+<figure><img src="../../.gitbook/assets/Create_Tenant_API_Credentials.gif" alt=""><figcaption><p>Create Asserts Service API Credentials</p></figcaption></figure>
 
 The CloudFormation template creates an API key to allow the Asserts server to read CloudWatch metrics from this account.&#x20;
 
