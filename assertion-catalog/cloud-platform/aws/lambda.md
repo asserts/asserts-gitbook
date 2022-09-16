@@ -27,12 +27,11 @@ The Asserts Lambda layer needs to be added to the Lambda function. Lambda layers
 
 #### Resource
 
-| **Metric**                                                                                                                | **Key Performance Indicator (KPI)**                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Memory NodeJS</p><p>process_heap_bytes</p><p>Memory Python</p><p>process_resident_memory_bytes</p>                     | <p><strong>NodeJS</strong></p><p>process_heap_bytes / aws_lambda_memory_limit_mb</p><p><strong>Python</strong></p><p>process_resident_memory_bytes / aws_lambda_memory_limit_mb</p>                                                                                 |
-| <p>CPU Total Time</p><p>aws_lambda_cpu_total_time_sum</p>                                                                 | <p>CPU Time Usage</p><p>avg_over_time(aws_lambda_cpu_total_time_sum[5m)</p>                                                                                                                                                                                         |
-| <p>Network Bytes Received</p><p>aws_lambda_rx_bytes_sum</p><p>Network Bytes Transmitted</p><p>aws_lambda_tx_bytes_sum</p> | <p>Data transfer rate</p><p>avg_over_time(aws_lambda_rx_bytes_sum[5m)</p><p>avg_over_time(aws_lambda_tx_bytes_sum[5m)</p>                                                                                                                                           |
-| <p>Concurrent Executions</p><p>aws_lambda_concurrent_executions_avg</p>                                                   | <p>When concurrency is reserved at the function level</p><p>aws_lambda_concurrent_executions_avg / aws_lambda_allocated_concurrency</p><p>For account level</p><p>aws_lambda_concurrent_executions_avg / aws_lambda_account_limit{type="concurrent_executions"}</p> |
+| **Metric**                                                                                            | **Key Performance Indicator (KPI)**                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Memory NodeJS</p><p>process_heap_bytes</p><p>Memory Python</p><p>process_resident_memory_bytes</p> | <p><strong>NodeJS</strong></p><p>process_heap_bytes / aws_lambda_memory_limit_mb</p><p><strong>Python</strong></p><p>process_resident_memory_bytes / aws_lambda_memory_limit_mb</p>                                                                                 |
+| <p>CPU Total Time</p><p><code>process_cpu_seconds_total</code></p>                                    | <p>CPU Time Usage</p><p><code>rate(process_cpu_seconds_total[5m])</code></p>                                                                                                                                                                                        |
+| <p>Concurrent Executions</p><p>aws_lambda_concurrent_executions_avg</p>                               | <p>When concurrency is reserved at the function level</p><p>aws_lambda_concurrent_executions_avg / aws_lambda_allocated_concurrency</p><p>For account level</p><p>aws_lambda_concurrent_executions_avg / aws_lambda_account_limit{type="concurrent_executions"}</p> |
 
 **Alerts**
 
@@ -50,6 +49,6 @@ The Asserts Lambda layer needs to be added to the Lambda function. Lambda layers
 
 ### KPI Dashboard
 
-The Lambda KPI Dashboard shows all the above mentioned KPIs
+The Lambda KPI Dashboard shows all the KPIs
 
-![](../../../.gitbook/assets/Blog\_KPI\_Dashboard.png)
+<figure><img src="../../../.gitbook/assets/Lambda_with_Cold_Starts.png" alt=""><figcaption><p>Lambda KPI for a NodeJS Lambda function</p></figcaption></figure>
