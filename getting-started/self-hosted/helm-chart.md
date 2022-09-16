@@ -104,7 +104,9 @@ You can now view the deployed frontend by visiting the following link.
 
 [**http://localhost:8080**](http://localhost:8080)
 
+Once there, you can request a trial license and start observing!
 
+<figure><img src="../../.gitbook/assets/Asserts Request Trial License.gif" alt=""><figcaption></figcaption></figure>
 
 ## Update
 

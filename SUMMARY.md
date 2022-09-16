@@ -9,12 +9,13 @@
   * [Docker Compose](getting-started/self-hosted/docker-compose.md)
   * [AWS CloudFormation](getting-started/self-hosted/aws-cloudformation.md)
 * [Cloud](getting-started/cloud.md)
-* [DataSources](getting-started/datasources/README.md)
-  * [AWS CloudWatch](getting-started/datasources/aws-cloudwatch.md)
 
 ## Integrations
 
 * [Logs](integrations/logs.md)
+* [Data Source](integrations/data-source/README.md)
+  * [AWS CloudWatch](integrations/data-source/aws-cloudwatch.md)
+  * [Prometheus](integrations/data-source/prometheus.md)
 
 ## User Guide
 

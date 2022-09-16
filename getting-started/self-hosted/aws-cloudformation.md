@@ -134,6 +134,9 @@ _Region specific Quick-Create Links for Asserts Stack_
 1. _Wait for the Asserts Stack to display <mark style="color:green;">**Create\_Complete**</mark>_
 2. _Under the stack's Outputs tab, click the **WebsiteUrl**_ \
    _****Y_ou should now be able to view the Asserts UI
+3. Request a trial license to start observing!
+
+<figure><img src="../../.gitbook/assets/Asserts Request Trial License.gif" alt=""><figcaption></figcaption></figure>
 
 
 

@@ -148,6 +148,9 @@ __
     ```
     open http://localhost
     ```
+5. Request a trial license to start observing!
+
+<figure><img src="../../.gitbook/assets/Asserts Request Trial License.gif" alt=""><figcaption></figcaption></figure>
 
 
 
