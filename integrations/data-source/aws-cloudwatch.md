@@ -12,7 +12,7 @@ Asserts can monitor AWS Services, including Serverless technologies like AWS Lam
 
 Here is a diagram that shows how these components function
 
-<figure><img src="../../.gitbook/assets/AWS_Monitoring_Architecture.png" alt=""><figcaption><p>Asserts Components for AWS Monitoring</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/AWS_Monitoring_Architecture_Nicer (1).png" alt=""><figcaption><p>Asserts Components for AWS Monitoring</p></figcaption></figure>
 
 #### Installing the Asserts AWS Exporter
 
