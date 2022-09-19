@@ -26,7 +26,7 @@ The following inputs would need to be provided -
 
 **VPC and Subnets**
 
-1. **VPC Id** The VPC in which the ECS Services and the Application Load Balancer need to be installed.&#x20;
+1. **VPC Id** The VPC in which the Asserts AWS Exporter ECS Service needs to be installed.&#x20;
 2. **VPC CIDR** The CIDR of the VPC
 3. **Subnets** The subnets for the service instances. At least 2 subnets in different availability zones need to be provided
 
