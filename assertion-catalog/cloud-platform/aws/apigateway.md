@@ -4,13 +4,7 @@
 
 #### **Asserts AWS Exporter**
 
-The [Asserts AWS Exporter](https://github.com/asserts/aws-cloudwatch-exporter) is required to discover the **ApiGateways**. To run the exporter in the development environment
-
-```
-docker run -p 8010:8010 --env-file env.properties asserts/aws-cloudwatch-exporter.dev 
-```
-
-where env.properties has the AWS credentials.
+Refer to [aws-cloudwatch.md](../../../integrations/data-source/aws-cloudwatch.md "mention") on how to install Asserts AWS Exporter.
 
 ### Key Performance Indicators (KPIs) and Alerts
 
@@ -18,7 +12,7 @@ The AWS Exporter discovers the ApiGateway and also converts any CloudWatch alarm
 
 ### KPI Dashboard
 
-The ApiGateway KPI Dashboard shows the following KPIs
+The API gateway KPI Dashboard shows the following KPIs
 
 * Request Rate
   * **Sum(RequestCount)**
