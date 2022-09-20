@@ -1,6 +1,6 @@
 # How Asserts Processes Data
 
-As an Asserts customer, all you need to do is forward your Prometheus metrics to Asserts with a simple remote write config. Once the metrics are in Asserts land, a few things happen.
+As an Asserts customer, all you need to do is connect your Prometheus to Asserts, [see more](../getting-started/self-hosted-vs-cloud.md). Once Asserts has access to the metrics, a few things happen.
 
 ## Discovery <a href="#howassertsworks-wip-discovery" id="howassertsworks-wip-discovery"></a>
 
