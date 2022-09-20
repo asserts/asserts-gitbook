@@ -187,5 +187,5 @@ _Region specific Quick-Create Links for Asserts Stack_
 
 <mark style="color:orange;">****</mark>
 
-## [Need Help](../../#before-you-begin)
+## [Need Help](<../../README (1).md#before-you-begin>)
 

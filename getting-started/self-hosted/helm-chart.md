@@ -135,5 +135,5 @@ To delete the PVCs associated with `asserts`:
 kubectl delete pvc -l app.kubernetes.io/instance=asserts
 ```
 
-## [Need Help](../../#before-you-begin)
+## [Need Help](<../../README (1).md#before-you-begin>)
 

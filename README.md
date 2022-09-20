@@ -1,55 +1,52 @@
----
-description: How to get up and running with Asserts
----
+# Features
 
-# Introduction
+### **Discover a Living Map of App and Infra components**
 
-## Welcome!
+Asserts taps into your telemetry data sources (app metrics), automatically builds a graph of your application and infrastructure components, and indexes the graph for search.
 
-This guide will walk you through getting up and running with Asserts.
+* With our search, you can find how the components fit together in real-time and view KPIs in the built-in Grafana dashboard. [see more](user-guide/exploring-the-entity-graph.md)
 
-You'll learn how to setup, run, and experiment with the Asserts Platform.
+![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.30.30 AM.png>)
 
+Our [cloud component catalog](assertion-catalog/overview.md) is constantly evolving.
 
+### Instrument **via SAAFE Assertions to collect the symptoms and causes**
 
-### **Before you begin**
+Asserts curates knowledge of common runtime failure patterns and potential causes, so your team doesn’t have to research and maintain these rules.
 
-If you run into any issues, need help setting up or using Asserts, or just have questions in general you can reach us via the following channels:
+It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (new deployments, scale events et al.), request & latency _**Anomalies**_, systemic _**Failures**_, and _**Errors**_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
 
-1.  **Join our community Slack Channel**
+The occurrences of these assertions are annotated on the (Knowledge) Graph, so it is easy to consume at a glance. [see more](how-asserts-works/understanding-saafe-model.md)
 
-    Please consider joining our [community Slack channel](https://join.slack.com/t/asserts-community/shared\_invite/zt-1aobjmmls-xT1HwiSp1DNFXPeEvQEb5A). \
-    This is our preferred method of communication. \
+![](.gitbook/assets/1.png)
 
-2. **Messenger App**\
-   You can also reach us by simply clicking on the <img src=".gitbook/assets/intercom-icon-27.jpg" alt="" data-size="line"> icon in the bottom right corner of any page on our site to open our messenger app and send us a message <mark style="color:blue;"></mark> to directly chat with us 😃\
+### **Explore with Unified Search**
 
-3. **Email**\
-   Lastly, you can also shoot us an email directly at [support@asserts.ai](mailto:support@asserts.ai)
+With our unified search, you can combine components, relations, configurations, and associated assertions to express your intent in an easy natural language expression.
 
+_e.g.,_ Search “Pods `crashing` on Nodes with high `cpu:load`” , [see more](https://docs.asserts.ai/user-guide/exploring-the-entity-graph#howassertsworks-wip-entityassertionstatus)
 
+![](<.gitbook/assets/Screen Shot 2021-09-16 at 11.34.26 PM.png>)
 
-## Determine which Asserts is right for you?
+### **Wake up when it matters**
 
-### Self-Hosted vs Asserts Cloud
+The SRE book recommends [Alerting on Service Level Objectives (SLO)](https://sre.google/workbook/alerting-on-slos/), to track`"what's broken"`and with Asserts setting up your SLOs and tracking your error budget is a breeze. And then finding "why it's broken" is just a click away in our Assertion workbench. see more
 
+![](<.gitbook/assets/Screen Shot 2021-09-30 at 9.19.41 AM.png>)
 
+### **Spot issues quickly with Top Insights**
 
-## What's needed to get up and running? <a href="#system-requirements" id="system-requirements"></a>
+With our always-on Assertions, you don’t have to wait for SLOs to breach and Alerts to fire. Top Insights presents a stack-ranked view of Services / Nodes that need attention based on their `assertion score`. \
+And then `Open in Workbench` to find the root cause. [see more](user-guide/top-insights.md)
 
-&#x20; You can get setup and running with Asserts in a few simple steps.
+![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.32.50 AM.png>)
 
-### Self-Hosted
+### **Troubleshoot in Workbench with all the Assertions**
 
-1. [Install **** Asserts](getting-started/self-hosted/#installation-options)
-2. Follow the instructions in your installation to request a _**Self-Hosted** _ Trial License
-3. Integrate your **Prometheus** server(s) through our **Data Sources** screen
-4. Start Observing
+In our assertion workbench, dig in to view all the possible causes correlated across time and space, with just the right metrics and logs at your fingertip.
 
-### Asserts Cloud
+_e.g.,_ an amend (new deployment) on `api-server`triggered a spike in error rate on an endpoint `/slo/incidents`. Jump to `Dashboard` or `View Logs` to see contextual logs in your existing log store, like Kibana, Graylog, et al. [see more](user-guide/workbench.md)
 
-1. [Request a Cloud Trial](https://share.hsforms.com/1Cc0HO62KRIy2-TZpbvcTwwbvn02)
-2. We will reach out to you to connect to your **Prometheus**
-3. Start Observing
+![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.38.03 AM.png>)
 
-<mark style="color:blue;">****</mark>
+### ****
