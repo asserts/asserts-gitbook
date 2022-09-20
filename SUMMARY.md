@@ -19,6 +19,7 @@
 
 ## User Guide
 
+* [Overview](user-guide/features.md)
 * [Top Insights](user-guide/top-insights.md)
 * [Workbench](user-guide/workbench.md)
 * [Entities](user-guide/exploring-the-entity-graph.md)
@@ -61,7 +62,6 @@
 
 * [Understanding SAAFE Model](how-asserts-works/understanding-saafe-model.md)
 * [How Asserts Processes Data](how-asserts-works/how-asserts-processes-data.md)
-* [Features](how-asserts-works/features.md)
 
 ***
 

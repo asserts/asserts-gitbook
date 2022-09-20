@@ -1,8 +1,4 @@
----
-description: Introduction
----
-
-# Features
+# Overview
 
 ### **Discover a Living Map of App and Infra components**
 
