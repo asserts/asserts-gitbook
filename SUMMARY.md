@@ -62,6 +62,7 @@
 
 * [Understanding SAAFE Model](how-asserts-works/understanding-saafe-model.md)
 * [How Asserts Processes Data](how-asserts-works/how-asserts-processes-data.md)
+* [Features](how-asserts-works/features.md)
 
 ***
 
