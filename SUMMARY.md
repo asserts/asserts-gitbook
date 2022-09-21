@@ -15,8 +15,8 @@
 
 * [Logs](integrations/logs.md)
 * [Data Source](integrations/data-source/README.md)
-  * [AWS CloudWatch](integrations/data-source/aws-cloudwatch.md)
   * [Prometheus](integrations/data-source/prometheus.md)
+  * [AWS CloudWatch](integrations/data-source/aws-cloudwatch.md)
 
 ## User Guide
 
