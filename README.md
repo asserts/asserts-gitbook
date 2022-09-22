@@ -1,16 +1,18 @@
 # Features
 
+As an Asserts customer, all you need to do is connect your Observability Datasources like Prometheus, Cloudwatch, Log Aggregators, et al. to Asserts and then let Asserts apply its intelligence to present root cause insights.&#x20;
+
+<figure><img src=".gitbook/assets/Screen Shot 2022-09-22 at 12.17.56 PM.png" alt=""><figcaption><p>Connect your Observability datasources </p></figcaption></figure>
+
 ### **Discover a Living Map of App and Infra components**
 
 Asserts taps into your telemetry data sources (app metrics), automatically builds a graph of your application and infrastructure components, and indexes the graph for search.
 
-* With our search, you can find how the components fit together in real-time and view KPIs in the built-in Grafana dashboard. [see more](user-guide/exploring-the-entity-graph.md)
+With our search, you can find how the components fit together in real-time and view KPIs in the built-in Grafana dashboard. [see more](user-guide/exploring-the-entity-graph.md)
 
 ![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.30.30 AM.png>)
 
-Our [cloud component catalog](assertion-catalog/overview.md) is constantly evolving.
-
-### Instrument **via SAAFE Assertions to collect the symptoms and causes**
+### Record **SAAFE Assertions to collect the symptoms and causes**
 
 Asserts curates knowledge of common runtime failure patterns and potential causes, so your team doesn’t have to research and maintain these rules.
 
@@ -19,6 +21,8 @@ It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (new deploym
 The occurrences of these assertions are annotated on the (Knowledge) Graph, so it is easy to consume at a glance. [see more](how-asserts-works/understanding-saafe-model.md)
 
 ![](.gitbook/assets/1.png)
+
+Our [assertion catalog](assertion-catalog/overview.md) is constantly evolving.
 
 ### **Explore with Unified Search**
 

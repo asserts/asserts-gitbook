@@ -1,6 +1,6 @@
 # How Asserts Processes Data
 
-As an Asserts customer, all you need to do is connect your Prometheus to Asserts, [see more](broken-reference). Once Asserts has access to the metrics, a few things happen.
+As an Asserts customer, all you need to do is connect your Observability data stores such as Prometheus and Cloudwatch to Asserts, [see more](broken-reference). Once Asserts has access to the metrics and metadata, a few things happen.
 
 ## Discovery <a href="#howassertsworks-wip-discovery" id="howassertsworks-wip-discovery"></a>
 
