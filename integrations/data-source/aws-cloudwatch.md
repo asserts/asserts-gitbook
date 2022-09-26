@@ -18,7 +18,7 @@ Here is a diagram that shows how these components function
 
 The Asserts AWS Exporter must be installed on each AWS Account that needs to be monitored. Asserts provides a CloudFormation template to install the exporter. The link, **install AWS Exporter** as shown in the image below **** will launch the CloudFormation template to install the AWS Exporter.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Link to launch CloudFormation template for AWS Exporter installation</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Link to launch CloudFormation template for AWS Exporter installation</p></figcaption></figure>
 
 
 
