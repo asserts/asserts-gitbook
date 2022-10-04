@@ -26,6 +26,47 @@ The advanced UI allows specifying custom Prometheus queries to define the SLO.
 
 ![Define SLO for API Latency using Advanced UI](<../.gitbook/assets/Screen Shot 2022-01-06 at 7.29.56 AM.png>)
 
+The latency P99 is computed for each minute. Let's say the threshold is 100ms. So each minute that the P99 is within the threshold is a good minute and each minute when P99 is above this threshold is a bad minute.&#x20;
+
+Here is a table that summaries the SLO in terms of tolerated bad minutes or expected good minutes in a day
+
+```
+#  _________________________________________________________________________________________________________________
+#       |        |          | 30 day Error  | Fast Burn       |   Slow Burn     |  Fast Burn Alert Behaviour       |
+#  Bad  |   Good |    SLO   | Budget        | 2% in 1 hour    |   5% in 6 hours |                                  |
+#  ----------------------------------------------------------------------------------------------------------------
+#       |        |          |               |                 |                 | Triggers for every bad minute    |
+#   1   |   1439 |   99.93  |       30      |      36s        |    2m 30s       | Each alert lasts for 5m          |
+#  ----------------------------------------------------------------------------------------------------------------
+#       |        |          |               |                 |                 | Triggers on the 4th and every    |
+#       |        |          |               |                 |                 | subsequent bad minute in a 1 hour|
+#   5   |   1435 |   99.65  |      150      |       3m        |    7m 30s       | window. Each alert lasts for 5m  |
+#  ----------------------------------------------------------------------------------------------------------------
+#       |        |          |               |                 |                 | Triggers on the 7th and every    |
+#       |        |          |               |                 |                 | subsequent bad minute in a 1 hour|
+#  10   |   1430 |   99.31  |      300      |       6m        |    15m          | window. Each alert lasts for 5m  |
+#  ----------------------------------------------------------------------------------------------------------------
+#       |        |          |               |                 |                 | Triggers on the 10th and every   |
+#       |        |          |               |                 |                 | subsequent bad minute in a 1 hour|
+#  15   |   1425 |   98.95  |      450      |       9m        |    22m 30s      | window. Each alert lasts for 5m  |
+#  ----------------------------------------------------------------------------------------------------------------
+#       |        |          |               |                 |                 | Triggers when there are 2 bad    |
+#       |        |          |               |                 |                 | minutes in last 5 minutes and 19 |
+#  30   |   1410 |   97.91  |      900      |      18m        |    45m          | bad minutes in last 1 hour. Each |
+#       |        |          |               |                 |                 | alert lasts for 5m               |
+#  ----------------------------------------------------------------------------------------------------------------
+#       |        |          |               |                 |                 | Triggers when there are 2 bad    |
+#       |        |          |               |                 |                 | minutes in last 5 minutes and 22 |
+#  36   |   1404 |   97.50  |     1080      |     21m 36s     |    54m          | bad minutes in last 1 hour. Each |
+#       |        |          |               |                 |                 | alert lasts for 5m               |
+#  ----------------------------------------------------------------------------------------------------------------
+#       |        |          |               |                 |                 | Triggers when there are 2 bad    |
+#       |        |          |               |                 |                 | minutes in last 5 minutes and 37 |
+#  60   |   1380 |   95.83  |     1800      |     36m         |    90m          | bad minutes in last 1 hour. Each |
+#       |        |          |               |                 |                 | alert lasts for 5m               |
+###################################################################################################################
+```
+
 **SLO Definition API**
 
 SLOs can also be defined through an API. Here is an example of an SLO API request to define an SLO.&#x20;
