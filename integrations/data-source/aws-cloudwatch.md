@@ -45,7 +45,8 @@ The following inputs would need to be provided -
 4. **Asserts API Server URL** For e.g. https://acme.app.asserts.ai
 5. **Asserts API Server API User Name** An API key can be created in Asserts. In the Asserts product, Go to your Profile -> Settings -> Credentials and create a new credential. Copy the **Id** and **Secret** for use later. Specify the **Id** as the User name
 6. **Asserts API Server API Password** Specify the **Secret** as the password
-7. **CloudWatch User Password** Password to create a user with permission to read CloudWatch metrics.
+
+****
 
 <figure><img src="../../.gitbook/assets/Create_Tenant_API_Credentials.gif" alt=""><figcaption><p>Create Asserts Service API Credentials</p></figcaption></figure>
 
