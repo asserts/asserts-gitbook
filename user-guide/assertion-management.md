@@ -26,6 +26,8 @@ As we mentioned earlier, assertions are not alerts. If you want to get notified,
 
 ![](<../.gitbook/assets/Screen Shot 2021-09-22 at 10.53.12 AM.png>)
 
+Asserts internally use Prometheus Alert Manager for notification, so we support all the receivers listed on its official page (Email, Pagerduty, Slack, etc.)
+
 #### Suppressions <a href="#howassertsworks-wip-suppressions" id="howassertsworks-wip-suppressions"></a>
 
 Similar to notifications, you can also choose a subset of assertions to suppress, so they don’t even fire. Suppressed assertions are ignored in Asserts processing. They will not be available in Top Insights, Graph, or the Workbench. Note this is very different from an assertion that fires but does not notify.
