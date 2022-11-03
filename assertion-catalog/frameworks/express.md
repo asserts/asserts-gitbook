@@ -2,7 +2,7 @@
 
 ### Setup
 
-We recommend the Express Middleware exporter. To set up this exporter, just add it s a dependency in your NodeJS package.json
+We recommend the [Express Middleware exporter](express.md). To set up this exporter, just add it s a dependency in your NodeJS package.json
 
 ```
 {
