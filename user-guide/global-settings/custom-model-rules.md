@@ -4,7 +4,7 @@ A set of model rules defines Asserts' entity model. Thus, we can extend the mode
 
 Our default entities rules are carefully curated to cover most scenarios, so we usually do not expect customers to supply additional rules. If you still want to augment the model, you can add your own model rules by uploading a rule file.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Image 2022-11-03 09-26-47.jpg" alt=""><figcaption></figcaption></figure>
 
 Quite often, custom rules are about relationships between services. To eliminate the management hassle of custom relationship rules, Asserts platform supports service calls defined by an `asserts:relation:calls` metric. For example, customers can add the following recording rule indicating that an `api-server` service calls a `backend-server` service.
 
