@@ -52,6 +52,7 @@
 * [Frameworks](assertion-catalog/frameworks/README.md)
   * [Springboot](assertion-catalog/frameworks/springboot.md)
   * [Flask](assertion-catalog/frameworks/flask.md)
+  * [Express](assertion-catalog/frameworks/express.md)
   * [Loopback](assertion-catalog/frameworks/loopback.md)
   * [gRPC](assertion-catalog/frameworks/grpc.md)
   * [Kafka](assertion-catalog/frameworks/kafka.md)
