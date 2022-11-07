@@ -59,6 +59,7 @@
 * [Runtimes](assertion-catalog/runtimes/README.md)
   * [Java](assertion-catalog/runtimes/java.md)
   * [NodeJS](assertion-catalog/runtimes/nodejs.md)
+  * [GoLang](assertion-catalog/runtimes/golang.md)
 
 ## How Asserts Works
 

@@ -14,10 +14,10 @@ collectDefaultMetrics({ register })
 
 ### Metrics and Key Performance Indicators (KPIs)
 
-| **Metric**                                        | **KPI**                                                                                                                                                                                                                            |
-| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Memory</p><p>process_resident_memory_bytes</p> | <p>Utilization in k8s</p><p>process_resident_memory_bytes / kube_node_status_allocatable{resource="memory"}</p><p>Utilization in non k8s</p><p>process_resident_memory_bytes / node_memory_MemTotal_bytes</p>                      |
-| <p>CPU</p><p>process_cpu_seconds_total</p>        | <p>Utilization in k8s</p><p>rate(process_cpu_seconds_total[5m]) / kube_pod_container_resource_limits{resource="cpu"}</p><p>Utilization in non k8s</p><p>rate(process_cpu_seconds_total[5m]) / rate(node_cpu_seconds_total[5m])</p> |
+| **Metric**                                                     | **KPI**                                                                                                                                                                                                                                                      |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <p>Memory</p><p><code>process_resident_memory_bytes</code></p> | <p>Utilization in k8s</p><p><code>process_resident_memory_bytes / kube_node_status_allocatable{resource="memory"}</code></p><p>Utilization in non k8s</p><p><code>process_resident_memory_bytes / node_memory_MemTotal_bytes</code></p>                      |
+| <p>CPU</p><p><code>process_cpu_seconds_total</code></p>        | <p>Utilization in k8s</p><p><code>rate(process_cpu_seconds_total[5m]) / kube_pod_container_resource_limits{resource="cpu"}</code></p><p>Utilization in non k8s</p><p><code>rate(process_cpu_seconds_total[5m]) / rate(node_cpu_seconds_total[5m])</code></p> |
 
 ### Dashboard
 
