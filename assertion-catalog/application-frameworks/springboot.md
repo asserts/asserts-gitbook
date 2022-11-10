@@ -67,9 +67,11 @@ Asserts tracks the JVM GC Count and Time  from micrometer metrics, the threshold
 Asserts aggregates data from micrometer, cAdvisor,  kubelet and node-exporter to present a dashboard with the following KPIs:
 
 * Request Rate
+  * Type: inbound, outbound, method, executor, logger, custom
+  * Context: URI, method name et al.&#x20;
 * Latency Average
 * Latency P99
-* Error Rate
+* Error Ratio and Error Rate
 * CPU %
 * CPU Cores Used
 * CPU Throttle
