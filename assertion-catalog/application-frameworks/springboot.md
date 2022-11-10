@@ -63,7 +63,7 @@ Asserts tracks the JVM GC Count and Time  from micrometer metrics, the threshold
 
 #### Service KPI Dashboard
 
-This dashboard has the following KPIs:
+Asserts aggregates data from micrometer, cAdvisor,  kubelet and node-exporter to present a dashboard with the following KPIs:
 
 * Request Rate
 * Latency Average
