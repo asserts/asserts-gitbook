@@ -4,10 +4,6 @@ As an Asserts customer, all you need to do is connect your Observability Datasou
 
 <figure><img src=".gitbook/assets/Screen Shot 2022-09-22 at 12.17.56 PM.png" alt=""><figcaption><p>Connect your Observability datasources </p></figcaption></figure>
 
-### **Troubleshooting experience with Asserts**
-
-{% embed url="https://app.arcade.software/share/AhAPiXHKdR0caZLGRO11" %}
-
 ### **Discover a Living Map of App and Infra components**
 
 Asserts taps into your telemetry data sources (app metrics), automatically builds a graph of your application and infrastructure components, and indexes the graph for search.
