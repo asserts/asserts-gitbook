@@ -4,15 +4,15 @@ Asserts will continue to grow its support for different application components a
 
 ## SAAFE Model
 
-Asserts requires a standard set of metrics to be able to detect resource **S**aturation, **A**nomalies, and changes to the deployment aka **A**mends, component **F**ailures, and availability/latency **E**rrors. We will illustrate how to map custom metrics to these standard Asserts metrics with some examples. Let's say we have a database **D** and a Prometheus exporter for this database which exports metrics that begin with `d_`.
+Asserts requires a standard set of metrics to detect resource **S**aturation, **A**nomalies, and changes to the deployment, aka **A**mends, component **F**ailures, and availability/latency **E**rrors. We will illustrate how to map custom metrics to these standard Asserts metrics with some examples. Let's say we have a database **D** and a Prometheus exporter for this database which exports metrics that begin with `d_`.
 
 ### Saturation
 
-If the database is deployed using Kubernetes or any other container-based orchestration framework, Asserts will automatically monitor the memory, CPU, disk utilization, and network byte transmission rates based on metrics from cAdvisor/kubelet. &#x20;
+Suppose the database is deployed using Kubernetes or any container-based orchestration framework. In that case, Asserts will automatically monitor the memory, CPU, disk utilization, and network byte transmission rates based on metrics from cAdvisor/kubelet. &#x20;
 
 #### Query Cache
 
-Suppose the memory used and allocated for query cache are available through custom metrics, we just need to define the following recording rule
+Suppose the memory used and allocated for query cache are available through custom metrics; we need to define the following recording rule.
 
 ```
 - record: asserts:resource
@@ -27,7 +27,7 @@ Once this rule is added as described [here](../user-guide/assertion-management.m
 
 #### Client Connections
 
-Suppose that there is a limit on the number of active client connections, and there are metrics available to track the current number of active connections and also the maximum number of active connections allowed.&#x20;
+Suppose there is a limit on the number of active client connections, and there are metrics available to track the current number of active connections and the maximum number of active connections allowed.&#x20;
 
 | Metric                                  | Details                                      |
 | --------------------------------------- | -------------------------------------------- |
@@ -43,15 +43,15 @@ For Asserts to detect whether the client connections are saturating, we will nee
     asserts_resource_type: d_client_connections
     asserts_source: d_exporter</code></pre>
 
-Asserts will now start observing for Saturation of client connections and raise alerts when the warning or critical threshold is exceeded. If you want to customize the thresholds, you can do it [here](../user-guide/assertion-management.md#thresholds)
+Asserts will now start observing for Saturation of client connections and raise alerts when the warning or critical threshold is exceeded. If you want to customize the thresholds, you can do it [here.](../user-guide/assertion-management.md#thresholds)
 
 ### **Request Rate Anomaly**
 
-Suppose the count of the number of queries is available as a metric broken down by query types. For e.g., the number of selects, inserts, updates, and deletes. Asserts can observe the rate at which these queries are being fired and detect anomalies when the query rate deviates from a baseline.&#x20;
+Suppose the count of the number of queries is available as a metric broken down by query types. E.g., the number of selects, inserts, updates, and deletes. Asserts can observe the rate at which these queries are being fired and detect anomalies when the query rate deviates from a baseline.&#x20;
 
 #### Mapping Request Counter Metrics
 
-Suppose the request metrics are available as [counters](https://prometheus.io/docs/concepts/metric\_types/#counter) as shown below
+Suppose the request metrics are available as [counters,](https://prometheus.io/docs/concepts/metric\_types/#counter) as shown below.
 
 | Metric                         | Description                                      |
 | ------------------------------ | ------------------------------------------------ |
@@ -83,11 +83,11 @@ Alternatively, the breakup of the counts by query type may also be available as 
     asserts_request_type: query   
 ```
 
-With the above recording rule, the `asserts:request:total` will now have 4 metrics with the `asserts_request_context` label now having the respective query type values i.e `select`, `insert`, `update` and `delete`
+With the above recording rule, the `asserts:request:total` will now have four metrics with the `asserts_request_context` label now having the respective query type values, i.e., `select`, `insert`, `update` and `delete`
 
 #### Mapping Request Gauge Metrics
 
-Suppose the request metrics are available as [gauges](https://prometheus.io/docs/concepts/metric\_types/#gauge), i.e, the exporter already captures the rate of requests.&#x20;
+Suppose the request metrics are available as [gauges](https://prometheus.io/docs/concepts/metric\_types/#gauge), i.e., the exporter already captures the rate of requests.&#x20;
 
 | Metric                           | Description                           |
 | -------------------------------- | ------------------------------------- |
@@ -101,13 +101,13 @@ Suppose the request metrics are available as [gauges](https://prometheus.io/docs
     asserts_request_context: select                    
 ```
 
-Note that we have divided the metric by `60`. This is because in Prometheus the rate is always in units per second.
+Note that we have divided the metric by `60`. This is because, in Prometheus, the rate is always in units per second.
 
 Asserts will automatically start observing for the anomalies in the rate at which queries are fired. If you want to customize the thresholds, you can do it [here](../user-guide/assertion-management.md#thresholds).
 
 ### Errors
 
-Suppose the count of the number of errors is available as a metric just like the request metrics. But in addition, the error metric is further broken down by whether it's a system error in executing the query or whether it's due to a user error in the query.  &#x20;
+Suppose the count of the number of errors is available as a metric. But in addition, the error metric is further broken down by whether it's a system error in executing the query or whether it's due to a user error in the query.  &#x20;
 
 | Metric                              | Description                                                |
 | ----------------------------------- | ---------------------------------------------------------- |
@@ -116,7 +116,7 @@ Suppose the count of the number of errors is available as a metric just like the
 
 #### Mapping Error Counter Metrics
 
-To enable Asserts to observe the errors and raise alerts, the following recording rule will have to be created&#x20;
+To enable Asserts to observe the errors and raise alerts, the following recording rule will have to be created.&#x20;
 
 ```
 - record: asserts:error:total
@@ -136,7 +136,7 @@ To enable Asserts to observe the errors and raise alerts, the following recordin
 
 #### Mapping Error Gauge Metrics
 
-The recording rules will be similar to the counter-based rules. Instead of recording `asserts:error:total` we just need to record `asserts:error:gauge`
+The recording rules will be similar to the counter-based rules. Instead of recording `asserts:error:total,` we need to record `asserts:error:gauge`
 
 Asserts will automatically start tracking the error ratio and error budget for each request context and raise the `ErrorRatioBreach` for ratio breaches and `ErrorBuildup` for error budget burn rate breaches.
 
@@ -146,7 +146,7 @@ If the latency average and quantile metrics are available, these can also be map
 
 #### **Latency Average**
 
-Suppose the latency average metric is directly available, and it is in units of milliseconds, it can be mapped as follows
+Suppose the latency average metric is directly available, and it is in units of milliseconds; it can be mapped as follows.
 
 ```
 - record: asserts:latency:average
@@ -174,7 +174,7 @@ If the latency metric is available as a [Histogram](https://prometheus.io/docs/c
 
 #### **Latency P99**
 
-If latency is available as a [Histogram](https://prometheus.io/docs/concepts/metric\_types/#histogram) metric, then the latency P99 can be mapped as follows
+If latency is available as a [Histogram](https://prometheus.io/docs/concepts/metric\_types/#histogram) metric, then the latency P99 can be mapped as
 
 ```
 - record: asserts:latency:p99
@@ -190,7 +190,7 @@ If latency is available as a [Histogram](https://prometheus.io/docs/concepts/met
     asserts_request_type: query
 ```
 
-In the above rule, the P99 for the `select` query is recorded at the Service level. For stateless services where there might be a large number of instances of the service, it's more useful to know the P99 for the entire service. If the service is stateful, the P99 might have to be computed at the service instance level.&#x20;
+The above rule records the P99 for the select query at the Service level. For stateless services where there might be a large number of service instances, it's more useful to know the P99 for the entire service. The P99 might have to be computed at the service instance level if the service is stateful.&#x20;
 
 ```
 - record: asserts:latency:p99
@@ -206,7 +206,7 @@ In the above rule, the P99 for the `select` query is recorded at the Service lev
     asserts_request_type: query
 ```
 
-If latency is available as a [Summary](https://prometheus.io/docs/concepts/metric\_types/#summary) metric, then the latency P99 can be mapped as follows
+If latency is available as a [Summary](https://prometheus.io/docs/concepts/metric\_types/#summary) metric, then the latency P99 can be mapped as follows.
 
 ```
 - record: asserts:latency:p99
@@ -218,4 +218,28 @@ If latency is available as a [Summary](https://prometheus.io/docs/concepts/metri
     asserts_request_type: query
 ```
 
-In the case of the summary metric, the p99 is already computed by the exporter so it cannot be aggregated to the Service level.
+In the case of the summary metric, the p99 is already computed by the exporter, so it cannot be aggregated to the Service level.
+
+### Failure
+
+Suppose our database **D** has a clustered architecture that allows for data to be replicated between multiple replicas, with one replica being the primary and the others being secondaries. Suppose there are metrics to observe the replication health. One could then write an alert rule to report when replication is unhealthy. Problems like these are categorized as `Failure` in Asserts. The existing alert rule can be imported into Asserts by adding additional labels, as explained below.   &#x20;
+
+```
+- alert: DClusterReplicationLagHigh
+  expr: >
+   <QUERY-TO-IDENTIFY-REPLICATION-LAG>
+  labels:
+    asserts_category: failure
+    asserts_entity_type: Service
+```
+
+In the above recording rule, we have indicated this is a failure alert by adding the label `asserts_category`. We have also added the `asserts_entity_type` label to indicate that this is a problem at the cluster level and not a specific replica. When this is the case, the metric returned by the query will not have the `instance` label in the result. If the query to identify the replication lag reports the lag for each problematic secondary replica, i.e., the alert query expression returns the `instance` label in the result, then the rule should be written as
+
+```
+- alert: DClusterReplicationLagHigh
+  expr: >
+   <QUERY-TO-IDENTIFY-REPLICATION-LAG-FOR-EACH-AFFECTED-REPLICA>
+  labels:
+    asserts_category: failure
+    asserts_entity_type: ServiceInstance
+```
