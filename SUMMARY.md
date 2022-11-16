@@ -62,6 +62,7 @@
   * [Java](assertion-catalog/runtimes/java.md)
   * [NodeJS](assertion-catalog/runtimes/nodejs.md)
   * [GoLang](assertion-catalog/runtimes/golang.md)
+* [Extending Asserts Library](assertion-catalog/extending-asserts-library.md)
 
 ## How Asserts Works
 
