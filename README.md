@@ -1,30 +1,30 @@
 # Features
 
-As an Asserts customer, all you need to do is connect your Observability Datasources like Prometheus, Cloudwatch, Log Aggregators, et al. to Asserts and then let Asserts apply its intelligence to present root cause insights.&#x20;
+As an Asserts customer, all you need to do is connect your Observability Datasources like Prometheus, Cloudwatch, Log Aggregators, Traces et al. to Asserts and then let Asserts apply its intelligence to present root cause insights.&#x20;
 
-<figure><img src=".gitbook/assets/Screen Shot 2022-09-22 at 12.17.56 PM.png" alt=""><figcaption><p>Connect your Observability datasources </p></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2022-11-17 at 11.57.06 AM.png" alt=""><figcaption><p>Connect your existing Observability Datasources </p></figcaption></figure>
 
-### **Discover a Living Map of App and Infra components**
+### **Builds a Map of App and Infra components (with Grafana Dashboards)**
 
-Asserts taps into your telemetry data sources (app metrics), automatically builds a graph of your application and infrastructure components, and indexes the graph for search.
+Asserts taps into your telemetry data sources like Prometheus, CloudWatch et al., automatically builds a graph of your application and infrastructure components, and indexes the graph for search.
 
 With our search, you can find how the components fit together in real-time and view KPIs in the built-in Grafana dashboard. [see more](user-guide/exploring-the-entity-graph.md)
 
 ![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.30.30 AM.png>)
 
-### Record **SAAFE Assertions to collect the symptoms and causes**
+### Runs curated rules **to detect Service Unavailability and potential causes**
 
-Asserts curates knowledge of common runtime failure patterns and potential causes, so your team doesn’t have to research and maintain these rules.
+Asserts curates knowledge of common runtime failure patterns and potential causes, so your team doesn’t have to research and maintain these PromQL complex recording and alerting rules for frameworks.
 
-It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (new deployments, scale events et al.), request & latency _**Anomalies**_, systemic _**Failures**_, and _**Errors**_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
+It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (i.e. **Changes** such as new conatiner deployments, config upgrades, kafka rebalances, scale events et al.), request rate, error rate & latency _**Anomalies**_, systemic _**Failures**_, and _**Errors**_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
 
-The occurrences of these assertions are annotated on the (Knowledge) Graph, so it is easy to consume at a glance. [see more](how-asserts-works/understanding-saafe-model.md)
+We call these checks **Assertions**. The occurrences of these assertions are annotated on the (Knowledge) Graph, so it is easy to consume at a glance. [see more](how-asserts-works/understanding-saafe-model.md)
 
 ![](.gitbook/assets/1.png)
 
 Our [assertion catalog](assertion-catalog/overview.md) is constantly evolving.
 
-### **Explore with Unified Search**
+### **Exploration with Unified Search**
 
 With our unified search, you can combine components, relations, configurations, and associated assertions to express your intent in an easy natural language expression.
 
@@ -45,9 +45,9 @@ And then `Open in Workbench` to find the root cause. [see more](user-guide/top-i
 
 ![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.32.50 AM.png>)
 
-### **Troubleshoot in Workbench with all the Assertions**
+### **Troubleshoot in Workbench with all the Root cause Insights**&#x20;
 
-In our assertion workbench, dig in to view all the possible causes correlated across time and space, with just the right metrics and logs at your fingertip.
+In our assertion workbench, dig in to view all the possible causes correlated across time and dependency, with just the right metrics, logs and traces at your fingertip.
 
 _e.g.,_ an amend (new deployment) on `api-server`triggered a spike in error rate on an endpoint `/slo/incidents`. Jump to `Dashboard` or `View Logs` to see contextual logs in your existing log store, like Kibana, Graylog, et al. [see more](user-guide/workbench.md)
 
