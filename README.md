@@ -34,13 +34,13 @@ _e.g.,_ Search “Pods `crashing` on Nodes with high `cpu:load`” , [see more](
 
 ### **Wake up when it matters**
 
-The SRE book recommends [Alerting on Service Level Objectives (SLO)](https://sre.google/workbook/alerting-on-slos/), to track`"what's broken"`and with Asserts setting up your SLOs and tracking your error budget is a breeze. And then finding "why it's broken" is just a click away in our Assertion workbench. see more
+The SRE book recommends [Alerting on Service Level Objectives (SLO)](https://sre.google/workbook/alerting-on-slos/), to track`"what's broken"`and with Asserts setting up your SLOs and tracking your error budget is a breeze. And then finding "why it's broken" is just a click away in our RCA workbench. see more
 
 ![](<.gitbook/assets/Screen Shot 2021-09-30 at 9.19.41 AM.png>)
 
 ### **Spot issues quickly with Top Insights**
 
-With our always-on Assertions, you don’t have to wait for SLOs to breach and Alerts to fire. Top Insights presents a stack-ranked view of Services / Nodes that need attention based on their `assertion score`. \
+With our always-on Checks (aka Assertions), you don’t have to wait for SLOs to breach and Alerts to fire. Top Insights presents a stack-ranked view of Services / Nodes that need attention based on their `severity score`. \
 And then `Open in Workbench` to find the root cause. [see more](user-guide/top-insights.md)
 
 ![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.32.50 AM.png>)
