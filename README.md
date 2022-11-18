@@ -1,8 +1,8 @@
 # Features
 
-As an Asserts customer, all you need to do is connect your Observability Datasources like Prometheus, Cloudwatch, Log Aggregators, Traces et al. to Asserts and then let Asserts apply its intelligence to present root cause insights.&#x20;
+As an Asserts customer, all you need to do is connect your Observability Datasources like Prometheus, Cloudwatch et al. to Asserts and then let Asserts apply its intelligence to present root cause insights.&#x20;
 
-<figure><img src=".gitbook/assets/Screen Shot 2022-11-17 at 11.57.06 AM.png" alt=""><figcaption><p>Connect your existing Observability Datasources </p></figcaption></figure>
+<figure><img src=".gitbook/assets/Screen Shot 2022-11-17 at 10.42.55 PM.png" alt=""><figcaption><p>Connect your existing Observability Datasources </p></figcaption></figure>
 
 ### **Builds a Map of App and Infra components (with Grafana Dashboards)**
 
