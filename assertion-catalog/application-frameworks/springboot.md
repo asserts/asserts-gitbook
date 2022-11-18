@@ -1,10 +1,10 @@
 # Springboot
 
-### Setup
+### Basic Setup
 
 [Spring Boot](https://spring.io/projects/spring-boot) is a popular Java framework for building modern applications. With the help of the [actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html) module and the [micrometer](https://micrometer.io/) library, we can configure a Spring Boot application to expose performance metrics in the [Prometheus format](https://prometheus.io/docs/concepts/data\_model/).
 
-First, you will need the actuator module to enable all the[ management endpoints](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints.exposing), and the micrometer module to provide the prometheus endpoint that exposes Prometheus metrics.
+First, you will need the actuator module to enable the[ management endpoints](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints), and the micrometer module to provide the Prometheus endpoint that exposes Prometheus metrics.
 
 ```
 dependencies {
@@ -16,11 +16,13 @@ dependencies {
 Second, make sure the Prometheus endpoint is enabled in your application.properties or application.yml:
 
 ```
-management.endpoints.web.exposure.include=info, health, prometheus
 management.endpoint.prometheus.enabled=true
+management.endpoints.web.exposure.include=prometheus
 ```
 
-Now if you hit the /actuator/prometheus endpoint of your web application, you will see a list of metrics like these:
+The first line enables the endpoint that provides metrics in Prometheus format, and the second line tells Springboot to expose this endpoint as a Web API. Note that we can expose many other endpoints here, like `info`, `health`, etc., and the second line can be defined as either `include` or `exclude` depending on your preference. Please refer to the [official documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints.exposing) for details.
+
+Now, if you hit the /actuator/prometheus endpoint of your web application, you will see a list of metrics like these. They usually cover JVM, inbound HTTP requests, and outbound calls, among other things.
 
 ```
 jvm_memory_used_bytes{area="heap",id="PS Survivor Space",} 2.012508E7
@@ -32,6 +34,55 @@ http_client_requests_seconds_count{clientName="chief.tsdb.dev.asserts.ai",method
 http_client_requests_seconds_sum{clientName="chief.tsdb.dev.asserts.ai",method="POST",outcome="SUCCESS",status="200",uri="/select/0/prometheus/api/v1/query",} 238.762194814
 …
 ```
+
+### Optional Setup - Histogram
+
+By default, you only get [summary metrics](https://prometheus.io/docs/concepts/metric\_types/#summary). If you want the [histogram metrics](https://prometheus.io/docs/concepts/metric\_types/#histogram) to calculate quantiles, you can enable them with additional properties:
+
+```
+management.metrics.distribution.percentiles-histogram.http.server.requests=true
+management.metrics.distribution.percentiles-histogram.http.client.requests=true
+```
+
+The first property enables the histogram for inbound requests, and the second one is for outbound HTTP calls. Be aware histogram metrics can quickly increase the number of time series you get, so enable them with caution.
+
+### Optional Setup - Custom Instrumentation
+
+Micrometer also provides annotations like @Timed and @Counted for you to monitor individual methods:
+
+```
+package ai.asserts.tasks;
+
+@Bean
+public class TimerTask {
+    @Timed(description = "Time spent processing all tenants", histogram = true)
+    public void run() {
+        processAllTenants();
+    }
+    ...
+}
+```
+
+These annotations produce `method_timed_seconds` metrics as Prometheus summary metrics and optionally histogram metrics if we set `histogram = true`.
+
+```
+method_timed_seconds_count{class="ai.asserts.tasks.TimerTask",exception="none",method="run",} 11.0
+method_timed_seconds_sum{class="ai.asserts.tasks.TimerTask",exception="none",method="run",} 524.279248451
+method_timed_seconds_bucket{class="ai.asserts.tasks.TimerTask",exception="none",method="run",le="0.001",} 0.0
+…
+```
+
+{% hint style="info" %}
+For these annotations to work, the object has to be managed by the framework as a Java bean. If you are creating the above `TimerTask` object with a `new` operator, the `@Timed` annotation will not work.
+{% endhint %}
+
+### Cardinality Consideration
+
+JVM metrics are usually small, so you need to focus on the HTTP request metrics when considering how many metrics will get published. There are a few things to consider here.
+
+First, for summary metrics, one \<URI, status code> combination has only three series on its latency: `count`, `sum`, and `max`, but histogram metrics are much more. One combination may have 50\~100 buckets, so if you have 20 different URLs with 5 common status codes, you will be counting 10000+ series per service instance.
+
+For inbound calls, the number of URIs usually matches the number of API endpoints your service provides. But for outbound calls, depending on how you customize your RestTemplate, [URIs could contain query strings](https://github.com/spring-projects/spring-boot/issues/22307), thus can cause a cardinality explosion. When you enable histogram for outbound calls, check the URIs and [fix the RestTemplate](https://stackoverflow.com/questions/60818196/how-do-i-make-spring-boot-resttemplate-client-metrics-not-create-a-new-tag-for-q) if necessary.
 
 ### RED Metric KPIs
 
