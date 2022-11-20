@@ -10,6 +10,7 @@
   * [Docker Compose](getting-started/self-hosted/docker-compose.md)
   * [AWS CloudFormation](getting-started/self-hosted/aws-cloudformation.md)
 * [Cloud](getting-started/cloud.md)
+* [FAQ](getting-started/faq.md)
 
 ## Integrations
 
@@ -69,7 +70,3 @@
 
 * [How Asserts Processes Data](how-asserts-works/how-asserts-processes-data.md)
 * [Understanding SAAFE Model](how-asserts-works/understanding-saafe-model.md)
-
-***
-
-* [FAQ](faq.md)

@@ -8,7 +8,7 @@ description: Frequently Asked Questions
 
 ### Does Asserts offer a free trial?&#x20;
 
-Yes, we do. See instructions on [how to get started](<README (1).md#system-requirements>).&#x20;
+Yes, we do. See instructions on [how to get started](<../README (1).md#system-requirements>).&#x20;
 
 
 
