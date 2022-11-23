@@ -12,7 +12,7 @@ Suppose the database is deployed using Kubernetes or any container-based orchest
 
 #### Query Cache
 
-Suppose the memory used and allocated for query cache are available through custom metrics; we need to define the following recording rule.
+Suppose the memory used and allocated for query cache are available through custom metrics. For Asserts to observe for Saturation of the query cache, we need to define the cache utilization as below.
 
 ```
 - record: asserts:resource
@@ -23,7 +23,7 @@ Suppose the memory used and allocated for query cache are available through cust
     asserts_source: d_exporter
 ```
 
-Once this rule is added as described [here](../user-guide/assertion-management.md#howassertsworks-wip-additions), Asserts will automatically start observing for Saturation of the query cache.
+Once this rule is added as described [here](../user-guide/assertion-management.md#howassertsworks-wip-additions), Asserts will automatically start observing for Saturation of the query cache. If you want to customize the thresholds, you can do it [here.](../user-guide/assertion-management.md#thresholds)
 
 #### Client Connections
 
