@@ -80,9 +80,9 @@ For these annotations to work, the object has to be managed by the framework as 
 
 JVM metrics are usually small, so you need to focus on the HTTP request metrics when considering how many metrics will get published. There are a few things to consider here.
 
-First, for summary metrics, one \<URI, status code> combination has only three series on its latency: `count`, `sum`, and `max`, but histogram metrics are much more. One combination may have 50\~100 buckets, so if you have 20 different URLs with 5 common status codes, you will be counting 10000+ series per service instance.
+First, for summary metrics, one \<URI, status code> combination has only three series on its latency: `count`, `sum`, and `max`, but histogram metrics are much more. One combination may have 50\~100 buckets, so if you have 20 different URLs, you will be counting 1000+ series per service instance. When the application is reporting status codes other than 200, such as 5xx, 4xx, then additional metrics are reported. &#x20;
 
-For inbound calls, the number of URIs usually matches the number of API endpoints your service provides. But for outbound calls, depending on how you customize your RestTemplate, [URIs could contain query strings](https://github.com/spring-projects/spring-boot/issues/22307), thus can cause a cardinality explosion. When you enable histogram for outbound calls, check the URIs and [fix the RestTemplate](https://stackoverflow.com/questions/60818196/how-do-i-make-spring-boot-resttemplate-client-metrics-not-create-a-new-tag-for-q) if necessary.
+For inbound calls, the number of URIs usually matches the number of API endpoints your service provides. But for outbound calls, depending on how you customize your RestTemplate, [URIs could contain query strings](https://github.com/spring-projects/spring-boot/issues/22307), thus can cause a cardinality explosion. If you enable histogram for outbound calls, check the URIs and [fix the RestTemplate](https://stackoverflow.com/questions/60818196/how-do-i-make-spring-boot-resttemplate-client-metrics-not-create-a-new-tag-for-q) if necessary.
 
 ### RED Metric KPIs
 
