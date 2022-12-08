@@ -1,0 +1,14 @@
+# User Roles
+
+Once you have configured authentication (SSO) for Asserts, you will be able to manage user access to functionality through our predefined roles in the User Directory located under the Settings menu.
+
+These roles are VIEWER, EDITOR & OWNER. For a self-hosted installation, the first user to log into Asserts will be granted the OWNER role. Subsequent users are granted the VIEWER role upon logging in for the first time. A user with the OWNER role has permission to modify other users' role.
+
+### Role Permissions
+
+| Role   | Access Granted                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| VIEWER | <ul><li>Read-only access to all functionality</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                            |
+| EDITOR | <ul><li>All VIEWER access</li><li>Configure rule thresholds</li><li>Manage alerts</li><li>Create custom dashboards</li><li>Manage SLOs</li><li>Manage integrations</li><li>List all users and roles</li><li>Configure Prometheus rules</li><li>Configure Prometheus relabel rules</li><li>Create users' own API access credentials</li><li>Configure AWS exporter configuration</li><li>Configure Asserts model rules</li><li>Manage trace configuration</li></ul> |
+| OWNER  | <ul><li>All EDITOR access</li><li>Change other users role</li><li>Enable/Disable Prometheus rules</li><li>Invite users (if enabled)</li><li>Grafana admin privileges</li><li>Configure AWS CloudWatch</li><li>Configure authentication</li><li>Manage license info</li><li>Manage Prometheus DataSources</li><li>Read raw tenant &#x26; base Prometheus rules</li><li>Configure tenant api credentials</li></ul>                                                   |
+

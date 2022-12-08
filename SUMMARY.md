@@ -31,6 +31,7 @@
   * [Relabeling](user-guide/global-settings/relabeling.md)
   * [Custom Model Rules](user-guide/global-settings/custom-model-rules.md)
   * [Authentication (SSO)](user-guide/global-settings/authentication-sso.md)
+  * [User Roles](user-guide/global-settings/user-roles.md)
 
 ## Assertion Catalog
 
