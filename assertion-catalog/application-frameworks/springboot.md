@@ -20,7 +20,7 @@ management.endpoint.prometheus.enabled=true
 management.endpoints.web.exposure.include=prometheus
 ```
 
-The first line enables the endpoint that provides metrics in Prometheus format, and the second line tells Springboot to expose this endpoint as a Web API. Note that we can expose many other endpoints here, like `info`, `health`, etc., and the second line can be defined as either `include` or `exclude` depending on your preference. Please refer to the [official documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints.exposing) for details.
+The first line enables the endpoint that provides metrics in Prometheus format, and the second line tells Springboot to expose this endpoint as a Web API. You may already have other endpoints listed here, like `info`, `health`, etc. Here is a link to the [official documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html#actuator.endpoints.exposing) for details.
 
 Now, if you hit the /actuator/prometheus endpoint of your web application, you will see a list of metrics like these. They usually cover JVM, inbound HTTP requests, and outbound calls, among other things.
 
