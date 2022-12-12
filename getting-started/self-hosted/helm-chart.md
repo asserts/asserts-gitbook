@@ -28,7 +28,7 @@ Install the chart and create the asserts namespace
 ```
 helm repo add asserts https://asserts.github.io/helm-charts
 helm repo update
-helm upgrade --install asserts asserts/asserts -n asserts --create-namespac
+helm upgrade --install asserts asserts/asserts -n asserts --create-namespace
 ```
 
 #### You ARE NOT running Prometheus-Operator in the same cluster as where Asserts is installed
