@@ -22,11 +22,11 @@
 ## User Guide
 
 * [Top Insights](user-guide/top-insights.md)
-* [Workbench](user-guide/workbench.md)
-* [Entities](user-guide/exploring-the-entity-graph.md)
+* [Entity Graph](user-guide/exploring-the-entity-graph.md)
 * [SLOs](user-guide/slos.md)
+* [RCA Workbench](user-guide/workbench.md)
+* [Alerts / Rules](user-guide/assertion-management.md)
 * [Monitoring as Code](user-guide/monitoring-as-a-code.md)
-* [Assertion Management](user-guide/assertion-management.md)
 * [Global Settings](user-guide/global-settings/README.md)
   * [Relabeling](user-guide/global-settings/relabeling.md)
   * [Custom Model Rules](user-guide/global-settings/custom-model-rules.md)
