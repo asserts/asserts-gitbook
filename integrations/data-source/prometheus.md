@@ -4,11 +4,15 @@ description: Configure Prometheus metric data sources
 
 # Prometheus
 
+Asserts leverages the labels in your existing application and infrastructure metrics, such as `pod, node, instance, service, job, namespace et al`.&#x20;
+
+If _**you are using**_ [_**Prometheus-Operator**_](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack), these labels are there by default, and _**you can skip**_ **to** [**Connecting Asserts to your Prometheus.**](prometheus.md#connecting-asserts-to-your-prometheus) ****&#x20;
+
 ### Preparing your Prometheus
 
-Asserts leverages the labels in your existing application and infrastructure metrics, such as `pod, node, instance, service, job, namespace et al`. If _**you are using**_ [_**Prometheus-Operator**_](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack), these labels are there by default, and _**you can skip**_ **to** [**Connecting Asserts to your Prometheus.**](prometheus.md#connecting-asserts-to-your-prometheus) ****&#x20;
+If you are using annotation based [kubernetes service discovery](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#kubernetes\_sd\_config) in your Prometheus configuration such as used in the official [Prometheus Helm Chart default scrape config](https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus/values.yaml#L771), some **relabel configurations** will need to be added.&#x20;
 
-If you are using annotation based [kubernetes service discovery](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#kubernetes\_sd\_config) in your Prometheus configuration such as used in the official [Prometheus Helm Chart default scrape config](https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus/values.yaml#L771), some **relabel configurations** will need to be added. Using the mentioned scrape config as our base config we can see the [diff for the required changes](https://github.com/asserts/prometheus-helm-charts/pull/1/files) which results from doing the following 3 steps:
+Using the mentioned scrape config as our base config we can see the [diff for the required changes](https://github.com/asserts/prometheus-helm-charts/pull/1/files) which results from doing the following 3 steps:
 
 1. Add the **node** label to the jobs **`kubernetes-nodes`** and **`kubernetes-nodes-cadvisor`**:
 
