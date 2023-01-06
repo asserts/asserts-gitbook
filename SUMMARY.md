@@ -21,8 +21,8 @@
 
 ## User Guide
 
-* [Top Insights](user-guide/top-insights.md)
 * [Entity Graph](user-guide/exploring-the-entity-graph.md)
+* [Top Insights](user-guide/top-insights.md)
 * [SLOs](user-guide/slos.md)
 * [RCA Workbench](user-guide/workbench.md)
 * [Alerts / Rules](user-guide/assertion-management.md)

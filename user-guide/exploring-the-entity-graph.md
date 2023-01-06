@@ -1,4 +1,4 @@
-# Exploring the entity graph
+# Entity Graph
 
 ### Search
 
@@ -50,7 +50,7 @@ A user can pull up the KPI dashboard for each entity in focus by clicking “Sho
 
 ![](<../.gitbook/assets/Screen Shot 2021-09-22 at 1.12.01 AM.png>)
 
-Within the same entity type, say Service, if we know the service type, say `Nginx`, we also have a specific dashboard for that service type.
+Within the same entity type, say Service, if we know the service type, say `Nginx`, we also have a popular community grafana dashboard for that service type.
 
 ![](<../.gitbook/assets/Screen Shot 2021-09-22 at 1.12.39 AM.png>)
 
