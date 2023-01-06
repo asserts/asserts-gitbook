@@ -62,6 +62,16 @@ helm repo update
 helm upgrade --install asserts asserts/asserts -n asserts
 ```
 
+## Sizing Values
+
+The default Helm chart values in the [values.yaml](https://github.com/asserts/helm-charts/blob/master/charts/asserts/values.yaml) file are configured to allow you to quickly get Asserts up and running. Here are some sample values files for sizing resources according to the total number of raw metrics at the source Prometheus endpoints:
+
+[small](https://github.com/asserts/helm-charts/blob/master/charts/asserts/small.yaml): Up to 1 million metrics
+
+[medium](https://github.com/asserts/helm-charts/blob/master/charts/asserts/medium.yaml): 1 to 5 million metrics
+
+[large](https://github.com/asserts/helm-charts/blob/master/charts/asserts/large.yaml): Over 5 million metrics
+
 ## Uninstalling the Chart
 
 To uninstall Asserts and its dependencies, run the following command:
