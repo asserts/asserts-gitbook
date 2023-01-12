@@ -10,62 +10,79 @@ Kafka server can be enabled for Prometheus metrics either using an external expo
 
 > docker run -ti --rm -p 9308:9308 danielqsj/kafka-exporter --kafka.server=kafka:9092 \[--kafka.server=another-server ...]
 
-&#x20;
-
 * JMX Exporter can be set up and configured using [JMX Exporter](https://github.com/prometheus/jmx\_exporter) , while launching the Kafka server you can use the below command to launch
 
 > `java -javaagent:./jmx_prometheus_javaagent-0.16.1.jar=8080:config.yaml -jar yourJar.jar`
 
+* An alternative way to configure in case Kafka is running using script
+
+`KAFKA_OPTS="$KAFKA_OPTS -javaagent:./jmx_prometheus_javaagent-0.16.1.jar=8080:./kafka-2_0_0.yml" kafka-server-start /usr/local/etc/kafka/server.properties`
+
 After the Kafka server is successfully enabled for the Prometheus metric, you can verify whether you are able to see some of the following metrics in Prometheus.
 
-&#x20;
+`kafka_topic_partitions{topic="__consumer_offsets"}` \
+`kafka_topic_partition_current_offset gauge kafka_topic_partition_current_offset{partition="0",topic="__consumer_offsets"}`
 
-`1# HELP kafka_topic_partitions Number of partitions for this Topic 2# TYPE kafka_topic_partitions gauge 3kafka_topic_partitions{topic="__consumer_offsets"} 50 4 5# HELP kafka_topic_partition_current_offset Current Offset of a Broker at Topic/Partition 6# TYPE kafka_topic_partition_current_offset gauge 7kafka_topic_partition_current_offset{partition="0",topic="__consumer_offsets"} 0 8 9# HELP kafka_topic_partition_oldest_offset Oldest Offset of a Broker at Topic/Partition 10# TYPE kafka_topic_partition_oldest_offset gauge 11kafka_topic_partition_oldest_offset{partition="0",topic="__consumer_offsets"} 0`
+### RED Metrics KPI <a href="#metrics" id="metrics"></a>
 
-### Metrics <a href="#metrics" id="metrics"></a>
+#### Request Rate
 
-| **Metric**                                                                                                                                                                                                                                                                                            | **Key Performance Indicator(KPI)**                                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Requests</p><p><code>kafka_server_brokertopicmetrics_totalproducerequests_total</code></p><p><code>kafka_server_brokertopicmetrics_messagesin_total</code></p><p><code>kafka_server_brokertopicmetrics_totalfetchrequests_total</code></p><p><code>kafka_topic_partition_current_offset</code></p> | <p>Request Rate</p><p><code>rate(kafka_server_brokertopicmetrics_totalproducerequests_total[5m])</code></p><p><code>rate(kafka_server_brokertopicmetrics_messagesin_total[5m])</code></p>    |
-| <p>Errors</p><p><code>kafka_server_brokertopicmetrics_failedfetchrequests_total</code></p><p><code>kafka_server_brokertopicmetrics_failedproducerequests_total</code></p>                                                                                                                             | <p>Error Ratio</p><p><code>rate(kafka_server_brokertopicmetrics_failedfetchrequests_total[5m])</code>/ <code>rate(kafka_server_brokertopicmetrics_totalproducerequests_total[5m])</code></p> |
-| <p>Latency</p><p><code>kafka_network_requestmetrics_totaltimems</code></p>                                                                                                                                                                                                                            | <p>Latency P99</p><p><code>kafka_network_requestmetrics_totaltimems{request="Produce", quantile="0.99"} / 1000</code></p>                                                                    |
+Asserts will automatically track the following list of Key performance indicators for your Request, Error, and Duration, aka RED metrics.
 
-### Alerts <a href="#alerts" id="alerts"></a>
+* **Kafka JMX RED Metrics KPI**
+  * **Producer Requests** \
+    ****`rate(kafka_server_brokertopicmetrics_totalproducerequests_total[5m])`
+  * **Producer Records**\
+    ****`rate(kafka_server_brokertopicmetrics_messagesin_total[5m])`
+  * **Consumer Requests**\
+    ****`rate(kafka_server_brokertopicmetrics_totalfetchrequestspersec_count{topic!=""}[5m])`
+* **Kafka Exporter RED Metrics KPI**
+  * **Produced Messages**\
+    &#x20;**** `avg_over_time((delta(kafka_topic_partition_current_offset{topic!=""}[1m]) > 0 or delta(kafka_topic_partition_current_offset{topic!=""}[1m]) * 0) / 60 [5m])`
+  * **Consumed Messages**\
+    ****`avg_over_time((delta(kafka_consumergroup_current_offset{topic!=""}[1m]) > 0 or delta(kafka_consumergroup_current_offset{topic!=""}[1m]) * 0) / 60 [5m])`
 
-| **KPI** | **Alerts** |
-| ------- | ---------- |
+#### Error Ratio
 
-| **KPI**      | **Alerts**                                                                                                    |
-| ------------ | ------------------------------------------------------------------------------------------------------------- |
-| Request Rate | **RequestRateAnomaly**                                                                                        |
-| Error Rate   | <p><strong>ErrorRatioBreach</strong></p><p><strong>ErrorBuildup</strong> based on a <code>99.9</code> SLO</p> |
-| Latency P99  | **LatencyP99ErrorBuildup**                                                                                    |
+* **Producer Errors**\
+  _`rate(kafka_server_brokertopicmetrics_failedproducerequests_total{topic!=""}[5m])/rate(kafka_server_brokertopicmetrics_totalproducerequests_total[5m])`_
+* **Consumer Errors**\
+  _`rate(kafka_server_brokertopicmetrics_total_failedfetchrequestspersec_count{topic!=""}[5m])/ rate(kafka_server_brokertopicmetrics_totalfetchrequestspersec_count{topic!=""}[5m])`_
 
-#### Failure Alerts <a href="#failure-alerts" id="failure-alerts"></a>
+#### Latency
 
-**KafkaTopicsUnderReplicatedPartitions**
+* **P99 - Consumer Request**\
+  ****`kafka_network_requestmetrics_totaltimems{request="Fetch", quantile="0.99"} / 1000`
+* **P99 - Consumer Group**\
+  ****`kafka_network_requestmetrics_totaltimems{request=~".*Group", quantile="0.99"}) / 1000`
+* **P99 - Producer Request**\
+  ****`kafka_network_requestmetrics_totaltimems{request="Produce",quantile="0.99"} / 1000`
+* **P99 - Broker Request**\
+  ****`kafka_controller_controllerchannelmanager_requestrateandqueuetimems{quantile="0.99"} /1000`
 
-Kafka Partition is not replicate as expected
+### RED Metrics Alerts <a href="#alerts" id="alerts"></a>
 
-`kafka_topic_partition_under_replicated_partition` > 0
+Asserts automatically tracks the short-term and long-term trends for request and latency for Anomaly detection. Similarly, thresholds can be set for Latency averages and P99 to record breaches. Error Ratios are tracked against availability goals (default, 99.9%) and breaches (default, 10%)&#x20;
 
-**KafkaOfflinePartitions**
+| **KPI**      | **Alerts**                                                                                              |
+| ------------ | ------------------------------------------------------------------------------------------------------- |
+| Request Rate | **RequestRateAnomaly**                                                                                  |
+| Error Ratio  | <p><strong>ErrorRatioBreach</strong></p><p><strong>ErrorBuildup</strong> - availability goal 99.9 %</p> |
+| Latency P99  | **LatencyP99ErrorBuildup**                                                                              |
 
-When Kafka partitions are offline
+### Failure Alerts <a href="#failure-alerts" id="failure-alerts"></a>
 
-`kafka_controller_kafkacontroller_offlinepartitionscount > 0`
+**KafkaTopicsUnderReplicatedPartitions**\
+`kafka_topic_partition_under_replicated_partition > 0`
 
-**KafkaActiveController**
+**KafkaOfflinePartitions**\
+****`kafka_controller_kafkacontroller_offlinepartitionscount > 0`
 
-Kafka controller is not active/offline
+**KafkaActiveController**\
+****`kafka_controller_kafkacontroller_activecontrollercount != 1`
 
-`kafka_controller_kafkacontroller_activecontrollercount != 1`
-
-**KafkaUnderMinIsrPartitions**
-
-Kafka partitions are under the expected in-sync replicas
-
-`kafka_cluster_partition_underminisr > 0`
+**KafkaUnderMinIsrPartitions**\
+****`kafka_cluster_partition_underminisr > 0`
 
 ### Dashboards <a href="#dashboards" id="dashboards"></a>
 
@@ -76,7 +93,7 @@ The below dashboard shows information about Kafka server metrics
 * Lag by Consumer
 * Partitions for Topics
 
-![](<../../.gitbook/assets/image (8).png>)
+<figure><img src="../../.gitbook/assets/dash2.jpeg" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -88,32 +105,49 @@ JMX Exporter can be set up and configured using [JMX Exporter](https://github.co
 
 > `java -javaagent:./jmx_prometheus_javaagent-0.16.1.jar=8080:config.yaml -jar yourJar.jar`
 
-&#x20;
+&#x20;You can check whether following prometheus metrics are available to confirm Kafka client is instrumented
 
-You can check whether following prometheus metrics are available to confirm Kafka client is instrumented
+`kafka_producer_topic_record_send_total`\
+`kafka_producer_record_send_total`\
+`kafka_consumer_records_consumed_total_records_total`\
+`kafka_consumer_fetch_manager_bytes_consumed_total`
 
-* `kafka_producer_topic_record_send_total`
-* `kafka_producer_record_send_total`
-* `kafka_consumer_records_consumed_total_records_total`
-* `kafka_consumer_fetch_manager_bytes_consumed_total`
+### RED Metrics - Producer <a href="#metrics-producer" id="metrics-producer"></a>
 
-### Metrics - Producer <a href="#metrics-producer" id="metrics-producer"></a>
+#### Requests
 
-| **Metric**                                                                                                                    | **Key Performance Indicator(KPI)**                                                                                                                    |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Requests</p><p><code>kafka_producer_record_send_total</code></p><p><code>kafka_producer_topic_record_send_total</code></p> | <p>Request Rate</p><p><code>rate(kafka_producer_record_send_total[5m])</code></p><p><code>rate(kafka_producer_topic_record_send_total[5m])</code></p> |
-| <p>Errors</p><p><code>kafka_producer_record_error_total</code></p><p> </p>                                                    | <p>Error Ratio</p><p><code>rate(kafka_producer_record_error_total[5m])</code>/ <code>rate(kafka_producer_record_send_total[5m])</code></p>            |
-| <p>Latency</p><p><code>kafka_producer_request_latency_avg</code></p>                                                          | <p>Latency Average</p><p><code>kkafka_producer_request_latency_avg/ 1000</code></p>                                                                   |
+* **Producer Record**\
+  `rate(kafka_producer_record_send_total[5m])`
+* **Producer Requests**\
+  `rate(kafka_producer_request_total[5m])`
 
-### Metrics - Consumer <a href="#metrics-consumer" id="metrics-consumer"></a>
+#### Error Ratio
 
-| **Metric** | **Key Performance Indicator(KPI)** |
-| ---------- | ---------------------------------- |
+* **Producer Record**\
+  ****_`rate(kafka_producer_record_error_total[5m])`` `**`/`**`rate(kafka_producer_record_send_total[5m])`_
 
-| **Metric**                                                                                                                                                                                                      | **Key Performance Indicator(KPI)**                                                                                                                                                                                                      |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Requests</p><p><code>kafka_consumer_records_consumed_total_records_total</code></p><p><code>kafka_consumer_fetch_total_requests_total</code></p><p><code>kafka_consumer_fetch_manager_fetch_total</code></p> | <p>Request Rate</p><p><code>rate(kafka_consumer_fetch_total_requests_total[5m])</code></p><p><code>rate(kafka_consumer_fetch_total_requests_total[5m])</code></p><p><code>rate(kafka_consumer_fetch_manager_fetch_total[5m])</code></p> |
-| <p>Latency</p><p><code>kafka_consumer_fetch_latency_avg_seconds</code></p><p><code>kafka_consumer_fetch_manager_fetch_latency_avg</code></p>                                                                    | <p>Latency Average</p><p><code>kafka_consumer_fetch_latency_avg_seconds</code></p><p><code>kafka_consumer_fetch_manager_fetch_latency_avg / 1000</code></p>                                                                             |
+#### Latency
+
+* Average\
+  `max without(asserts_request_context)(kafka_producer_request_latency_avg/1000)`
+
+### RED Metrics - Consumer <a href="#metrics-producer" id="metrics-producer"></a>
+
+#### Requests
+
+* **Consumer Record**\
+  `rate(kafka_consumer_records_consumed_total_records_total[5m])`
+* **Consumer Requests**\
+  `rate(kafka_consumer_fetch_total_requests_total[5m])`
+* **Consumer Fetch Requests**\
+  `rate(kafka_consumer_fetch_manager_fetch_total[5m])`
+* **Consumer Fetch Record**\
+  `rate(kafka_consumer_fetch_manager_records_consumed_total[5m])`
+
+#### Latency
+
+* **Average**\
+  `max without(asserts_request_context) (kafka_producer_request_latency_avg/1000)`
 
 ### Alerts <a href="#alerts.1" id="alerts.1"></a>
 

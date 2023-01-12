@@ -19,14 +19,15 @@ After the flask python module is enabled you can verify by looking at the follow
 
 ### Metrics
 
-| **Metric**                                                                                                      | **Key Performance Indicator(KPI)**                                                                                                                                                                                                                                                |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Requests</p><p>flask_http_request_duration_seconds_count</p>                                                 | <p>Request Rate</p><p>rate(flask_http_request_duration_seconds_count[5m])</p>                                                                                                                                                                                                     |
-| <p>Errors</p><p>flask_http_request_duration_seconds_count</p>                                                   | <p>Error Ratio</p><p>rate(flask_http_request_duration_seconds_count{status=~"5.."}[5m])/ rate(flask_http_request_duration_seconds_count[5m])</p>                                                                                                                                  |
+| **Metric**                                                                                                      | **Key Performance Indicator(KPI)**                                                                                                                                                                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Requests</p><p>flask_http_request_duration_seconds_count</p>                                                 | <p>Request Rate</p><p>rate(flask_http_request_duration_seconds_count[5m])</p>                                                                                                                                                                                                      |
+| <p>Errors</p><p>flask_http_request_duration_seconds_count</p>                                                   | <p>Error Ratio</p><p>rate(flask_http_request_duration_seconds_count{status=~"5.."}[5m])/ rate(flask_http_request_duration_seconds_count[5m])</p>                                                                                                                                   |
 | <p>Latency</p><p>flask_http_request_duration_seconds_bucket</p><p>flask_http_request_duration_seconds_count</p> | <p>Latency Average</p><p>rate(flask_http_request_duration_seconds_count[5m])/ rate(flask_http_request_duration_seconds_count[5m])</p><p>Latency P99</p><pre><code>histogram_quantile (
   0.99,
   sum(rate(flask_http_request_duration_seconds_bucket[1m])) by (le)
-)</code></pre> |
+)
+</code></pre> |
 
 ### Alerts
 
