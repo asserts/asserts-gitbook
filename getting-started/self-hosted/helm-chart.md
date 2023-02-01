@@ -8,6 +8,10 @@ description: Quick start guide for Deploying Asserts on a Kubernetes Cluster
 Helm charts and source code can be found in our public [github helm-charts repo.](https://github.com/asserts/helm-charts/tree/master/charts/asserts)
 {% endhint %}
 
+## **Architecture**
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 ## **Prerequisites**
 
 * Kubernetes 1.17+
