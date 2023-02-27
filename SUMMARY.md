@@ -8,7 +8,6 @@
 * [Self-Hosted](getting-started/self-hosted/README.md)
   * [Helm Chart](getting-started/self-hosted/helm-chart.md)
   * [Docker Compose](getting-started/self-hosted/docker-compose.md)
-  * [AWS CloudFormation](getting-started/self-hosted/aws-cloudformation.md)
 * [Cloud](getting-started/cloud.md)
 * [FAQ](getting-started/faq.md)
 

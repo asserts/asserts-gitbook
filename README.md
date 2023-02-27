@@ -14,9 +14,9 @@ With our search, you can find how the components fit together in real-time and v
 
 ### Runs curated rules **to detect Service Unavailability and potential causes**
 
-Asserts curates knowledge of common runtime failure patterns and potential causes, so your team doesn’t have to research and maintain these PromQL complex recording and alerting rules for frameworks.
+Asserts curates knowledge of common runtime failure patterns and potential causes so your team doesn’t have to research and maintain these PromQL complex recording and alerting rules for frameworks.
 
-It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (i.e. **Changes** such as new conatiner deployments, config upgrades, kafka rebalances, scale events et al.), request rate, error rate & latency _**Anomalies**_, systemic _**Failures**_, and _**Errors**_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
+It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (i.e. changes **** such as new container deployments, config updates, kafka consumer group rebalancing, HPA scale events et al.), _**Anomalies**_ in _****_ request rate, error rate & latency, systemic _**Failures**_ (e.g. Pod Crash looping, Cron Job Failure), and _**Errors** (e.g 5XX / 4XX status code, Latency Threshold Breach)_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
 
 We call these checks **Assertions**. The occurrences of these assertions are annotated on the (Knowledge) Graph, so it is easy to consume at a glance. [see more](how-asserts-works/understanding-saafe-model.md)
 
