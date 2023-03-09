@@ -25,7 +25,7 @@ Select _**Test Connection**_** ** to verify your endpoint, then _**Add New.**_ O
 
 Now navigate to the **Entity Graph** and **** type **Show all Services** in the the search bar to visualize your services. Learn more about exploring Asserts from our [**user guide**](broken-reference)**.**
 
-<figure><img src="../../.gitbook/assets/screencast 2023-02-26 15-08-46.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/screencast 2023-02-26 15-08-46 (1).gif" alt=""><figcaption></figcaption></figure>
 
 
 
