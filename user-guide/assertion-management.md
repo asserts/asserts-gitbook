@@ -1,4 +1,4 @@
-# Assertion Management
+# Alerts / Rules
 
 ## Thresholds
 
@@ -22,11 +22,15 @@ For resources, the hierarchy starts with `source`, i.e., the exporter, then `res
 
 #### Notifications <a href="#howassertsworks-wip-notifications" id="howassertsworks-wip-notifications"></a>
 
-As we mentioned earlier, assertions are not alerts. If you want to get notified, you can add notification rules. They are also organized into the same three sections like the thresholds, and the same hierarchical granularity levels apply. You can set notifications for an assertion whenever it fires, or when it fires on a certain job, or a certain job and request type. Free-form label conditions are also supported here.
+As we mentioned earlier, assertions are not alerts. If you want to get notified, you can add notification rules. They are also organized into different sections, like the thresholds, and the same hierarchical granularity levels apply. You can set notifications for an assertion whenever it fires, or when it fires on a specific job, or a job and request type. Free-form label conditions are also supported here.
 
 ![](<../.gitbook/assets/Screen Shot 2021-09-22 at 10.53.12 AM.png>)
 
-Asserts internally use Prometheus Alert Manager for notification, so we support all the receivers listed on its official page (Email, Pagerduty, Slack, etc.)
+From the Workbench, there is also a quick shortcut to bring you to the notification settings with all the labels pre-populated.
+
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+Asserts internally uses Prometheus Alert Manager for notification, so we support all the receivers listed on its official page (Email, Pagerduty, Slack, etc.)
 
 #### Suppressions <a href="#howassertsworks-wip-suppressions" id="howassertsworks-wip-suppressions"></a>
 
