@@ -12,20 +12,10 @@ You'll learn how to setup, run, and experiment with the Asserts Platform.
 
 ### **Before you begin**
 
-If you run into any issues, need help setting up or using Asserts, or just have questions in general you can reach us via the following channels:
+If you run into any issues, need help setting up or using Asserts, or just have questions in general you can:
 
-1.  **Join our community Slack Channel**
-
-    Please consider joining our [community Slack channel](https://join.slack.com/t/asserts-community/shared\_invite/zt-1aobjmmls-xT1HwiSp1DNFXPeEvQEb5A). \
-    This is our preferred method of communication. \
-
-2. **Messenger App**\
-   You can also reach us by simply clicking on the <img src=".gitbook/assets/intercom-icon-27.jpg" alt="" data-size="line"> icon in the bottom right corner of any page on our site to open our messenger app and send us a message <mark style="color:blue;"></mark> to directly chat with us 😃\
-
-3. **Email**\
-   Lastly, you can also shoot us an email directly at [support@asserts.ai](mailto:support@asserts.ai)
-
-
+* ****[**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)****
+* ****[**Email Us**](mailto:support@asserts.ai)****
 
 ## Determine which Asserts is right for you?
 

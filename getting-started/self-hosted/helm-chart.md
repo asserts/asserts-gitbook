@@ -12,6 +12,8 @@ Helm charts and source code can be found in our public [github helm-charts repo.
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
+## ****[**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)****
+
 ## **Prerequisites**
 
 * Kubernetes 1.17+

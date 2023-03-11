@@ -4,9 +4,9 @@ description: Quick start guide for Deploying Asserts on Virtual or Physical Mach
 
 # Docker Compose
 
-## **Before you begin**
+## ****[**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)****
 
-### **Required P**rerequisites
+### **P**rerequisites
 
 * At least 4 GB of RAM dedicated to the host running the Docker engine&#x20;
   * 8Gb is recommended
