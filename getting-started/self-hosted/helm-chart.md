@@ -32,7 +32,9 @@ helm upgrade asserts asserts/asserts \
     --create-namespace
 ```
 
-Asserts uses metric label informaton to build the Entity Graph, it will use labels from service meshes (Istio, Linkerd) or from the Asserts eBPF Probe. By default the probe is not enabled, it can be enabled via a values file or from the Helm command line.
+#### eBPF Probe
+
+Asserts uses metric label information to build the Entity Graph; it will use labels from service meshes (Istio, Linkerd) or from the Asserts eBPF Probe. By default, the probe is not enabled; it can be enabled via a values file or from the Helm command line.
 
 ```bash
 helm upgrade asserts asserts/asserts \
@@ -42,7 +44,7 @@ helm upgrade asserts asserts/asserts \
     --set ebpfProbe.enabled=true
 ```
 
-There any many configuration options such as PagerDuty and Slack integrations. These can be configured with a values file. View all install configuration options [**here**](https://github.com/asserts/helm-charts/blob/master/charts/asserts/values.yaml).
+There any many **other configuration** options, such as PagerDuty and Slack integrations. These can be configured with a values file. View all install configuration options [**here**](https://github.com/asserts/helm-charts/blob/master/charts/asserts/values.yaml).
 
 ## **Verify and Access**
 
@@ -51,7 +53,7 @@ When Asserts is spinning up for the first time, it usually takes about 3-4 minut
 Once all containers are initialized and running:
 
 ```
-kubectl get pods -l app.kubernetes.io/instance=asserts -n asserts
+kubectl get pods -l app.kubernetes.io/instance=asserts -n asserts -w
 ```
 
 You can then login to the asserts-ui by running:
