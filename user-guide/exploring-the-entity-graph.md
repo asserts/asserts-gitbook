@@ -1,6 +1,6 @@
 # Entity Graph
 
-### Search
+#### Search
 
 Asserts’s web app is built for cloud scale. The best way to explore the entity graph is to use search expressions. We’ve shipped a default set of search expressions that cover everyday use cases. For example, "Show Service api-server", “Show all services”, “Show Assertions in Namespace”, etc.
 
@@ -20,7 +20,7 @@ When users click on an entity, it also allows them to navigate to its connected 
 
 In the list view, users can also pick properties or the monitoring status of each entity. This gives a high-level overview of what’s being automatically monitored by Asserts. Resource monitoring applies to both Services and Nodes, but traffic and latency monitoring usually only applies to Services.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 A bubble view is also provided to help the user to rank entities by requests, resources, or selected properties from `View Settings`<img src="../.gitbook/assets/Screen Shot 2021-09-22 at 1.31.16 AM.png" alt="" data-size="line"> . Users can even choose multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus, the `yace` service here is having a CPU-related assertion.
 
