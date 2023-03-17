@@ -4,7 +4,7 @@ As an Asserts customer, all you need to do is connect your Observability Datasou
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-02-01 at 9.16.29 PM.png" alt=""><figcaption><p>Connect your existing Observability Datasources </p></figcaption></figure>
 
-### **Builds a Graph of App and Infra components (with Grafana Dashboards)**
+### **Builds an Entity Graph of App and Infra components (with Grafana Dashboards)**
 
 Asserts taps into your telemetry data sources like Prometheus, CloudWatch et al., automatically builds a graph of your application and infrastructure components, and indexes the graph for search.
 
