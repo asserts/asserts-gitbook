@@ -4,7 +4,7 @@ As an Asserts customer, all you need to do is connect your Observability Datasou
 
 <figure><img src=".gitbook/assets/Screen Shot 2023-02-01 at 9.16.29 PM.png" alt=""><figcaption><p>Connect your existing Observability Datasources </p></figcaption></figure>
 
-### **Builds a Map of App and Infra components (with Grafana Dashboards)**
+### **Builds a Graph of App and Infra components (with Grafana Dashboards)**
 
 Asserts taps into your telemetry data sources like Prometheus, CloudWatch et al., automatically builds a graph of your application and infrastructure components, and indexes the graph for search.
 
@@ -14,7 +14,7 @@ With our search, you can find how the components fit together in real-time and v
 
 ### Runs curated rules **to detect Service Unavailability and potential causes**
 
-Asserts curates knowledge of common runtime failure patterns and potential causes so your team doesn’t have to research and maintain these PromQL complex recording and alerting rules for frameworks.
+Asserts curates knowledge of common runtime failure patterns and potential causes so your team doesn’t have to research and maintain these complex PromQL recording and alerting rules for frameworks.
 
 It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (i.e. changes **** such as new container deployments, config updates, kafka consumer group rebalancing, HPA scale events et al.), _**Anomalies**_ in _****_ request rate, error rate & latency, systemic _**Failures**_ (e.g. Pod Crash looping, Cron Job Failure), and _**Errors** (e.g 5XX / 4XX status code, Latency Threshold Breach)_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
 
