@@ -26,6 +26,8 @@
 * [SLOs](user-guide/slos.md)
 * [RCA Workbench](user-guide/workbench.md)
 * [Rules](user-guide/assertion-management.md)
+* [Metrics](user-guide/metrics.md)
+* [Dashboards](user-guide/dashboards.md)
 * [Monitoring as Code](user-guide/monitoring-as-a-code.md)
 * [Global Settings](user-guide/global-settings/README.md)
   * [Authentication (SSO)](user-guide/global-settings/authentication-sso.md)
