@@ -2,7 +2,7 @@
 
 ### Setup
 
-Prometheus metrics for Istio can be enabled by following the setup instructions documented [here](https://istio.io/latest/docs/ops/integrations/prometheus/). Once the exporter is setup check the following metrics to verify the setup:
+Prometheus metrics for Istio can be enabled by following the setup instructions documented [here](https://istio.io/latest/docs/ops/integrations/prometheus/). Once the exporter is set up, check the following metrics to verify the setup:
 
 * istio\_build
 
@@ -10,11 +10,11 @@ Prometheus metrics for Istio can be enabled by following the setup instructions 
 
 #### Request, Errors, and Latency
 
-| **Metric**                                                         | **KPI**                                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Request Counter</p><p>istio_requests_total</p>                  | <p>Request Rate</p><p>rate(istio_requests_total[5m])</p>                                                                                                                                                                                                                   |
-| <p>Error Counter</p><p>istio_requests_total</p>                    | <p>Error Ratio (server errors)</p><p>rate(istio_requests_total{response_code=~"5.."}[5m])/ rate(istio_requests_total[5m])</p><p>Error Ratio (client errors)</p><p>rate(istio_requests_total{response_code=~"4.."}[5m])/ rate(istio_requests_total[5m])</p>                 |
-| <p>Latency Histogram</p><p>istio_request_duration_milliseconds</p> | <p>Latency Average</p><p>rate(istio_request_duration_milliseconds_sum[5m])/ rate(istio_request_duration_milliseconds_count[5m])</p><p>Latency P99</p><p>histogram_quantile (<br>0.99,<br>sum(rate(istio_request_duration_milliseconds_bucket[5m]) > 0)<br>by (le)<br>)</p> |
+| **Metric**                                                         | **KPI**                                                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <p>Request Counter</p><p>istio_requests_total</p>                  | <p>Request Rate</p><p>rate(istio_requests_total{reporter="destination"}[5m])</p>                                                                                                                                                                                                                                   |
+| <p>Error Counter</p><p>istio_requests_total</p>                    | <p>Error Ratio (server errors)</p><p>rate(istio_requests_total{reporter=~"destination|source", response_code=~"5.."}[5m])/ rate(istio_requests_total[5m])</p><p>Error Ratio (client errors)</p><p>rate(istio_requests_total{reporter="destination", response_code=~"4.."}[5m])/ rate(istio_requests_total[5m])</p> |
+| <p>Latency Histogram</p><p>istio_request_duration_milliseconds</p> | <p>Latency Average</p><p>rate(istio_request_duration_milliseconds_sum[5m])/ rate(istio_request_duration_milliseconds_count[5m])</p><p>Latency P99</p><p>histogram_quantile (<br>0.99,<br>sum(rate(istio_request_duration_milliseconds_bucket[5m]) > 0)<br>by (le)<br>)</p>                                         |
 
 #### Resource
 
