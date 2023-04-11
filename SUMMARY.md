@@ -66,6 +66,7 @@
   * [NodeJS](assertion-catalog/runtimes/nodejs.md)
   * [GoLang](assertion-catalog/runtimes/golang.md)
 * [Extending Asserts Library](assertion-catalog/extending-asserts-library.md)
+* [Typical Metric Counts](assertion-catalog/typical-metric-counts.md)
 
 ## How Asserts Works
 
