@@ -31,16 +31,16 @@ Asserts will automatically track the following list of Key performance indicator
 
 * **Kafka JMX RED Metrics KPI**
   * **Producer Requests** \
-    ****`rate(kafka_server_brokertopicmetrics_totalproducerequests_total[5m])`
+    `rate(kafka_server_brokertopicmetrics_totalproducerequests_total[5m])`
   * **Producer Records**\
-    ****`rate(kafka_server_brokertopicmetrics_messagesin_total[5m])`
+    `rate(kafka_server_brokertopicmetrics_messagesin_total[5m])`
   * **Consumer Requests**\
-    ****`rate(kafka_server_brokertopicmetrics_totalfetchrequestspersec_count{topic!=""}[5m])`
+    `rate(kafka_server_brokertopicmetrics_totalfetchrequestspersec_count{topic!=""}[5m])`
 * **Kafka Exporter RED Metrics KPI**
   * **Produced Messages**\
-    &#x20;**** `avg_over_time((delta(kafka_topic_partition_current_offset{topic!=""}[1m]) > 0 or delta(kafka_topic_partition_current_offset{topic!=""}[1m]) * 0) / 60 [5m])`
+    &#x20;`avg_over_time((delta(kafka_topic_partition_current_offset{topic!=""}[1m]) > 0 or delta(kafka_topic_partition_current_offset{topic!=""}[1m]) * 0) / 60 [5m])`
   * **Consumed Messages**\
-    ****`avg_over_time((delta(kafka_consumergroup_current_offset{topic!=""}[1m]) > 0 or delta(kafka_consumergroup_current_offset{topic!=""}[1m]) * 0) / 60 [5m])`
+    `avg_over_time((delta(kafka_consumergroup_current_offset{topic!=""}[1m]) > 0 or delta(kafka_consumergroup_current_offset{topic!=""}[1m]) * 0) / 60 [5m])`
 
 #### Error Ratio
 
@@ -52,13 +52,13 @@ Asserts will automatically track the following list of Key performance indicator
 #### Latency
 
 * **P99 - Consumer Request**\
-  ****`kafka_network_requestmetrics_totaltimems{request="Fetch", quantile="0.99"} / 1000`
+  `kafka_network_requestmetrics_totaltimems{request="Fetch", quantile="0.99"} / 1000`
 * **P99 - Consumer Group**\
-  ****`kafka_network_requestmetrics_totaltimems{request=~".*Group", quantile="0.99"}) / 1000`
+  `kafka_network_requestmetrics_totaltimems{request=~".*Group", quantile="0.99"}) / 1000`
 * **P99 - Producer Request**\
-  ****`kafka_network_requestmetrics_totaltimems{request="Produce",quantile="0.99"} / 1000`
+  `kafka_network_requestmetrics_totaltimems{request="Produce",quantile="0.99"} / 1000`
 * **P99 - Broker Request**\
-  ****`kafka_controller_controllerchannelmanager_requestrateandqueuetimems{quantile="0.99"} /1000`
+  `kafka_controller_controllerchannelmanager_requestrateandqueuetimems{quantile="0.99"} /1000`
 
 ### RED Metrics Alerts <a href="#alerts" id="alerts"></a>
 
@@ -76,13 +76,13 @@ Asserts automatically tracks the short-term and long-term trends for request and
 `kafka_topic_partition_under_replicated_partition > 0`
 
 **KafkaOfflinePartitions**\
-****`kafka_controller_kafkacontroller_offlinepartitionscount > 0`
+`kafka_controller_kafkacontroller_offlinepartitionscount > 0`
 
 **KafkaActiveController**\
-****`kafka_controller_kafkacontroller_activecontrollercount != 1`
+`kafka_controller_kafkacontroller_activecontrollercount != 1`
 
 **KafkaUnderMinIsrPartitions**\
-****`kafka_cluster_partition_underminisr > 0`
+`kafka_cluster_partition_underminisr > 0`
 
 ### Dashboards <a href="#dashboards" id="dashboards"></a>
 
@@ -124,7 +124,7 @@ JMX Exporter can be set up and configured using [JMX Exporter](https://github.co
 #### Error Ratio
 
 * **Producer Record**\
-  ****_`rate(kafka_producer_record_error_total[5m])`` `**`/`**`rate(kafka_producer_record_send_total[5m])`_
+  _`rate(kafka_producer_record_error_total[5m])`` `**`/`**`rate(kafka_producer_record_send_total[5m])`_
 
 #### Latency
 

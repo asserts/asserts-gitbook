@@ -16,7 +16,7 @@ With our search, you can find how the components fit together in real-time and v
 
 Asserts curates knowledge of common runtime failure patterns and potential causes so your team doesn’t have to research and maintain these complex PromQL recording and alerting rules for frameworks.
 
-It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (i.e. changes **** such as new container deployments, config updates, kafka consumer group rebalancing, HPA scale events et al.), _**Anomalies**_ in _****_ request rate, error rate & latency, systemic _**Failures**_ (e.g. Pod Crash looping, Cron Job Failure), and _**Errors** (e.g 5XX / 4XX status code, Latency Threshold Breach)_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
+It continuously tracks resource _**Saturation**_**s**, _**Amends**_ (i.e. changes such as new container deployments, config updates, kafka consumer group rebalancing, HPA scale events et al.), _**Anomalies**_ in request rate, error rate & latency, systemic _**Failures**_ (e.g. Pod Crash looping, Cron Job Failure), and _**Errors** (e.g 5XX / 4XX status code, Latency Threshold Breach)_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/#xref\_monitoring\_golden-signals) and health metrics.
 
 We call these checks **Assertions**. The occurrences of these assertions are annotated on the (Knowledge) Graph, so it is easy to consume at a glance. [see more](how-asserts-works/understanding-saafe-model.md)
 
@@ -53,4 +53,4 @@ _e.g.,_ an amend (new deployment) on `api-server`triggered a spike in error rate
 
 ![](<.gitbook/assets/Screen Shot 2021-09-17 at 12.38.03 AM.png>)
 
-### ****
+###

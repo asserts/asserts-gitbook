@@ -14,8 +14,8 @@ You'll learn how to setup, run, and experiment with the Asserts Platform.
 
 If you run into any issues, need help setting up or using Asserts, or just have questions in general you can:
 
-* ****[**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)****
-* ****[**Email Us**](mailto:support@asserts.ai)****
+* [**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)
+* [**Email Us**](mailto:support@asserts.ai)
 
 ## Determine which Asserts is right for you?
 
@@ -58,8 +58,8 @@ This offering is well suited for:&#x20;
 
 ### Self-Hosted
 
-1. [Install **** Asserts](getting-started/self-hosted/#installation-options)
-2. Follow the instructions in your installation to request a _**Self-Hosted** _ Trial License
+1. [Install Asserts](getting-started/self-hosted/#installation-options)
+2. Follow the instructions in your installation to request a _**Self-Hosted**_ Trial License
 3. Integrate your **Prometheus** server(s) through our **Data Sources** screen
 4. Start Observing
 
@@ -69,4 +69,3 @@ This offering is well suited for:&#x20;
 2. We will reach out to you to connect to your **Prometheus**
 3. Start Observing
 
-<mark style="color:blue;">****</mark>

@@ -19,11 +19,11 @@ Once you get your trial license, simply select the **Data Sources -> Prometheus*
   (Note: you must have at least one datasource enabled for rules & dashboards)
 * **For Dashboards:** Enabling this slider results in this Prometheus server only being utilized for dashboards. Enable this slider for your long term Prometheus storage
 
-****
 
-Select _**Test Connection**_** ** to verify your endpoint, then _**Add New.**_ Once you have connected your Prometheus Asserts will discover your service graph within the next minute.
 
-Now navigate to the **Entity Graph** and **** type **Show all Services** in the the search bar to visualize your services. Learn more about exploring Asserts from our [**user guide**](broken-reference)**.**
+Select _**Test Connection**_ to verify your endpoint, then _**Add New.**_ Once you have connected your Prometheus Asserts will discover your service graph within the next minute.
+
+Now navigate to the **Entity Graph** and type **Show all Services** in the the search bar to visualize your services. Learn more about exploring Asserts from our [**user guide**](broken-reference)**.**
 
 <figure><img src="../../.gitbook/assets/screencast 2023-02-26 15-08-46 (1).gif" alt=""><figcaption></figcaption></figure>
 
@@ -33,7 +33,7 @@ Now navigate to the **Entity Graph** and **** type **Show all Services** in the 
 
 Asserts leverages the labels in your existing application and infrastructure metrics, such as `pod, node, instance, service, job, namespace et al`.&#x20;
 
-If you _are_ using _****_ [_**Prometheus-Operator**_](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack), these labels are there by default, and _you can_ skip this section ****&#x20;
+If you _are_ using [_**Prometheus-Operator**_](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack), these labels are there by default, and _you can_ skip this section&#x20;
 
 If you are using annotation based [kubernetes service discovery](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#kubernetes\_sd\_config) in your Prometheus configuration such as used in the official [Prometheus Helm Chart default scrape config](https://github.com/prometheus-community/helm-charts/blob/main/charts/prometheus/values.yaml#L771), some **relabel configurations** will need to be added.&#x20;
 

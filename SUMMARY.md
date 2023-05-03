@@ -29,6 +29,7 @@
 * [Metrics](user-guide/metrics.md)
 * [Dashboards](user-guide/dashboards.md)
 * [Monitoring as Code](user-guide/monitoring-as-a-code.md)
+* [Access Metrics via API](user-guide/access-metrics-via-api.md)
 * [Global Settings](user-guide/global-settings/README.md)
   * [Authentication (SSO)](user-guide/global-settings/authentication-sso.md)
   * [User Roles](user-guide/global-settings/user-roles.md)

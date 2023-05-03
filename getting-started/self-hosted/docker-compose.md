@@ -4,7 +4,7 @@ description: Quick start guide for Deploying Asserts on Virtual or Physical Mach
 
 # Docker Compose
 
-## ****[**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)****
+## [**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)
 
 ### **P**rerequisites
 
@@ -117,7 +117,7 @@ All Asserts services publish their own metrics, which are in turn consumed by As
 * [node-exporter](https://github.com/prometheus/node\_exporter)
 * [cadvisor](https://github.com/google/cadvisor)
 
-__
+
 
 ## **Install**
 
@@ -131,7 +131,7 @@ __
     docker-compose pull
     ```
 
-    ****
+
 3.  **Run Asserts Services**
 
     ```
@@ -183,7 +183,7 @@ __
 
 
 2. **Managing Volumes**\
-   ****Docker data volume persists even after a container is deleted. See how to manage persistent data [here](https://docs.docker.com/storage/volumes/)
+   Docker data volume persists even after a container is deleted. See how to manage persistent data [here](https://docs.docker.com/storage/volumes/)
 
 
 
