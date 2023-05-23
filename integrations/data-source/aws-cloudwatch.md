@@ -82,7 +82,7 @@ The ECS sidecar container needs to be included in the task definition of each EC
       "containerPort": 8014
     }
   ],
-  "image": "asserts/ecs-dockerstats-exporter:v0.11.0",
+  "image": "asserts/ecs-dockerstats-exporter:v1.0.0",
   "essential": true,
   "name": "ecs-dockerstats-exporter"
 }
