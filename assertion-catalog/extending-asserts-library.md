@@ -29,10 +29,7 @@ Once this rule is added as described [here](../user-guide/assertion-management.m
 
 Suppose there is a limit on the number of active client connections, and there are metrics available to track the current number of active connections and the maximum number of active connections allowed.&#x20;
 
-| Metric                                  | Details                                      |
-| --------------------------------------- | -------------------------------------------- |
-| `d_active_client_connections_count`     | Number of active client connections          |
-| `d_active_client_connections_max_limit` | Maximum number of client connections allowed |
+<table><thead><tr><th width="418">Metric</th><th>Details</th></tr></thead><tbody><tr><td><code>d_active_client_connections_count</code></td><td>Number of active client connections</td></tr><tr><td><code>d_active_client_connections_max_limit</code></td><td>Maximum number of client connections allowed</td></tr></tbody></table>
 
 For Asserts to detect whether the client connections are saturating, we will need to define the resource utilization through a recording rule
 
@@ -41,7 +38,8 @@ For Asserts to detect whether the client connections are saturating, we will nee
   labels:
     asserts_entity_type: ServiceInstance
     asserts_resource_type: d_client_connections
-    asserts_source: d_exporter</code></pre>
+    asserts_source: d_exporter
+</code></pre>
 
 Asserts will now start observing for Saturation of client connections and raise alerts when the warning or critical threshold is exceeded. If you want to customize the thresholds, you can do it [here.](../user-guide/assertion-management.md#thresholds)
 
@@ -69,9 +67,7 @@ Similarly, additional recording rules will have to be created for the remaining 
 
 Alternatively, the breakup of the counts by query type may also be available as a label in the metric. In such cases, the [label\_replace](https://prometheus.io/docs/prometheus/latest/querying/functions/#label\_replace) function should be used to extract the `asserts_request_context` from an existing label. Also, since the request context is obtained from a label, a single recording rule will suffice for all 4 query types. The example below illustrates this.
 
-| Metric                                 | Description                                    |
-| -------------------------------------- | ---------------------------------------------- |
-| `d_queries_count_total{type="select"}` | The total count of select queries fired so far |
+<table><thead><tr><th width="405">Metric</th><th>Description</th></tr></thead><tbody><tr><td><code>d_queries_count_total{type="select"}</code></td><td>The total count of select queries fired so far</td></tr></tbody></table>
 
 ```
 - record: asserts:request:total

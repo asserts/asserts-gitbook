@@ -10,6 +10,8 @@ Currently, log integration is supported for **Kibana**, **Graylog,** and **Loki*
 
 **Environment** The environment for which the configuration is applicable
 
+**Site** The site for which the configuration is applicable, If not selected applicable for all sites for the environment.
+
 **URL** The base URL of the log analytics UI
 
 **Date Format** The format for start and end time inputs in the search request. This is specified using [Java Date Format](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html)
@@ -20,21 +22,21 @@ Currently, log integration is supported for **Kibana**, **Graylog,** and **Loki*
 
 **Correlation labels** The set of labels whose values are available as fields in the log message.
 
-**Label to Log Field Mapping (optional)** Optionally, the correlation labels can be mapped to the log fields to enable a precise search of logs related to the component, problem and time-window.&#x20;
+**Label to Log Field Mapping (optional)** Optionally, the correlation labels can be mapped to the log fields to enable a precise search of logs related to the component, problem, and time-window.&#x20;
 
 **Index** The index id. This is applicable only for **Kibana**
 
 ## Kibana
 
-![Kibana Configuration to a custom Kibana Service](<../.gitbook/assets/Screenshot 2021-10-21 at 11.42.27 AM.png>)
+<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 4.00.17 PM.png" alt=""><figcaption><p>Kibana Configuration to a Custom Kibana Service</p></figcaption></figure>
 
 ## Graylog
 
-![Graylog Configruation to a custom Graylog Service](<../.gitbook/assets/Screenshot 2021-10-21 at 11.44.50 AM.png>)
+<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 4.08.02 PM.png" alt=""><figcaption><p>GrayLog Config to a Custom Graylog Service</p></figcaption></figure>
 
 ## Loki
 
-<figure><img src="../.gitbook/assets/Screenshot 2022-11-07 at 12.24.46 PM.png" alt=""><figcaption><p>Loki Log Configuration to a custom Loki Service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 4.06.44 PM.png" alt=""><figcaption><p>Loki Configuration to a Customer Loki Service</p></figcaption></figure>
 
 #### Loki Log-Specific Configuration
 

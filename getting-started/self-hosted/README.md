@@ -7,8 +7,4 @@ How you install Asserts depends on your needs & target environment:
 
 ### Installation Options
 
-| Method                              | Target Environment                                                                           |
-| ----------------------------------- | -------------------------------------------------------------------------------------------- |
-| [Helm Chart](helm-chart.md)         | Kubernetes                                                                                   |
-| [Docker Compose](docker-compose.md) | <p>Docker Swarm<br>Virtual or Physical Machine <br>  • MacOS<br>  • Windows<br>  • Linux</p> |
-|                                     |                                                                                              |
+<table><thead><tr><th width="361">Method</th><th>Target Environment</th></tr></thead><tbody><tr><td><a href="helm-chart.md">Helm Chart</a></td><td>Kubernetes</td></tr><tr><td><a href="docker-compose.md">Docker Compose</a></td><td>Docker Swarm<br>Virtual or Physical Machine <br>  • MacOS<br>  • Windows<br>  • Linux</td></tr><tr><td></td><td></td></tr></tbody></table>
