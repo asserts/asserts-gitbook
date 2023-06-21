@@ -9,6 +9,7 @@
   * [Helm Chart](getting-started/self-hosted/helm-chart.md)
   * [Docker Compose](getting-started/self-hosted/docker-compose.md)
 * [Cloud](getting-started/cloud.md)
+* [eBPF Probe](getting-started/ebpf-probe.md)
 * [FAQ](getting-started/faq.md)
 
 ## Integrations
