@@ -67,7 +67,11 @@
   * [Java](assertion-catalog/runtimes/java.md)
   * [NodeJS](assertion-catalog/runtimes/nodejs.md)
   * [GoLang](assertion-catalog/runtimes/golang.md)
-* [Extending Asserts Library](assertion-catalog/extending-asserts-library.md)
+* [Mapping Metrics to Asserts Model](assertion-catalog/mapping-metrics-to-asserts-model/README.md)
+  * [Request, Error and Duration (RED)](assertion-catalog/mapping-metrics-to-asserts-model/request-error-and-duration-red.md)
+  * [Resource Utilization and Saturation](assertion-catalog/mapping-metrics-to-asserts-model/resource-utilization-and-saturation.md)
+  * [Failure](assertion-catalog/mapping-metrics-to-asserts-model/failure.md)
+  * [Amend](assertion-catalog/mapping-metrics-to-asserts-model/amend.md)
 * [Typical Metric Counts](assertion-catalog/typical-metric-counts.md)
 
 ## How Asserts Works
