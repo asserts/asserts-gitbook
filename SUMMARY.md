@@ -78,3 +78,4 @@
   * [Resource Utilization and Saturation](how-asserts-works/mapping-metrics-to-saafe-model/resource-utilization-and-saturation.md)
   * [Failure](how-asserts-works/mapping-metrics-to-saafe-model/failure.md)
   * [Amend](how-asserts-works/mapping-metrics-to-saafe-model/amend.md)
+* [Mapping Metrics to Entity Graph](how-asserts-works/mapping-metrics-to-entity-graph.md)
