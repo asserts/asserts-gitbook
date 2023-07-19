@@ -4,9 +4,7 @@
 
 Asserts provides a CloudFormation template to install the exporter. The link, **install AWS Exporter** as shown in the image below will launch the CloudFormation template to install the AWS Exporter.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (2).png" alt=""><figcaption><p>Link to launch CloudFormation template for AWS Exporter installation</p></figcaption></figure>
-
-
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Add AWS Account after installing the exporter</p></figcaption></figure>
 
 The following inputs would need to be provided -
 
@@ -33,5 +31,3 @@ The following inputs would need to be provided -
 6. **Asserts API Server API Password** Specify the **Secret** as the password
 
 The CloudFormation template creates an API key to allow the Asserts server to read CloudWatch metrics from this account. Use the API Key and Credentials and add the account
-
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Add AWS Account after installing the exporter</p></figcaption></figure>

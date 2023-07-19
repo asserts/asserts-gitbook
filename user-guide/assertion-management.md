@@ -26,7 +26,7 @@ As we mentioned earlier, assertions are not alerts. If you want to get notified,
 
 Notifications are organized into different sections, just like the thresholds, and the same hierarchical granularity levels apply. You can set notifications for an assertion whenever it fires or when it fires on a specific `job` or a `job` and `request type`. Free-form label conditions are also supported here.
 
-<figure><img src="../.gitbook/assets/image (5) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 There is also a quick shortcut from the Workbench to bring you to the notification settings with all the labels pre-populated.
 
@@ -34,7 +34,7 @@ There is also a quick shortcut from the Workbench to bring you to the notificati
 
 SLO notifications can also be managed here.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Suppressions <a href="#howassertsworks-wip-suppressions" id="howassertsworks-wip-suppressions"></a>
 
