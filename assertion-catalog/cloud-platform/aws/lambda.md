@@ -2,7 +2,7 @@
 
 #### **Asserts AWS Exporter**
 
-Refer to [aws-cloudwatch.md](../../../integrations/data-source/aws-cloudwatch.md "mention") on how to install the AWS Exporter.
+Refer to [aws-cloudwatch](../../../integrations/data-source/aws-cloudwatch/ "mention") on how to install the AWS Exporter.
 
 #### Asserts Lambda Layer
 

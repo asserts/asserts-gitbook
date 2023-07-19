@@ -17,7 +17,10 @@
 * [Logs](integrations/logs.md)
 * [Data Source](integrations/data-source/README.md)
   * [Prometheus](integrations/data-source/prometheus.md)
-  * [AWS CloudWatch](integrations/data-source/aws-cloudwatch.md)
+  * [AWS CloudWatch](integrations/data-source/aws-cloudwatch/README.md)
+    * [AWS Exporter](integrations/data-source/aws-cloudwatch/aws-exporter.md)
+    * [ECS Sidecar](integrations/data-source/aws-cloudwatch/ecs-sidecar.md)
+    * [Lambda Layer](integrations/data-source/aws-cloudwatch/lambda-layer.md)
 * [Traces](integrations/traces.md)
 
 ## User Guide
