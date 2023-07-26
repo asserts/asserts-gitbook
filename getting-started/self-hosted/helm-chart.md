@@ -12,7 +12,7 @@ Helm charts and source code can be found in our public [github helm-charts repo.
 
 <figure><img src="../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
 
-## ****[**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)****
+## [**Join Our Slack**](https://join.slack.com/t/asserts-community/shared\_invite/zt-1qxudnxgl-h3TbJs3HDk4Pk4ssEDu\~1Q)
 
 ## **Prerequisites**
 
@@ -32,6 +32,29 @@ helm upgrade asserts asserts/asserts \
     --create-namespace
 ```
 
+#### Enabling AWS Integration
+
+AWS Integration is enabled by activating the [AWS Exporter](../../integrations/data-source/aws/aws-exporter.md). This is done by setting the helm value `server.awsExporterEnabled` to `true`. For e.g.&#x20;
+
+```
+helm repo add asserts https://asserts.github.io/helm-charts
+helm repo update
+helm upgrade asserts asserts/asserts \
+    --install \
+    --namespace asserts \
+    --create-namespace
+    -f values.yaml
+```
+
+where `values.yaml` looks like
+
+```
+server:
+    awsExporterEnabled: true
+```
+
+Please note that for AWS Integration to work, the nodes on which Asserts is installed must have some AWS IAM role assigned. Enabling the AWS exporter does not trigger any AWS processing yet. For Asserts to observe an AWS Account, you will need to [add the AWS Account](../../integrations/data-source/aws/add-account.md)&#x20;
+
 #### eBPF Probe
 
 Asserts uses metric label information to build the Entity Graph; it will use labels from service meshes (Istio, Linkerd) or from the Asserts eBPF Probe. By default, the probe is not enabled; it can be enabled via a values file or from the Helm command line.
@@ -44,7 +67,7 @@ helm upgrade asserts asserts/asserts \
     --set ebpfProbe.enabled=true
 ```
 
-There any many **other configuration** options, such as PagerDuty and Slack integrations. These can be configured with a values file. View all install configuration options [**here**](https://github.com/asserts/helm-charts/blob/master/charts/asserts/values.yaml).
+There any many **other configuration** options, such as PagerDuty and Slack integrations. These can be configured with a values file. View all install configuration options [**here**](https://github.com/asserts/helm-charts/blob/master/charts/asserts/values.yaml).&#x20;
 
 ## **Verify and Access**
 

@@ -1,8 +1,10 @@
 # AWS Exporter
 
-#### Installing the Asserts AWS Exporter
+AWS Exporter is the component that enables AWS Integration. This component is part of Asserts SaaS. For self-hosted deployments, it is included as part of the [helm-chart](../../../getting-started/self-hosted/helm-chart.md) and [docker-compose](../../../getting-started/self-hosted/docker-compose.md). In self-hosted deployments, it is disabled by default. For information on how to enable it, refer to the respective install instructions. Optionally, it can also be installed as an ECS Service. The ECS mode of deployment is not a recommended mode and should only be considered for security reasons.
 
-Asserts provides a CloudFormation template to install the exporter. The link, **install AWS Exporter** as shown in the image below will launch the CloudFormation template to install the AWS Exporter.
+#### ECS Service
+
+Asserts provides a CloudFormation template to install the exporter. The link, [**install AWS Exporter**](https://s3.us-west-2.amazonaws.com/downloads.asserts.ai/aws-integration/ecs/v3/aws-integration-with-api-key.yaml) as shown in the image below will launch the CloudFormation template to install the AWS Exporter.
 
 <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Add AWS Account after installing the exporter</p></figcaption></figure>
 
@@ -31,3 +33,7 @@ The following inputs would need to be provided -
 6. **Asserts API Server API Password** Specify the **Secret** as the password
 
 The CloudFormation template creates an API key to allow the Asserts server to read CloudWatch metrics from this account. Use the API Key and Credentials and add the account
+
+#### ECS Service Discovery and Prometheus Metric Scraping
+
+When installed as an ECS Service, the exporter can scrape Prometheus metrics for ECS Services by automatically discovering the scrape targets. The scrape targets are discovered by looking at the `PROMETHEUS_EXPORTER_PATH` and `PROMETHEUS_EXPORTER_PORT` docker labels of each container in each ECS task. By default the ECS Service discovery is enabled because the exporter itself is scraped through service discovery.

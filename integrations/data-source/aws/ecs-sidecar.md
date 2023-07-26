@@ -88,4 +88,4 @@ In the `Active` mode, the sidecar will gather container level metrics for CPU, M
 
 #### Passive Mode
 
-In the `Passive` mode, the sidecar will gather container level metrics for CPU, Memory and Network bytes. But it will need to be scraped by the AWS Exporter.&#x20;
+In the `Passive` mode, the sidecar will gather container level metrics for CPU, Memory and Network bytes. But it will need to be scraped by the AWS Exporter.  If the environment variables that begin with `remoteWrite_` are removed, the exporter will default to `Passive` mode

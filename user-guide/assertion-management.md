@@ -34,7 +34,7 @@ There is also a quick shortcut from the Workbench to bring you to the notificati
 
 SLO notifications can also be managed here.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Suppressions <a href="#howassertsworks-wip-suppressions" id="howassertsworks-wip-suppressions"></a>
 
