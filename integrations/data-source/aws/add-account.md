@@ -4,4 +4,4 @@ For Asserts to start observing your AWS Infrastructure, you need to add the AWS 
 
 <figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Add AWS Account after installing the exporter</p></figcaption></figure>
 
-In the screenshot above, there is a link to a CloudFormation template to install the AWS Exporter as an ECS Service. While it is also possible to install the AWS Exporter as an ECS Service, this is not the recommended option. Please use the [CloudFormation template](https://s3.us-west-2.amazonaws.com/downloads.asserts.ai/aws-integration/ecs/v3/iam-role-with-trust-relationship.yaml) to create a role and specify the ARN of that role as the `Assume Role ARN`
+Once the role has been created, specify its ARN as the `Assume Role ARN` and add the account. You can ignore the message which instructs to install the AWS Exporter. This is not required anymore. For more information see the section on [AWS Exporter](../aws-cloudwatch/aws-exporter.md)&#x20;

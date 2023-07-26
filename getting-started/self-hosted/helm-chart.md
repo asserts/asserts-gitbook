@@ -34,7 +34,7 @@ helm upgrade asserts asserts/asserts \
 
 #### Enabling AWS Integration
 
-AWS Integration is enabled by activating the [AWS Exporter](../../integrations/data-source/aws/aws-exporter.md). This is done by setting the helm value `server.awsExporterEnabled` to `true`. For e.g.&#x20;
+AWS Integration is enabled by activating the [AWS Exporter](../../integrations/data-source/aws-cloudwatch/aws-exporter.md). This is done by setting the helm value `server.awsExporterEnabled` to `true`. For e.g.&#x20;
 
 ```
 helm repo add asserts https://asserts.github.io/helm-charts

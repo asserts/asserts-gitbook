@@ -17,11 +17,11 @@
 * [Logs](integrations/logs.md)
 * [Data Source](integrations/data-source/README.md)
   * [Prometheus](integrations/data-source/prometheus.md)
-  * [AWS](integrations/data-source/aws/README.md)
+  * [AWS](integrations/data-source/aws-cloudwatch.md)
     * [Add Account](integrations/data-source/aws/add-account.md)
-    * [AWS Exporter](integrations/data-source/aws/aws-exporter.md)
-    * [ECS Sidecar](integrations/data-source/aws/ecs-sidecar.md)
-    * [Lambda Layer](integrations/data-source/aws/lambda-layer.md)
+    * [AWS Exporter](integrations/data-source/aws-cloudwatch/aws-exporter.md)
+    * [ECS Sidecar](integrations/data-source/aws-cloudwatch/ecs-sidecar.md)
+    * [Lambda Layer](integrations/data-source/aws-cloudwatch/lambda-layer.md)
 * [Traces](integrations/traces.md)
 
 ## User Guide
