@@ -24,7 +24,7 @@
     * [Lambda Layer](integrations/data-source/aws-cloudwatch/lambda-layer.md)
 * [Traces](integrations/traces/README.md)
   * [Trace Storage](integrations/traces/trace-storage/README.md)
-    * [Asserts OTel Collector](integrations/traces/trace-storage/asserts-otel-collector.md)
+    * [Asserts OTel Collector](integrations/traces/asserts-otel-collector.md)
   * [Trace Store Integration](integrations/traces/trace-store-integration/README.md)
     * [Jaeger](integrations/traces/trace-store-integration/jaeger.md)
     * [Grafana Tempo](integrations/traces/trace-store-integration/grafana-tempo.md)
