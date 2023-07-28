@@ -4,7 +4,7 @@ When doing RCA in the workbench, one can pick a specific time window when a prob
 
 Currently, Trace integration is supported for Jaeger, Google Cloud Trace, AWS XRay, and Grafana Tempo
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-01-27 at 3.26.51 PM.png" alt=""><figcaption><p>View the Traces for specific problem</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-01-27 at 3.26.51 PM.png" alt=""><figcaption><p>View the Traces for specific problem</p></figcaption></figure>
 
 ### Trace Integration in Asserts
 
@@ -50,7 +50,7 @@ For Error Assertions, if the backend is Elasticsearch then the traces are filter
 
 **Elasticsearch Backend** Specify whether Jaeger is using Elasticsearch as the trace storage backend.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 2.12.54 PM.png" alt=""><figcaption><p>Jaeger Configuration to a Customer Jaeger Service</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-05-17 at 2.12.54 PM.png" alt=""><figcaption><p>Jaeger Configuration to a Customer Jaeger Service</p></figcaption></figure>
 
 ### Google Cloud Trace
 
@@ -62,7 +62,7 @@ For Error Assertions, the traces are filtered based on server or client error co
 
 **Using OTEL Agent to Ingest Traces Directly (optional)** Specify whether OTEL Agent is used to ingesting the trace directly to Trace backend.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 2.22.20 PM.png" alt=""><figcaption><p>Google Cloud Trace Configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-05-17 at 2.22.20 PM.png" alt=""><figcaption><p>Google Cloud Trace Configuration</p></figcaption></figure>
 
 ### AWS XRay
 
@@ -74,7 +74,7 @@ For Error Assertions, the traces are filtered based on server or client error co
 
 **AWS Region** Specify the Region traces ingested.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 2.26.58 PM.png" alt=""><figcaption><p>AWS XRay Configuration</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-05-17 at 2.26.58 PM.png" alt=""><figcaption><p>AWS XRay Configuration</p></figcaption></figure>
 
 ### Grafana Tempo
 
@@ -88,4 +88,4 @@ For Error Assertions, the traces are filtered based on server or client error co
 
 **Data Source** Specify the Data Source configured in Grafana for Tempo.
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 3.52.49 PM.png" alt=""><figcaption><p>Grafana Tempo Configuration to a Customer Tempo Service</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-05-17 at 3.52.49 PM.png" alt=""><figcaption><p>Grafana Tempo Configuration to a Customer Tempo Service</p></figcaption></figure>

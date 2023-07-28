@@ -90,7 +90,7 @@ Following MySQL dashboard shows the Summary level metrics
 
 Further details metrics are shown in the below dashboard
 
-![](<../../.gitbook/assets/image (10).png>)
+![](<../../.gitbook/assets/image (10) (2).png>)
 
 InnoDB Specific metrics are shown in the below dashboard
 

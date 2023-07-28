@@ -22,7 +22,8 @@
     * [AWS Exporter](integrations/data-source/aws-cloudwatch/aws-exporter.md)
     * [ECS Sidecar](integrations/data-source/aws-cloudwatch/ecs-sidecar.md)
     * [Lambda Layer](integrations/data-source/aws-cloudwatch/lambda-layer.md)
-* [Traces](integrations/traces.md)
+* [Traces](integrations/traces/README.md)
+  * [Asserts OTel Collector](integrations/traces/asserts-otel-collector.md)
 
 ## User Guide
 
