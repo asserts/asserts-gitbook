@@ -6,7 +6,7 @@ The Asserts OTel Collector helps reduce trace volumes significantly by retaining
 
 The Asserts collector can be installed as an ECS Service by creating a CloudFormation stack using [this CloudFormation template](https://s3.us-west-2.amazonaws.com/downloads.asserts.ai/asserts-otel-collector/ecs/v1/otel-collector-main-aws.yaml). The collector will send the traces to AWS X-Ray in the region in which it is installed.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Collector CloudFormation Template</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt="" width="563"><figcaption><p>Collector CloudFormation Template</p></figcaption></figure>
 
 #### Template Parameters
 
