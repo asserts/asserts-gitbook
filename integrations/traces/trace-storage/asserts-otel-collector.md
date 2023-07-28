@@ -6,7 +6,7 @@ The Asserts OTel Collector helps reduce trace volumes significantly by retaining
 
 The Asserts collector can be installed as an ECS Service by creating a CloudFormation stack using [this CloudFormation template](https://s3.us-west-2.amazonaws.com/downloads.asserts.ai/asserts-otel-collector/ecs/v1/otel-collector-main-aws.yaml). The collector will send the traces to AWS X-Ray in the region in which it is installed.&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Collector CloudFormation Template</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>Collector CloudFormation Template</p></figcaption></figure>
 
 #### Template Parameters
 
@@ -44,11 +44,11 @@ The metrics gathered by the collector and sidecar need to be sent to the Asserts
 
 `Active Mode`
 
-If the remote write URL and credentials are specified, the sidecar container will scrape the span metrics from the collector and remote write the span and container resource metrics to the TSDB. The collector should be run in this mode if the [Asserts AWS Exporter](../data-source/aws-cloudwatch/aws-exporter.md) is not installed or if ECS Service discovery is not enabled.&#x20;
+If the remote write URL and credentials are specified, the sidecar container will scrape the span metrics from the collector and remote write the span and container resource metrics to the TSDB. The collector should be run in this mode if the [Asserts AWS Exporter](../../data-source/aws-cloudwatch/aws-exporter.md) is not installed or if ECS Service discovery is not enabled.&#x20;
 
 `Passive Mode`
 
-If the [Asserts AWS Exporter](../data-source/aws-cloudwatch/aws-exporter.md) is installed and ECS Service discovery is enabled in it, then the remote write URL and credentials can be left blank and the exporter will scrape and remote these metrics.
+If the [Asserts AWS Exporter](../../data-source/aws-cloudwatch/aws-exporter.md) is installed and ECS Service discovery is enabled in it, then the remote write URL and credentials can be left blank and the exporter will scrape and remote these metrics.
 
 <mark style="color:orange;">**Number of collectors**</mark>&#x20;
 
