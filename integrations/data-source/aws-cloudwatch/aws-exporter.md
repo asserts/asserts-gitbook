@@ -6,7 +6,7 @@ AWS Exporter is the component that enables AWS Integration. This component is pa
 
 Asserts provides a CloudFormation template to install the exporter. The link, [**install AWS Exporter**](https://s3.us-west-2.amazonaws.com/downloads.asserts.ai/aws-integration/ecs/v3/aws-integration-with-api-key.yaml) as shown in the image below will launch the CloudFormation template to install the AWS Exporter.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Add AWS Account after installing the exporter</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Add AWS Account after installing the exporter</p></figcaption></figure>
 
 The following inputs would need to be provided -
 

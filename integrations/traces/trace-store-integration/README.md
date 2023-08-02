@@ -1,11 +1,5 @@
 # Trace Store Integration
 
-When doing RCA in the workbench, one can pick a specific time window when a problem occurred and directly jump to see the traces for that component in that time window. &#x20;
-
-Currently, Trace integration is supported for Jaeger, Google Cloud Trace, AWS XRay, and Grafana Tempo
-
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-01-27 at 3.26.51 PM.png" alt=""><figcaption><p>View the Traces for specific problem</p></figcaption></figure>
-
 ### Trace Integration in Asserts
 
 Asserts integrates with multiple Trace provider backends, that are useful to find out the root cause of the issue. When Assertion fires in Asserts, the user can navigate to the traces. It shows traces in the window of the assertion that occurred with the API/endpoint on which the assertion occurred.

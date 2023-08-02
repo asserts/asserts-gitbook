@@ -29,7 +29,7 @@
     * [Python Instrumentation](integrations/traces/capturing-traces/python-instrumentation.md)
   * [Trace Storage](integrations/traces/trace-storage/README.md)
     * [Asserts OTel Collector](integrations/traces/trace-storage/asserts-otel-collector/README.md)
-      * [ECS Deployment](integrations/traces/trace-storage/asserts-otel-collector/ecs-deployment.md)
+      * [AWS ECS](integrations/traces/trace-storage/asserts-otel-collector/aws-ecs.md)
       * [Docker](integrations/traces/trace-storage/asserts-otel-collector/docker.md)
   * [Trace Store Integration](integrations/traces/trace-store-integration/README.md)
     * [Jaeger](integrations/traces/trace-store-integration/jaeger.md)
