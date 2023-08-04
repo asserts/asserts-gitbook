@@ -1,6 +1,6 @@
 # Self-Hosted
 
-![](../../.gitbook/assets/self-hosted.svg)
+{% embed url="https://app.arcade.software/share/zSKsH3XBO9WLBp3zRlCd" %}
 
 **Asserts** currently runs as a containerized solution.\
 How you install Asserts depends on your needs & target environment:
