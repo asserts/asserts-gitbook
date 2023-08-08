@@ -2,22 +2,20 @@
 
 #### **Asserts AWS Exporter**
 
-Refer to [aws-cloudwatch.md](../../../integrations/data-source/aws-cloudwatch.md "mention") on how to install the AWS Exporter.
+Refer to Asserts [AWS Exporter](../../../integrations/data-source/aws-cloudwatch/aws-exporter.md) and [Lambda Layer](../../../integrations/data-source/aws-cloudwatch/lambda-layer.md) on pre-requires for observing Lambda function.
 
-#### Asserts Lambda Layer
 
-The Asserts Lambda layer needs to be added to the Lambda function. Lambda layers are available for [NodeJS](https://github.com/asserts/asserts-aws-lambda-layer-js) and [Python](https://github.com/asserts/aws-lambda-layer-python). Refer to the GitHub project documentation for instructions on how to install the layer and include it in one or more Lambda functions. There is a convenient utility script to add, remove, and upgrade the layer version in multiple Lambda functions in one go.
 
 ### Key Performance Indicators (KPIs) and Alerts
 
 #### Request, Errors, and Latency
 
-| **Metric**                                                   | **Key Performance Indicator (KPI)**                                                                                                                                                                                |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <p>Request Counter</p><p>aws_lambda_invocations_total</p>    | <p>Request Rate</p><p>rate(aws_lambda_invocations_total[5m])</p>                                                                                                                                                   |
-| <p>Error Counter</p><p>aws_lambda_errors_total</p>           | <p>Error Ratio</p><p>rate(aws_lambda_invocations_total[5m])/ rate(aws_lambda_invocations_total[5m])</p>                                                                                                            |
-| <p>Latency Histogram</p><p>aws_lambda_duration_seconds</p>   | <p>Latency Average</p><p>rate(aws_lambda_duration_seconds_sum[5m])/ rate(aws_lambda_duration_seconds_count[5m])</p><p>Latency P99</p><p>histogram_quantile(0.99, sum(rate(aws_lambda_duration_seconds_sum[5m])</p> |
-| <p>Request Throttle Count</p><p>aws_lambda_throttles_sum</p> | <p>Observe throttle count for Sustained Throttling</p><p>aws_lambda_throttles_sum</p>                                                                                                                              |
+| **Metric**                                                   | **Key Performance Indicator (KPI)**                                                                              |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| <p>Request Counter</p><p>aws_lambda_invocations_sum</p>      | <p>Request Rate</p><p>avg_over_time(aws_lambda_invocations_sum[5m])</p>                                          |
+| <p>Error Counter</p><p>aws_lambda_errors_sum</p>             | <p>Error Ratio</p><p>avg_over_time(aws_lambda_errors_sum[5m])/ avg_over_time(aws_lambda_invocations_sum[5m])</p> |
+| Latency Quantile                                             | aws\_lambda\_duration\_p99                                                                                       |
+| <p>Request Throttle Count</p><p>aws_lambda_throttles_sum</p> | <p>Observe throttle count for Sustained Throttling</p><p>aws_lambda_throttles_sum</p>                            |
 
 #### Resource
 
