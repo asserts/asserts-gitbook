@@ -4,7 +4,7 @@
 
 #### **Asserts AWS Exporter**
 
-Refer to [aws-cloudwatch.md](../../../integrations/data-source/aws-cloudwatch.md "mention") on how to install the Asserts AWS Exporter
+Refer to [AWS Exporter](../../../integrations/data-source/aws-cloudwatch/aws-exporter.md) and [ECS Sidecar](../../../integrations/data-source/aws-cloudwatch/ecs-sidecar.md) for pre-requisites of observing ECS Services
 
 ### Key Performance Indicators (KPIs) and Alerts
 
