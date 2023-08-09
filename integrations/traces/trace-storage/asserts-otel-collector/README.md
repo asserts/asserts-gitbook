@@ -1,6 +1,6 @@
 # Asserts OTel Collector
 
-<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>Asserts OTel Collector</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>Asserts OTel Collector</p></figcaption></figure>
 
 The Asserts OTel Collector helps reduce trace volumes significantly by retaining only slow and error traces. It also generates span metrics which are used by Asserts to discover the services and observe RED metrics.&#x20;
 
