@@ -38,3 +38,9 @@ The Application Load Balancer KPI Dashboard shows the following KPIs
   * **Sum(ProcessedBytes)**
 * Rule Evaluations
   * **Sum(RuleEvaluations)**
+
+**Dashboard**
+
+Asserts has out-of-the-box dashboard for Application Load Balancer which shows all the key KPIs
+
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>

@@ -16,7 +16,7 @@ resource:usage > resource:usage:threshold
 
 We quantify resource usage either as a percentage or an absolute value. Either way, the usage value is compared to two static thresholds. One is for warning, and the other for critical. They are not overlapping, so when the critical saturation fires, the warning assertion is suppressed. In the following example, CPU load experienced both warning and critical.
 
-![](<../.gitbook/assets/image (3) (1) (1).png>)
+![](<../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 Different types of resources need different thresholds. Even for the same resource type, like CPU, its usage measured by [cAdvisor](https://github.com/google/cadvisor) or [node exporter](https://github.com/prometheus/node\_exporter) can be different, thus may need different threshold values. Asserts provides default values per resource type, and in some cases, per source/exporter. Customers can modify them. For more fine-grained control, they can also supply threshold values on the container level.
 
@@ -114,7 +114,7 @@ We then supplement them with two warning assertions to detect pattern changes in
 
 These assertions complement each other, but they sometimes overlap.
 
-![](<../.gitbook/assets/image (4) (1).png>)
+![](<../.gitbook/assets/image (4) (1) (1).png>)
 
 In addition, we've also expanded the concept of errors to latency. Even though we have latency anomaly assertions already, we understand latency impacts user experience. When a user-facing request latency is big enough, we'd like to treat it as an error condition. Latency distribution is known to have long tails, so Asserts tries not to miss out by building a couple of different assertions:
 

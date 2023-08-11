@@ -26,3 +26,9 @@ The API gateway KPI Dashboard shows the following KPIs
 * Cache Hit/Miss counts
   * **Sum(CacheHitCount)**
   * **Sum(CachMissCount)**
+
+**Dashboard**
+
+Asserts has built-in dashboard for ApiGateway which shows the key KPIs
+
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
