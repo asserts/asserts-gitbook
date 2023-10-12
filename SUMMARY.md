@@ -68,6 +68,7 @@
       * [Classic Load Balancer](assertion-catalog/cloud-platform/aws/load-balancer/classic-load-balancer.md)
     * [ApiGateway](assertion-catalog/cloud-platform/aws/apigateway.md)
 * [Data Stores](assertion-catalog/data-stores/README.md)
+  * [MongoDB](assertion-catalog/data-stores/mongodb.md)
   * [MySQL](assertion-catalog/data-stores/mysql.md)
   * [PostgreSQL](assertion-catalog/data-stores/postgresql.md)
   * [Redis](assertion-catalog/data-stores/redis.md)
