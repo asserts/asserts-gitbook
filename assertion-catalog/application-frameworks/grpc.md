@@ -55,4 +55,4 @@ This dashboard has the following KPIs for resources and requests:
 * Disk Usage
 * Network Usage
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/dashboard-kpi.png>)

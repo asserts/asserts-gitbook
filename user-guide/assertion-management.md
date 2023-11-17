@@ -16,7 +16,7 @@ Asserts has curated an assertion library pertaining to our SAAFE model. Internal
 
 Besides configuring all the default thresholds, the user can also configure individual thresholds on fine-grained levels. These levels are hierarchical. For requests, if you specify a threshold on `job` level, it applies to all the request types for that job. Similarly, if you specify a threshold on `request_type` level, it applies to all the request contexts for that request type and job.
 
-![](<../.gitbook/assets/1573322759 (1) (1) (2) (3) (1).png>)
+![](<../.gitbook/assets/threshold-request.png>)
 
 For resources, the hierarchy starts with `source`, i.e., the exporter, then `resource_type,` and then `container`. An additional dimension is `severity`, which is independent of the granularity levels.
 
@@ -40,13 +40,13 @@ SLO notifications can also be managed here.
 
 Similar to notifications, you can also choose a subset of assertions to suppress, so they don’t fire. Suppressed assertions are ignored in Asserts processing. They will not be available in Top Insights, Graph, or the Workbench. Note this is very different from an assertion that fires but does not notify.
 
-![](<../.gitbook/assets/Screen Shot 2021-09-22 at 10.48.12 AM.png>)
+![](<../.gitbook/assets/health-suppress-elastic.png>)
 
 ### Bring your own <a href="#howassertsworks-wip-additions" id="howassertsworks-wip-additions"></a>
 
 If you have your own rules, you can also bring them into the Asserts system by defining custom assertion rules. You can add them individually on the UI or upload a rule file.
 
-![](<../.gitbook/assets/Screen Shot 2021-09-22 at 12.04.38 PM.png>)
+![](<../.gitbook/assets/rule-file-edit.png>)
 
 ### Entity and Relation
 

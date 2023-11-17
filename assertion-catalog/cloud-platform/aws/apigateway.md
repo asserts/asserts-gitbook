@@ -31,4 +31,4 @@ The API gateway KPI Dashboard shows the following KPIs
 
 Asserts has built-in dashboard for ApiGateway which shows the key KPIs
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ride-service-api-gateway.png" alt=""><figcaption></figcaption></figure>

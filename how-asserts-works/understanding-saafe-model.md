@@ -35,7 +35,7 @@ Out of the box, Asserts detect the following amends
 * Scaling events like node count change, pod count change
 * Other domain-specific change events like shard rebalancing in elastic search, config reload in Nginx, etc
 
-![](<../.gitbook/assets/Screen Shot 2021-09-21 at 5.58.51 PM.png>)
+![](<../.gitbook/assets/service-version-updated.png>)
 
 As we expand our domain coverage, we expect to include more amend assertions in the future.
 
@@ -54,7 +54,7 @@ unless request:erratic_and_sparse > 0
 
 An example of change detected by an `amend` assertion triggering a latency spike, an `anomaly` assertion on rule-engine service
 
-![](<../.gitbook/assets/Screen Shot 2021-10-08 at 4.34.05 PM.png>)
+![](<../.gitbook/assets/latency-average-anomaly-rule-engine.png>)
 
 For these anomaly assertions, customers do not need to provide much input on thresholds, but they can customize the size of the range and the sensitivity for detecting sparse requests.
 
@@ -78,7 +78,7 @@ Failure assertions are highly domain-specific, so the list of failure assertion 
 \
 Here is an example of `failures` (pod crash looping) triggered by Traffic Spike detected via request `anomaly` assertion. &#x20;
 
-![](<../.gitbook/assets/Screen Shot 2021-09-21 at 7.02.03 PM.png>)
+![](<../.gitbook/assets/kube-pod-crashlooping-workbench.png>)
 
 ## Error
 
