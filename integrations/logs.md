@@ -4,7 +4,7 @@ When doing RCA in the workbench, one can pick a specific time window when a prob
 
 Currently, log integration is supported for **Kibana**, **Graylog,** and **Loki**
 
-![View logs for the exact problem window](<../.gitbook/assets/Screenshot 2021-10-26 at 2.08.19 PM.png>)
+![View logs for the exact problem window](<../.gitbook/assets/view-logs-errors.png>)
 
 ## Log Configuration
 
@@ -28,15 +28,15 @@ Currently, log integration is supported for **Kibana**, **Graylog,** and **Loki*
 
 ## Kibana
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 4.00.17 PM.png" alt=""><figcaption><p>Kibana Configuration to a Custom Kibana Service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/kibana-logs-configurations.png" alt=""><figcaption><p>Kibana Configuration to a Custom Kibana Service</p></figcaption></figure>
 
 ## Graylog
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 4.08.02 PM.png" alt=""><figcaption><p>GrayLog Config to a Custom Graylog Service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/graylog-logs-configurations.png" alt=""><figcaption><p>GrayLog Config to a Custom Graylog Service</p></figcaption></figure>
 
 ## Loki
 
-<figure><img src="../.gitbook/assets/Screenshot 2023-05-17 at 4.06.44 PM.png" alt=""><figcaption><p>Loki Configuration to a Customer Loki Service</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/loki-logs-configurations.png" alt=""><figcaption><p>Loki Configuration to a Customer Loki Service</p></figcaption></figure>
 
 #### Loki Log-Specific Configuration
 

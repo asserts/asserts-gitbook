@@ -35,4 +35,4 @@ Prometheus metrics for Istio can be enabled by following the setup instructions 
 
 Istio KPI Dashboard shows all the above mentioned KPIs
 
-![](<../../.gitbook/assets/Screenshot 2022-07-07 at 10.34.42 AM.png>)
+![](<../../.gitbook/assets/istio-kpi-dash.png>)

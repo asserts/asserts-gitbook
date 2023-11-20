@@ -92,7 +92,7 @@ objectives:
 
 The SLO list page lists all the SLOs and their status and a summary of budget utilization and incidents.
 
-![List of SLOs with their budget utilization, incident status and summary](<../.gitbook/assets/Screenshot 2021-10-26 at 3.30.33 PM.png>)
+![List of SLOs with their budget utilization, incident status and summary](<../.gitbook/assets/slo-list-budget-utilization.png>)
 
 **SLO Burndown and Incident Timeline**
 

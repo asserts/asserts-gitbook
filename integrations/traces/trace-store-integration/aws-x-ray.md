@@ -6,4 +6,4 @@ For Error Assertions, the traces are filtered based on server or client error co
 
 **AWS Region** Specify the Region traces ingested.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-17 at 2.26.58 PM.png" alt=""><figcaption><p>AWS XRay Configuration</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/aws-xray-trace-configuration.png" alt=""><figcaption><p>AWS XRay Configuration</p></figcaption></figure>

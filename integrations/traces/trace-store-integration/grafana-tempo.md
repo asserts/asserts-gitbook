@@ -8,4 +8,4 @@ For Error Assertions, the traces are filtered based on server or client error co
 
 **Data Source** Specify the Data Source configured in Grafana for Tempo.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-17 at 3.52.49 PM.png" alt=""><figcaption><p>Grafana Tempo Configuration to a Customer Tempo Service</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/grafana-tempo-trace-configuration.png" alt=""><figcaption><p>Grafana Tempo Configuration to a Customer Tempo Service</p></figcaption></figure>

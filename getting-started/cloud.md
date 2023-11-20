@@ -4,7 +4,7 @@ description: Integrate Asserts cloud with your Prometheus server(s)
 
 # Cloud
 
-![ Cloud Architecture](<../.gitbook/assets/cloud (5).svg>)
+![ Cloud Architecture](<../.gitbook/assets/cloud-architecture.svg>)
 
 ## Prometheus Integrations
 
@@ -23,7 +23,7 @@ The **Query** integration enables Asserts Cloud to run on-demand queries on your
 
 ### Remote-Write
 
-<img src="../.gitbook/assets/remote-write (2).svg" alt="
+<img src="../.gitbook/assets/remote-write.svg" alt="
 " data-size="original">
 
 

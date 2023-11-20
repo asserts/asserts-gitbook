@@ -2,7 +2,7 @@
 
 As an Asserts customer, all you need to do is connect your Observability Datasources like Prometheus, Cloudwatch et al. to Asserts and then let Asserts apply its intelligence to present root cause insights.&#x20;
 
-<figure><img src=".gitbook/assets/Screen Shot 2023-02-01 at 9.16.29 PM.png" alt=""><figcaption><p>Connect your existing Observability Datasources </p></figcaption></figure>
+<figure><img src=".gitbook/assets/datasources-detect-alert.png" alt=""><figcaption><p>Connect your existing Observability Datasources </p></figcaption></figure>
 
 ### **Builds an Entity Graph of App and Infra components (with Grafana Dashboards)**
 

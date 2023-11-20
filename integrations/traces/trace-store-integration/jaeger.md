@@ -6,4 +6,4 @@ For Error Assertions, if the backend is Elasticsearch then the traces are filter
 
 **Elasticsearch Backend** Specify whether Jaeger is using Elasticsearch as the trace storage backend.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-05-17 at 2.12.54 PM.png" alt=""><figcaption><p>Jaeger Configuration to a Customer Jaeger Service</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/jaeger-trace-configuration.png" alt=""><figcaption><p>Jaeger Configuration to a Customer Jaeger Service</p></figcaption></figure>

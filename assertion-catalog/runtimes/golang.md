@@ -35,5 +35,5 @@ In addition to the above KPIs, the following Go runtime metrics are also visuali
 1. Number of routines `go_goroutines`
 2. Number of pointer dereferences `rate(go_memstats_lookups_total)`
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (4).png" alt=""><figcaption><p>Go KPI showing Go runtime metrics</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/golang-runtime.png" alt=""><figcaption><p>Go KPI showing Go runtime metrics</p></figcaption></figure>
 
