@@ -9,7 +9,7 @@ We recommend the [Express Middleware exporter](express.md). To set up this expor
   ...
   "dependencies": {
       ...
-      "express-prometheus-middleware": "1.2.0"     
+      "express-prometheus-middleware": "1.2.0"
   }
 }
 ```
@@ -97,4 +97,4 @@ This dashboard has the following KPIs from resources and requests:
 * Disk Usage
 * Network Usage
 
-![](<../../.gitbook/assets/image (18).png>)
+![](<../../.gitbook/assets/dashboard-kpi.png>)

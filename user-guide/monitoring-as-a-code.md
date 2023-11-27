@@ -1,8 +1,8 @@
 # Monitoring as a Code
 
-Manage your SLOs and Thresholds as code and publish them to Asserts cloud 
+Manage your SLOs and Thresholds as code and publish them to Asserts cloud
 
-![](../.gitbook/assets/5.png)
+![](../.gitbook/assets/monitoring-as-code-publish.png)
 
 #### SLO
 

@@ -10,4 +10,4 @@ Refer to [AWS Exporter](../../../integrations/data-source/aws-cloudwatch/aws-exp
 
 For the KPIs and Alerts based on the directly scraped metrics, refer to the documentation for the respective runtime and framework.
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/ride-service-all-service-kpis.png" alt=""><figcaption></figcaption></figure>

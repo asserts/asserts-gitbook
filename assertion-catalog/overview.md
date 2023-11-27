@@ -29,4 +29,4 @@ Our base rules are for common request and resource metrics across platforms and 
 
 Our framework-specific rules raise many specific assertions, which usually belong to Failure, Amend, and Saturation categories. You can read more in [Understanding SAAFE Model](../how-asserts-works/understanding-saafe-model.md). Here is a sample set of frameworks and libraries we have built-in assertions for&#x20;
 
-![](<../.gitbook/assets/Screen Shot 2022-07-20 at 7.26.35 PM.png>)
+![](<../.gitbook/assets/frameworks.png>)

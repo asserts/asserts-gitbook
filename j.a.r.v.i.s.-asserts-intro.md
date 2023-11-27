@@ -21,7 +21,7 @@ Asserts taps into your telemetry data sources and automatically builds a graph o
 * With our search, you can find how the components fit together in real-time.
 * Our cloud component catalog is constantly evolving, and you may easily plug in your very own custom components with our DSL.
 
-![](.gitbook/assets/1068400769%20%281%29%20%281%29.gif)
+![](.gitbook/assets/vmselect-calls.gif)
 
 Instrument via SAAFE Assertions to collect the signals
 
@@ -30,7 +30,7 @@ Asserts curates knowledge of common runtime failure patterns and potential cause
 * It continuously tracks resource _**Saturation**_, _**Amends**_ \(new deployments, scale events et al.\), request & latency _**Anomalies**_, systemic _**Failures**_, and _**Errors**_ on your [_golden signals_](https://sre.google/sre-book/monitoring-distributed-systems/) and health metrics.
 * The occurrences of these assertions are annotated on the \(Knowledge\) Graph so it is easy to consume at a glance
 
-![](.gitbook/assets/screen-shot-2021-03-04-at-1.08.43-pm%20%281%29%20%282%29.png)
+![](.gitbook/assets/assertions-acme-cluster.png)
 
 ## Explore with Unified Search <a id="AssertsIntro-ExplorewithUnifiedSearch"></a>
 
@@ -38,11 +38,11 @@ With our unified search, you can combine components, relations, configurations, 
 
 * _e.g._ Try search “pods crashing due to resource limits” will return you a list of instances in a certain region that has crashed due to resource saturation
 
-![](.gitbook/assets/1103954136%20%281%29%20%281%29.png)
+![](.gitbook/assets/pods-crashing-pod-count-cpu-limits.png)
 
 Troubleshoot in Workbench with all the Assertions
 
-You can use the search expression in our workbench and jump right in to view all the assertions correlated across time and space, with just the right data at your fingertip.![](.gitbook/assets/workbench-map-services%20%282%29%20%282%29.png)
+You can use the search expression in our workbench and jump right in to view all the assertions correlated across time and space, with just the right data at your fingertip.![](.gitbook/assets/workbench-map-services.png)
 
 ## Releasing Soon <a id="AssertsIntro-ReleasingSoon"></a>
 
@@ -55,5 +55,5 @@ You can use the search expression in our workbench and jump right in to view all
 
 Asserts is cloud-agnostic and has no proprietary application agents to install. It is natively built on the open [Prometheus](https://prometheus.io/) ecosystem with 100s of [exporters](https://prometheus.io/docs/instrumenting/exporters/). You can get started by remote-writing to Asserts cloud.
 
-![](.gitbook/assets/1049362470%20%281%29.png)
+![](.gitbook/assets/remote-write-cloud.png)
 
