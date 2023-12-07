@@ -4,7 +4,7 @@
 
 #### **Asserts AWS Exporter**
 
-Refer to [aws-cloudwatch.md](../../../../integrations/data-source/aws-cloudwatch.md "mention") on how to install Asserts AWS Exporter
+Refer to [Broken link](broken-reference "mention") on how to install Asserts AWS Exporter
 
 ### Key Performance Indicators (KPIs) and Alerts
 

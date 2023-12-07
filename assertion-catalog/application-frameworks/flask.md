@@ -19,15 +19,16 @@ After the flask python module is enabled you can verify by looking at the follow
 
 ### Metrics
 
-| **Metric**                                                                                                      | **Key Performance Indicator(KPI)**                                                                                                                                                                                                                                                 |
-| --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Requests</p><p>flask_http_request_duration_seconds_count</p>                                                 | <p>Request Rate</p><p>rate(flask_http_request_duration_seconds_count[5m])</p>                                                                                                                                                                                                      |
-| <p>Errors</p><p>flask_http_request_duration_seconds_count</p>                                                   | <p>Error Ratio</p><p>rate(flask_http_request_duration_seconds_count{status=~"5.."}[5m])/ rate(flask_http_request_duration_seconds_count[5m])</p>                                                                                                                                   |
+| **Metric**                                                                                                      | **Key Performance Indicator(KPI)**                                                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Requests</p><p>flask_http_request_duration_seconds_count</p>                                                 | <p>Request Rate</p><p>rate(flask_http_request_duration_seconds_count[5m])</p>                                                                                                                        |
+| <p>Errors</p><p>flask_http_request_duration_seconds_count</p>                                                   | <p>Error Ratio</p><p>rate(flask_http_request_duration_seconds_count{status=~"5.."}[5m])/ rate(flask_http_request_duration_seconds_count[5m])</p>                                                     |
 | <p>Latency</p><p>flask_http_request_duration_seconds_bucket</p><p>flask_http_request_duration_seconds_count</p> | <p>Latency Average</p><p>rate(flask_http_request_duration_seconds_count[5m])/ rate(flask_http_request_duration_seconds_count[5m])</p><p>Latency P99</p><pre><code>histogram_quantile (
-  0.99,
-  sum(rate(flask_http_request_duration_seconds_bucket[1m])) by (le)
-)
 </code></pre> |
+| 0.99,                                                                                                           |                                                                                                                                                                                                      |
+| sum(rate(flask\_http\_request\_duration\_seconds\_bucket\[1m])) by (le)                                         |                                                                                                                                                                                                      |
+| )                                                                                                               |                                                                                                                                                                                                      |
+|                                                                                                                 |                                                                                                                                                                                                      |
 
 ### Alerts
 
@@ -55,7 +56,7 @@ This dashboard has the following KPIs that include resource and requests metrics
 * Disk Usage
 * Network Usage
 
-![](<../../.gitbook/assets/dashboard-kpi.png>)
+![](<../../.gitbook/assets/dashboard-kpi (2).png>)
 
 You can include any custom dashboard from the community for example [this](https://github.com/rycus86/prometheus\_flask\_exporter/blob/master/examples/sample-signals/grafana/dashboards/example.json) which shows flask specific metrics directly as a custom dashboard for your service.
 

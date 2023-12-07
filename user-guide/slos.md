@@ -8,25 +8,25 @@ SLOs are meant to capture high-level business objectives and help reduce alert f
 
 **Availability SLO using Simple UI**
 
-Defining an SLO through the UI is very simple. Navigate to the `Manage SLOs` page, click the add new SLO, select your service, and optionally one or more specific APIs. You can also associate the SLO definition with a search expression or a saved search.&#x20;
+Defining an SLO through the UI is very simple. Navigate to the `Manage SLOs` page, click the add new SLO, select your service, and optionally one or more specific APIs. You can also associate the SLO definition with a search expression or a saved search.
 
-![Define an availability SLO using the simplified UI](<../.gitbook/assets/define-availability-slo-simple.png>)
+![Define an availability SLO using the simplified UI](../.gitbook/assets/define-availability-slo-simple.png)
 
 #### Availability SLO using Advanced UI
 
 The advanced UI allows specifying custom Prometheus queries to define the SLO.
 
-![Define an availability SLO using the advanced UI](<../.gitbook/assets/define-availability-slo-avanced.png>)
+![Define an availability SLO using the advanced UI](../.gitbook/assets/define-availability-slo-avanced.png)
 
 #### Latency SLO using Simple UI
 
-![Define SLO for API Latency using simple UI](<../.gitbook/assets/define-latency-slo-simple.png>)
+![Define SLO for API Latency using simple UI](<../.gitbook/assets/define-latency-slo-simple (1).png>)
 
 #### Latency SLO using Advanced UI
 
-![Define SLO for API Latency using Advanced UI](<../.gitbook/assets/define-latency-slo-advanced.png>)
+![Define SLO for API Latency using Advanced UI](../.gitbook/assets/define-latency-slo-advanced.png)
 
-The latency P99 is computed for each minute. Let's say the threshold is 100ms. So each minute that the P99 is within the threshold is a good minute and each minute when P99 is above this threshold is a bad minute.&#x20;
+The latency P99 is computed for each minute. Let's say the threshold is 100ms. So each minute that the P99 is within the threshold is a good minute and each minute when P99 is above this threshold is a bad minute.
 
 Here is a table that summaries the SLO in terms of tolerated bad minutes or expected good minutes in a day
 
@@ -69,7 +69,7 @@ Here is a table that summaries the SLO in terms of tolerated bad minutes or expe
 
 **SLO Definition API**
 
-SLOs can also be defined through an API. Here is an example of an SLO API request to define an SLO.&#x20;
+SLOs can also be defined through an API. Here is an example of an SLO API request to define an SLO.
 
 ```
 apiVersion: asserts/v1
@@ -92,13 +92,13 @@ objectives:
 
 The SLO list page lists all the SLOs and their status and a summary of budget utilization and incidents.
 
-![List of SLOs with their budget utilization, incident status and summary](<../.gitbook/assets/slo-list-budget-utilization.png>)
+![List of SLOs with their budget utilization, incident status and summary](../.gitbook/assets/slo-list-budget-utilization.png)
 
 **SLO Burndown and Incident Timeline**
 
-Clicking an SLO Objective navigates to a view that shows the error budget burndown and the underlying metric. Occurrences of incidents are highlighted on the timeline. Clicking a highlighted incident will show the incident duration and budget burndown. The tooltip shows the incident time window and budget burn down. By clicking `View` , you can navigate to [Workbench](workbench.md) to start the RCA of the incident.&#x20;
+Clicking an SLO Objective navigates to a view that shows the error budget burndown and the underlying metric. Occurrences of incidents are highlighted on the timeline. Clicking a highlighted incident will show the incident duration and budget burndown. The tooltip shows the incident time window and budget burn down. By clicking `View` , you can navigate to [Workbench](workbench.md) to start the RCA of the incident.
 
-![](<../.gitbook/assets/slo-budget-burndown.png>)
+![](../.gitbook/assets/slo-budget-burndown.png)
 
 #### Incidents <a href="#howassertsworks-wip-incidents" id="howassertsworks-wip-incidents"></a>
 
@@ -106,4 +106,4 @@ We assume the user wants to be notified whenever an SLO is violated, so we list 
 
 These incidents are grouped by SLOs and assertions and laid out in a common time frame. This is very similar to the [WorkBench](https://docs.asserts.ai/user-guide/rca-with-the-workbench) which enables instant time-based correlation.
 
-![](../.gitbook/assets/Incident.jpg)
+![](<../.gitbook/assets/Incident (1).jpg>)

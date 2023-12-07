@@ -27,11 +27,11 @@ You can verify the loopback is enabled by checking following metrics
 
 ### Metrics
 
-| **Metric**                                                | **KPI**                                                                                                                                                                                                                                                              |
-| --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Requests</p><p>loopback_invocation_total</p>           | <p>Request Rate</p><p>rate(loopback_invocation_total[5m])</p>                                                                                                                                                                                                        |
-| <p>Errors</p><p>loopback_invocation_total</p>             | <p>Error Ratio (server errors)</p><p>rate(loopback_invocation_total{status=~"5.."}[5m])/ rate(loopback_invocation_total[5m])</p><p>Error Ratio (client errors)</p><p>rate(loopback_invocation_total{statusCode=~"4.."}[5m])/ rate(loopback_invocation_total[5m])</p> |
-| <p>Latency</p><p>loopback_invocation_duration_seconds</p> | <p>Latency Average</p><p>rate(loopback_invocation_duration_seconds[5m])/ rate(loopback_invocation_total[5m])</p><p>Latency P99</p><p>histogram_quantile (<br>0.99,<br>sum(rate(loopback_invocation_duration_histogram_bucket[1m]) > 0)<br>by (le)<br>)</p>           |
+| **Metric**                                                | **KPI**                                                                                                                                                                                                                                                                       |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Requests</p><p>loopback_invocation_total</p>           | <p>Request Rate</p><p>rate(loopback_invocation_total[5m])</p>                                                                                                                                                                                                                 |
+| <p>Errors</p><p>loopback_invocation_total</p>             | <p>Error Ratio (server errors)</p><p>rate(loopback_invocation_total{status=<del>"5.."}[5m])/ rate(loopback_invocation_total[5m])</del></p><p>Error Ratio (client errors)</p><p>rate(loopback_invocation_total{statusCode="4.."}[5m])/ rate(loopback_invocation_total[5m])</p> |
+| <p>Latency</p><p>loopback_invocation_duration_seconds</p> | <p>Latency Average</p><p>rate(loopback_invocation_duration_seconds[5m])/ rate(loopback_invocation_total[5m])</p><p>Latency P99</p><p>histogram_quantile (<br>0.99,<br>sum(rate(loopback_invocation_duration_histogram_bucket[1m]) > 0)<br>by (le)<br>)</p>                    |
 
 ### Alerts
 
@@ -59,4 +59,4 @@ This dashboard has the following KPIs from resources and requests:
 * Disk Usage
 * Network Usage
 
-![](<../../.gitbook/assets/dashboard-kpi.png>)
+![](<../../.gitbook/assets/dashboard-kpi (2).png>)

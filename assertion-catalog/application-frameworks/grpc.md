@@ -17,17 +17,16 @@ Once you enable it verify your setup by checking the following metrics
 
 ### Metrics
 
-| **Metric**                                                                                        | **Key Performance Indicator(KPI)**                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Requests</p><p>grpc_server_handled_total</p>                                                   | <p>Request Rate</p><p>rate(grpc_server_handled_total[5m])</p><p> </p>                                                                                                                                                                                                 |
-| <p>Errors</p><p>grpc_server_handled_total{grpc_code!="OK"}</p>                                    | <p>Error Ratio</p><p>rate(grpc_server_handled_total{grpc_code!="OK"}[5m])/ rate(grpc_server_handled_total[5m])</p>                                                                                                                                                    |
+| **Metric**                                                                                        | **Key Performance Indicator(KPI)**                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>Requests</p><p>grpc_server_handled_total</p>                                                   | <p>Request Rate</p><p>rate(grpc_server_handled_total[5m])</p>                                                                                                                          |
+| <p>Errors</p><p>grpc_server_handled_total{grpc_code!="OK"}</p>                                    | <p>Error Ratio</p><p>rate(grpc_server_handled_total{grpc_code!="OK"}[5m])/ rate(grpc_server_handled_total[5m])</p>                                                                     |
 | <p>Latency</p><p>grpc_server_handling_seconds_count</p><p>grpc_server_handling_seconds_bucket</p> | <p>Latency Average</p><p>rate(grpc_server_handling_seconds_count[5m])/ rate(grpc_server_handling_seconds_count[5m])</p><p>Latency P99</p><pre><code>histogram_quantile (
-  0.99,
-  sum(rate(grpc_server_handling_seconds_bucket[1m])) by (le)
-)
-</code></pre><p> </p> |
-
-&#x20;
+</code></pre> |
+| 0.99,                                                                                             |                                                                                                                                                                                        |
+| sum(rate(grpc\_server\_handling\_seconds\_bucket\[1m])) by (le)                                   |                                                                                                                                                                                        |
+| )                                                                                                 |                                                                                                                                                                                        |
+|                                                                                                   |                                                                                                                                                                                        |
 
 ### Alerts
 
@@ -55,4 +54,4 @@ This dashboard has the following KPIs for resources and requests:
 * Disk Usage
 * Network Usage
 
-![](<../../.gitbook/assets/dashboard-kpi.png>)
+![](<../../.gitbook/assets/dashboard-kpi (2).png>)

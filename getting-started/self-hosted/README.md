@@ -2,6 +2,10 @@
 
 {% embed url="https://app.arcade.software/share/zSKsH3XBO9WLBp3zRlCd" %}
 
+{% hint style="info" %}
+Asserts is now part of Grafana Labs. All new customers will be onboarded on Grafana Cloud. Please sign up for early access at [https://www.asserts.ai/](https://www.asserts.ai/)
+{% endhint %}
+
 **Asserts** currently runs as a containerized solution.\
 How you install Asserts depends on your needs & target environment:
 

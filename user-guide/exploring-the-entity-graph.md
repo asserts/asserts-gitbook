@@ -4,11 +4,11 @@
 
 Asserts’s web app is built for cloud scale. The best way to explore the entity graph is to use search expressions. We’ve shipped a default set of search expressions that cover everyday use cases. For example, "Show Service api-server", “Show all services”, “Show Assertions in Namespace”, etc.
 
-![](<../.gitbook/assets/show-all-services.png>)
+![](../.gitbook/assets/show-all-services.png)
 
 The `Advanced search` panel provides more advanced search functions like searching by property conditions, showing connected entities, etc. These searches can provide context-rich shortcuts to a group of entities users want to view as a whole.
 
-![pods crashing in namespace petclinic](<../.gitbook/assets/advanced-search-pod-crash-petclinic.png>)
+![pods crashing in namespace petclinic](../.gitbook/assets/advanced-search-pod-crash-petclinic.png)
 
 Keep in mind that the graph is constantly updated by the time-series data, so the search result represents the system's state in the specified time window. When you change the time, the search result may change too. In addition, search results are always filtered by the selection in `env` and `site` dropdown.
 
@@ -16,7 +16,7 @@ Keep in mind that the graph is constantly updated by the time-series data, so th
 
 When users click on an entity, it also allows them to navigate to its connected entities. Navigation can be done in both graph view and list view. If the graph gets busy, we can filter the displayed entities by clicking on the entity type in the legends.
 
-![Browse entity graph](<../.gitbook/assets/navigation.gif>)
+![Browse entity graph](<../.gitbook/assets/navigation (3).gif>)
 
 In the list view, users can also pick properties or the monitoring status of each entity. This gives a high-level overview of what’s being automatically monitored by Asserts. Resource monitoring applies to both Services and Nodes, but traffic and latency monitoring usually only applies to Services.
 
@@ -24,7 +24,7 @@ In the list view, users can also pick properties or the monitoring status of eac
 
 A bubble view is also provided to help the user to rank entities by requests, resources, or selected properties from `View Settings`<img src="../.gitbook/assets/view-settings.png" alt="" data-size="line"> . Users can even choose multiple fields to rank them in the same view. For example, the following rank services by both requests and CPU. The node color indicates the assertion status related to the selected field. Thus, the `yace` service here is having a CPU-related assertion.
 
-![](<../.gitbook/assets/bubble-view.png>)
+![](../.gitbook/assets/bubble-view.png)
 
 #### Entity assertion status <a href="#howassertsworks-wip-entityassertionstatus" id="howassertsworks-wip-entityassertionstatus"></a>
 
@@ -41,17 +41,17 @@ The following example shows a node with a critical CPU load on itself while at t
 
 Note: we are merging the two tabs into one in an upcoming release
 
-| ![](<../.gitbook/assets/node-entity-assertions.png>) | ![](<../.gitbook/assets/node-entity-cpu-throttle.png>) |
-| ------------------------------------------------ | -------------------------------------------- |
+| ![](<../.gitbook/assets/node-entity-assertions (3).png>) | ![](<../.gitbook/assets/node-entity-cpu-throttle (1).png>) |
+| -------------------------------------------------------- | ---------------------------------------------------------- |
 
 #### Dashboards <a href="#howassertsworks-wip-dashboards" id="howassertsworks-wip-dashboards"></a>
 
-Users can pull up the KPI dashboard for each entity in focus by clicking “Show KPI”. Asserts has curated a library of Grafana dashboards. Each entity type has its own dashboard, so we have a dashboard for Cluster, NodeGroups, Nodes,  Pods, Services, et al.&#x20;
+Users can pull up the KPI dashboard for each entity in focus by clicking “Show KPI”. Asserts has curated a library of Grafana dashboards. Each entity type has its own dashboard, so we have a dashboard for Cluster, NodeGroups, Nodes, Pods, Services, et al.
 
-![](<../.gitbook/assets/ingress-nginx-go-service-kpi.png>)
+![](../.gitbook/assets/ingress-nginx-go-service-kpi.png)
 
 Within the same entity type, say Service, if we know the service type, say `Nginx`, we also have a popular community Grafana dashboard for that service type.
 
-![](<../.gitbook/assets/ingress-nginx-kpi.png>)
+![](../.gitbook/assets/ingress-nginx-kpi.png)
 
 Asserts keeps working on expanding this library. If a customer has their own Grafana dashboards, he/she can also integrate them into Asserts Web App.

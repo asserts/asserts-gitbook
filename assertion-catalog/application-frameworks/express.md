@@ -54,7 +54,7 @@ app.use(promMid({
   }));
 ```
 
-If the request URLs include ids. for e.g. **GET /order/1234567**, the URLs need to be captured as **/order/{id}** to avoid metric explosion. In this example, the regexp **\[0-9]+** which captures all numbers **1234567** can be specified in the **extraMasks** list of regular expressions.&#x20;
+If the request URLs include ids. for e.g. **GET /order/1234567**, the URLs need to be captured as **/order/{id}** to avoid metric explosion. In this example, the regexp **\[0-9]+** which captures all numbers **1234567** can be specified in the **extraMasks** list of regular expressions.
 
 ```
 extraMasks: ['[0-9]+']
@@ -97,4 +97,4 @@ This dashboard has the following KPIs from resources and requests:
 * Disk Usage
 * Network Usage
 
-![](<../../.gitbook/assets/dashboard-kpi.png>)
+![](<../../.gitbook/assets/dashboard-kpi (2).png>)

@@ -6,6 +6,10 @@ description: How to get up and running with Asserts
 
 ## Welcome!
 
+{% hint style="warning" %}
+Asserts is now part of Grafana Labs. All new customers will be onboarded on Grafana Cloud. Please sign up for early access at [https://www.asserts.ai/](https://www.asserts.ai/)
+{% endhint %}
+
 This guide will walk you through getting up and running with Asserts.
 
 You'll learn how to setup, run, and experiment with the Asserts Platform.

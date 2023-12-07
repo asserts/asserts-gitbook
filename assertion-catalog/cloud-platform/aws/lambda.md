@@ -2,7 +2,7 @@
 
 #### **Asserts AWS Exporter**
 
-Refer to Asserts [AWS Exporter](../../../integrations/data-source/aws-cloudwatch/aws-exporter.md) and [Lambda Layer](../../../integrations/data-source/aws-cloudwatch/lambda-layer.md) on pre-requires for observing Lambda function.
+Refer to Asserts [AWS Exporter](broken-reference) and [Lambda Layer](../../../integrations/data-source/aws-cloudwatch/lambda-layer.md) on pre-requires for observing Lambda function.
 
 
 
