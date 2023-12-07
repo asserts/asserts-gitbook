@@ -2,7 +2,7 @@
 
 As an Asserts customer, all you need to do is connect your Observability Datasources like Prometheus, Cloudwatch et al. to Asserts and then let Asserts apply its intelligence to present root cause insights.
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Asserts is now part of Grafana Labs. All new customers will be onboarded on Grafana Cloud. Please sign up for early access at [https://www.asserts.ai/](https://www.asserts.ai/)
 {% endhint %}
 

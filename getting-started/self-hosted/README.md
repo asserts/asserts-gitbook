@@ -1,10 +1,10 @@
-# Self-Hosted
+# Self-Hosted (Unsupported)
 
-{% embed url="https://app.arcade.software/share/zSKsH3XBO9WLBp3zRlCd" %}
-
-{% hint style="info" %}
+{% hint style="warning" %}
 Asserts is now part of Grafana Labs. All new customers will be onboarded on Grafana Cloud. Please sign up for early access at [https://www.asserts.ai/](https://www.asserts.ai/)
 {% endhint %}
+
+{% embed url="https://app.arcade.software/share/zSKsH3XBO9WLBp3zRlCd" %}
 
 **Asserts** currently runs as a containerized solution.\
 How you install Asserts depends on your needs & target environment:

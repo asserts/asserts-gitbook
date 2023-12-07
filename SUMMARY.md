@@ -5,7 +5,7 @@
 ## Getting Started
 
 * [Introduction](<README (1).md>)
-* [Self-Hosted](getting-started/self-hosted/README.md)
+* [Self-Hosted (Unsupported)](getting-started/self-hosted/README.md)
   * [Helm Chart](getting-started/self-hosted/helm-chart.md)
   * [Docker Compose](getting-started/self-hosted/docker-compose.md)
 * [Cloud](getting-started/cloud.md)
