@@ -1,5 +1,7 @@
 # Request, Error and Duration (RED)
 
+**NOTE:** these instructions are meant for a quick PoC to demonstrate capability. They involve creating copy of existing metrics and hence would lead to additional metrics being created. In customer environments, this might be acceptable only if the scope of the data being looked at is small.
+
 ### **asserts:request:total**
 
 In Asserts, the `asserts:request:total` records the total count of requests.&#x20;
