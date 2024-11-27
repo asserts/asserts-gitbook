@@ -109,7 +109,7 @@ Once these rules are added, the following things will happen
   anomalies.
 
 <b>NOTE:</b> In the above example, the source metric is available as a counter. So it was mapped to <code>asserts:error:total</code>. If the source metric were a gauge,
-then it should be mapped to <code>asserts:error:gauge</code> and set <code>asserts_metric_error: gauge</code>.
+then it should be mapped to <code>asserts:error:gauge</code> and set <code>asserts_metric_error: gauge</code> or <code>asserts_metric_error: client_gauge</code> in the case of inbound client errors.
 
 ### **asserts:latency:total and asserts:latency:count**
 
