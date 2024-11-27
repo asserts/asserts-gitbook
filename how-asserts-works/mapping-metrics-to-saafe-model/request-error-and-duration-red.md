@@ -1,6 +1,6 @@
 # Request, Error and Duration (RED)
 
-**NOTE:** These instructions are meant for a quick PoC to demonstrate capability. They involve creating copy of existing metrics and hence would lead to additional metrics being created. In customer environments, this might be acceptable only if the scope of the data being looked at is small.
+**NOTE:** These instructions are meant for a quick PoC to demonstrate capability. They involve creating copy of existing metrics and hence would lead to additional metrics being created. This might be acceptable only if the scope of the data being looked at is small.
 
 ### **asserts:request:total**
 
